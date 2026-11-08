@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maksym — Telegram-боти та сайти</title>
+  <meta name="description" content="Розробка Telegram-ботів, лендингів та автоматизації. Запуск на сервері 24/7, підтримка після здачі.">
+  <meta property="og:title" content="Maksym — Telegram-боти та сайти">
+  <meta property="og:description" content="Розробка Telegram-ботів, лендингів та автоматизації.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b0d12">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#top"><span class="logo__dot"></span>Maksym<span class="logo__sub">bots &amp; web</span></a>
+    <nav class="nav__links">
+      <a href="#services" data-i18n="nav.services">Послуги</a>
+      <a href="#work" data-i18n="nav.work">Роботи</a>
+      <a href="#process" data-i18n="nav.process">Як працюємо</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
+    </nav>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="uk" class="is-on">UA</button><button data-lang="en">EN</button>
+      </div>
+      <a class="btn btn--sm" href="#contact" data-i18n="nav.cta">Зв'язатися</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero__text">
+      <p class="tag" data-i18n="hero.tag">Відкритий до нових проєктів</p>
+      <h1 data-i18n-html="hero.title"><span class="nw">Telegram-боти</span>, сайти та <span class="hl">автоматизація</span>, які працюють за вас</h1>
+      <p class="lead" data-i18n="hero.lead">Роблю ботів для запису клієнтів, прийому заявок і продажів, лендинги та скрипти, що економлять години рутини. Запускаю на сервері 24/7 і залишаюся на зв'язку після здачі.</p>
+      <div class="hero__btns">
+        <a class="btn" href="#contact" data-i18n="hero.cta1">Обговорити проєкт</a>
+        <a class="btn btn--ghost" href="#work" data-i18n="hero.cta2">Подивитися роботи</a>
+      </div>
+      <ul class="hero__facts">
+        <li><b>24/7</b><span data-i18n="hero.f1">бот працює без перерв</span></li>
+        <li><b data-i18n="hero.f2b">від 3 днів</b><span data-i18n="hero.f2">готовий бот</span></li>
+        <li><b>UA · EN · RU</b><span data-i18n="hero.f3">мови спілкування</span></li>
+      </ul>
+    </div>
+    <div class="hero__phone">
+      <div class="phone">
+        <video src="assets/salon-demo.mp4" poster="assets/salon-poster.jpg" autoplay muted loop playsinline></video>
+      </div>
+      <p class="phone__cap" data-i18n="hero.phone">Живий приклад: бот запису до салону</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section wrap">
+    <h2 data-i18n="srv.h">Послуги та ціни</h2>
+    <p class="sub" data-i18n="srv.sub">Точна ціна залежить від задачі — напишіть, і я назву її після короткого обговорення. Без прихованих доплат.</p>
+    <div class="grid grid--4">
+      <article class="card">
+        <div class="card__ico">🤖</div>
+        <h3 data-i18n="srv.1.h">Telegram-боти</h3>
+        <p data-i18n="srv.1.p">Запис клієнтів, прийом заявок, каталог і замовлення, розсилки, нагадування, адмін-панель.</p>
+        <p class="price"><span data-i18n="from">від</span> $30</p>
+      </article>
+      <article class="card">
+        <div class="card__ico">🌐</div>
+        <h3 data-i18n="srv.2.h">Лендинги та сайти</h3>
+        <p data-i18n="srv.2.p">Односторінкові сайти для послуг і продуктів: адаптивні, швидкі, з формою заявки та підключенням домену.</p>
+        <p class="price"><span data-i18n="from">від</span> $50</p>
+      </article>
+      <article class="card">
+        <div class="card__ico">⚙️</div>
+        <h3 data-i18n="srv.3.h">Автоматизація</h3>
+        <p data-i18n="srv.3.p">Скрипти та інтеграції: Google Таблиці, сповіщення, обробка файлів, збір даних, генерація контенту.</p>
+        <p class="price"><span data-i18n="from">від</span> $20</p>
+      </article>
+      <article class="card">
+        <div class="card__ico">🛠️</div>
+        <h3 data-i18n="srv.4.h">Запуск і підтримка</h3>
+        <p data-i18n="srv.4.p">Розміщення на сервері, автозапуск, оновлення та дрібні правки після здачі проєкту.</p>
+        <p class="price"><span data-i18n="from">від</span> $10<span data-i18n="permonth">/міс</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section wrap">
+    <h2 data-i18n="work.h">Роботи</h2>
+    <p class="sub" data-i18n="work.sub">Реальні проєкти, які можна відкрити й перевірити самому.</p>
+
+    <article class="work">
+      <div class="work__media">
+        <video src="assets/salon-demo.mp4" poster="assets/salon-poster.jpg" muted loop playsinline autoplay></video>
+      </div>
+      <div class="work__body">
+        <p class="work__kind" data-i18n="work.1.kind">Telegram-бот · запис клієнтів</p>
+        <h3 data-i18n="work.1.h">Бот онлайн-запису для салону краси</h3>
+        <p data-i18n="work.1.p">Клієнт сам обирає послугу, дату й вільний час — без дзвінків і переписок. Майстер отримує сповіщення про кожен запис, а клієнт — нагадування. Бот працює на сервері 24/7.</p>
+        <ul class="chips"><li>Python</li><li>aiogram 3</li><li>SQLite</li><li>Ubuntu</li><li>systemd</li></ul>
+        <div class="work__links">
+          <a class="btn btn--sm" href="https://t.me/faceclo_bot" target="_blank" rel="noopener" data-i18n="work.try">Спробувати бота</a>
+          <a class="btn btn--sm btn--ghost" href="https://github.com/Mrnofaceym/salon-booking-bot" target="_blank" rel="noopener" data-i18n="work.code">Код на GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="grid grid--2">
+      <article class="card card--work">
+        <p class="work__kind" data-i18n="work.2.kind">Автоматизація · контент</p>
+        <h3 data-i18n="work.2.h">Конвеєр для коротких відео</h3>
+        <p data-i18n="work.2.p">Система, яка з тексту сценарію автоматично робить готовий ролик: озвучка, субтитри, згенеровані ілюстрації, анімація, звукові ефекти та монтаж. Ролик за ~1 годину замість дня ручної роботи.</p>
+        <ul class="chips"><li>Python</li><li>FFmpeg</li><li>TTS</li><li>AI images</li><li>Pillow</li></ul>
+      </article>
+      <article class="card card--work">
+        <p class="work__kind" data-i18n="work.3.kind">Сайт · портфоліо</p>
+        <h3 data-i18n="work.3.h">Цей сайт</h3>
+        <p data-i18n="work.3.p">Двомовний адаптивний лендинг без конструкторів: чистий HTML/CSS/JS, швидке завантаження, хостинг на Cloudflare з HTTPS. Так само можу зробити сайт для вашого бізнесу.</p>
+        <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Cloudflare</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section wrap">
+    <h2 data-i18n="stack.h">З чим працюю</h2>
+    <ul class="stack">
+      <li>Python</li><li>aiogram</li><li>Telegram Bot API</li><li>SQLite</li><li>Google Sheets API</li>
+      <li>HTML · CSS · JS</li><li>Linux / Ubuntu</li><li>systemd</li><li>Git · GitHub</li><li>Cloudflare</li><li>FFmpeg</li><li>AI API</li>
+    </ul>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="section wrap">
+    <h2 data-i18n="proc.h">Як проходить робота</h2>
+    <ol class="steps">
+      <li><b data-i18n="proc.1.h">Заявка</b><span data-i18n="proc.1.p">Ви коротко описуєте задачу — у Telegram або поштою.</span></li>
+      <li><b data-i18n="proc.2.h">Обговорення</b><span data-i18n="proc.2.p">Уточнюю деталі, пропоную рішення, ціну та термін.</span></li>
+      <li><b data-i18n="proc.3.h">Передоплата</b><span data-i18n="proc.3.p">50% на старт, решта — після того, як усе працює.</span></li>
+      <li><b data-i18n="proc.4.h">Розробка</b><span data-i18n="proc.4.p">Показую проміжний результат, щоб ви бачили прогрес.</span></li>
+      <li><b data-i18n="proc.5.h">Правки</b><span data-i18n="proc.5.p">Доопрацьовую до того, як вам усе подобається.</span></li>
+      <li><b data-i18n="proc.6.h">Запуск</b><span data-i18n="proc.6.p">Розміщую на сервері, передаю код та інструкцію.</span></li>
+    </ol>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section wrap about">
+    <div>
+      <h2 data-i18n="about.h">Про мене</h2>
+      <p data-i18n="about.p1">Мене звати Максим, я з України. Розробляю Telegram-ботів, сайти та автоматизацію на Python. Мені подобається, коли рутина, що забирає години, робиться сама — за кілька секунд.</p>
+      <p data-i18n="about.p2">Працюю чесно: називаю реальні терміни, показую прогрес і не зникаю після оплати. Якщо задача мені не підходить — скажу про це одразу.</p>
+    </div>
+    <div class="team">
+      <div class="member">
+        <div class="avatar">M</div>
+        <b data-i18n="about.me">Максим</b>
+        <span data-i18n="about.role">Розробник · боти, сайти, автоматизація</span>
+      </div>
+      <div class="member member--empty">
+        <div class="avatar">+</div>
+        <b data-i18n="about.soon">Команда росте</b>
+        <span data-i18n="about.soonp">Скоро тут з'являться нові люди</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section wrap">
+    <h2 data-i18n="faq.h">Часті питання</h2>
+    <div class="faq">
+      <details><summary data-i18n="faq.1.q">Скільки часу займає розробка бота?</summary><p data-i18n="faq.1.a">Простий бот — 3–5 днів, складніший з адмін-панеллю та оплатою — 1–2 тижні. Точний термін називаю після обговорення.</p></details>
+      <details><summary data-i18n="faq.2.q">Що потрібно від мене?</summary><p data-i18n="faq.2.a">Опис задачі своїми словами, тексти для бота чи сайту (або допоможу їх написати) і доступ до Telegram, щоб створити бота через @BotFather.</p></details>
+      <details><summary data-i18n="faq.3.q">Як відбувається оплата?</summary><p data-i18n="faq.3.a">50% передоплата та 50% після здачі. Способи оплати обговорюємо індивідуально.</p></details>
+      <details><summary data-i18n="faq.4.q">Де буде працювати бот?</summary><p data-i18n="faq.4.a">Можу розмістити на своєму сервері (з підтримкою) або на вашому. Бот працює 24/7 і сам перезапускається у разі збою.</p></details>
+      <details><summary data-i18n="faq.5.q">Чи отримаю я код?</summary><p data-i18n="faq.5.a">Так. Після оплати ви отримуєте повний код, інструкцію із запуску та всі доступи.</p></details>
+      <details><summary data-i18n="faq.6.q">А якщо потрібні зміни потім?</summary><p data-i18n="faq.6.a">Дрібні правки протягом 14 днів після здачі — безкоштовно. Далі — за домовленістю або в рамках підтримки.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section wrap">
+    <div class="contact">
+      <h2 data-i18n="ct.h">Маєте задачу? Напишіть</h2>
+      <p data-i18n="ct.p">Опишіть, що потрібно, — відповім протягом дня та запропоную рішення. Обговорення безкоштовне.</p>
+      <div class="contact__btns">
+        <a class="btn" id="ct-tg" href="#" target="_blank" rel="noopener">✈️ Telegram</a>
+        <a class="btn btn--ghost" id="ct-mail" href="#">✉️ <span id="ct-mail-t">Email</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <span>© <span id="year"></span> Maksym · bots &amp; web</span>
+  <a href="https://github.com/Mrnofaceym" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
