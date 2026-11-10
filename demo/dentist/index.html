@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Посмішка — стоматологічна клініка</title>
+  <meta name="description" content="Стоматологія «Посмішка»: лікування, гігієна, імплантація, вініри та брекети. Онлайн-запис до лікаря за 1 хвилину.">
+  <meta property="og:title" content="Посмішка — стоматологічна клініка">
+  <meta property="og:description" content="Сучасна стоматологія без болю. Онлайн-запис до лікаря за 1 хвилину.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%231E9C8C'/><path d='M18 22c0-6 6-9 14-6 8-3 14 0 14 6 0 8-4 10-5 20-1 7-5 7-6 0-1-5-2-7-3-7s-2 2-3 7c-1 7-5 7-6 0-1-10-5-12-5-20z' fill='white'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Посмішка">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><path d="M18 22c0-6 6-9 14-6 8-3 14 0 14 6 0 8-4 10-5 20-1 7-5 7-6 0-1-5-2-7-3-7s-2 2-3 7c-1 7-5 7-6 0-1-10-5-12-5-20z"/></svg>
+        <span>Посмішка</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#services" data-i18n="nav_services">Послуги</a>
+        <a href="#doctors" data-i18n="nav_doctors">Лікарі</a>
+        <a href="#why" data-i18n="nav_why">Чому ми</a>
+        <a href="#faq" data-i18n="nav_faq">Питання</a>
+        <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <button class="lang" id="lang" type="button" aria-label="Мова / Language">EN</button>
+        <a href="#book" class="btn btn--small" data-i18n="nav_book">Записатися</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill"><span class="pill__dot"></span><span data-i18n="hero_pill">Сьогодні є вільні години</span></p>
+          <h1 data-i18n="hero_title">Здорова посмішка <span>без болю і стресу</span></h1>
+          <p class="hero__sub" data-i18n="hero_sub">Лікуємо під мікроскопом, з комп'ютерною анестезією і фіксованою ціною в плані лікування. Перша консультація — безкоштовно.</p>
+          <div class="hero__cta">
+            <a href="#book" class="btn" data-i18n="hero_book">Записатися на прийом</a>
+            <a href="#services" class="btn btn--ghost" data-i18n="hero_prices">Ціни на послуги</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>12</b><span data-i18n="st_years">років досвіду</span></li>
+            <li><b>18 000+</b><span data-i18n="st_patients">пацієнтів</span></li>
+            <li><b>4.9</b><span data-i18n="st_rating">рейтинг у Google</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="" fetchpriority="high">
+          <div class="float float--a"><b data-i18n="fl_a_t">Гарантія 5 років</b><span data-i18n="fl_a_p">на імплантацію</span></div>
+          <div class="float float--b"><b data-i18n="fl_b_t">Без черг</b><span data-i18n="fl_b_p">запис онлайн за хвилину</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services wrap" id="services">
+      <div class="head reveal">
+        <p class="eyebrow" data-i18n="srv_eyebrow">Послуги та ціни</p>
+        <h2 data-i18n="srv_title">Усе для здоров'я зубів — в одній клініці</h2>
+      </div>
+      <div class="services__grid" id="servicesGrid"></div>
+      <p class="note" data-i18n="srv_note">Точну вартість лікар фіксує в плані лікування після огляду — вона не зміниться.</p>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap why__in">
+        <div class="why__media reveal"><img src="img/room.webp" alt="" loading="lazy"><img class="why__small" src="img/tools.webp" alt="" loading="lazy"></div>
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="why_eyebrow">Чому обирають нас</p>
+          <h2 data-i18n="why_title">Лікування, якого не треба боятися</h2>
+          <ul class="why__list">
+            <li><b data-i18n="w1_t">Комп'ютерна анестезія</b><span data-i18n="w1_p">Без «заморожених» щік на пів дня — оніміє лише потрібний зуб.</span></li>
+            <li><b data-i18n="w2_t">3D-діагностика за 10 хвилин</b><span data-i18n="w2_p">Бачимо проблему до того, як вона заболить, і показуємо вам знімок.</span></li>
+            <li><b data-i18n="w3_t">Фіксована ціна</b><span data-i18n="w3_p">Підписуємо план лікування — жодних «доплат» у процесі.</span></li>
+            <li><b data-i18n="w4_t">Стерильність класу B</b><span data-i18n="w4_p">Інструменти в індивідуальних пакетах, які відкриваємо при вас.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="doctors wrap" id="doctors">
+      <div class="head reveal">
+        <p class="eyebrow" data-i18n="doc_eyebrow">Наші лікарі</p>
+        <h2 data-i18n="doc_title">Лікарі, яким довіряють родини</h2>
+      </div>
+      <div class="doctors__grid" id="doctorsGrid"></div>
+    </section>
+
+    <section class="kids">
+      <div class="wrap kids__in reveal">
+        <img src="img/kids.webp" alt="" loading="lazy">
+        <div>
+          <p class="eyebrow eyebrow--light" data-i18n="kids_eyebrow">Дитяча стоматологія</p>
+          <h2 data-i18n="kids_title">Перший візит — у формі гри</h2>
+          <p data-i18n="kids_p">Знайомимо дитину з кабінетом, даємо потримати «чарівні» інструменти і лікуємо лише тоді, коли малюк готовий. Після прийому — подарунок і грамота сміливця.</p>
+          <a href="#book" class="btn btn--white" data-i18n="kids_btn">Записати дитину</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews wrap">
+      <div class="head reveal">
+        <p class="eyebrow" data-i18n="rev_eyebrow">Відгуки</p>
+        <h2 data-i18n="rev_title">Що кажуть пацієнти</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev1">«Боялася стоматологів з дитинства. Тут уперше лікувала зуб і нічого не відчула. Дякую Олені Петрівні!»</p><cite>Ірина К. · Google</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev2">«Ставив імплант. Усе пояснили, показали 3D-знімок, ціна в договорі не змінилася ні на гривню.»</p><cite>Сергій М. · Google</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev3">«Записалася онлайн о 23:00 на ранок, а о 9:05 вже сиділа в кріслі. Дуже зручно.»</p><cite>Оксана Т. · Facebook</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="wrap book__in">
+        <div class="book__intro reveal">
+          <p class="eyebrow" data-i18n="book_eyebrow">Онлайн-запис</p>
+          <h2 data-i18n="book_title">Запишіться за 1 хвилину</h2>
+          <p data-i18n="book_p">Оберіть послугу, лікаря та вільний час. Адміністратор миттєво отримає заявку в Telegram і підтвердить запис.</p>
+          <ol class="steps">
+            <li data-i18n="step1">Послуга та лікар</li>
+            <li data-i18n="step2">Дата та час</li>
+            <li data-i18n="step3">Ваші контакти</li>
+          </ol>
+        </div>
+        <form class="booking reveal" id="bookForm" novalidate>
+          <div class="field-row">
+            <label><span data-i18n="f_service">Послуга</span><select name="service" id="fService" required></select></label>
+            <label><span data-i18n="f_doctor">Лікар</span><select name="doctor" id="fDoctor" required></select></label>
+          </div>
+          <div class="pick">
+            <span class="pick__label" data-i18n="f_date">Дата</span>
+            <div class="dates" id="dates" role="radiogroup"></div>
+          </div>
+          <div class="pick">
+            <span class="pick__label" data-i18n="f_time">Вільний час</span>
+            <div class="slots" id="slots" role="radiogroup"></div>
+          </div>
+          <div class="field-row">
+            <label><span data-i18n="f_name">Ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+            <label><span data-i18n="f_phone">Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+          </div>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="summary" id="summary" aria-live="polite"></div>
+          <button class="btn btn--wide" type="submit" data-i18n="f_submit">Підтвердити запис</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow" data-i18n="faq_eyebrow">Питання</p>
+        <h2 data-i18n="faq_title">Часті запитання</h2>
+      </div>
+      <div class="faq__list" id="faqList"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="c_eyebrow">Контакти</p>
+          <h2 data-i18n="c_title">Чекаємо на вас</h2>
+          <dl class="contacts__list">
+            <dt data-i18n="c_addr_t">Адреса</dt><dd data-i18n="c_addr">вул. Здорова, 5, 2 поверх (демо-адреса)</dd>
+            <dt data-i18n="c_hours_t">Графік</dt><dd data-i18n="c_hours">Пн–Пт 9:00–19:00 · Сб 10:00–15:00 · Нд вихідний</dd>
+            <dt data-i18n="c_phone_t">Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+          <a href="#book" class="btn" data-i18n="c_btn">Записатися онлайн</a>
+        </div>
+        <img class="contacts__img reveal" src="img/consult.webp" alt="" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> <span data-i18n="foot_name">Стоматологія «Посмішка»</span></span>
+      <span><span data-i18n="demo">Демо-проєкт. Сайт розроблено</span> <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
