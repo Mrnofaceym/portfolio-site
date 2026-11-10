@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мотор Сервіс — СТО, діагностика та ремонт авто</title>
+  <meta name="description" content="СТО «Мотор Сервіс»: комп'ютерна діагностика, ТО, гальма, ходова, шиномонтаж, кондиціонер. Онлайн-запис за 1 хвилину з прозорою ціною.">
+  <meta property="og:title" content="Мотор Сервіс — СТО, діагностика та ремонт авто">
+  <meta property="og:description" content="Онлайн-запис на СТО за 1 хвилину: оберіть авто, послуги та вільний час.">
+  <meta property="og:image" content="img/hero.webp">
+  <meta name="theme-color" content="#0E1013">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4l24 14v28L32 60 8 46V18z' fill='%230E1013'/><circle cx='32' cy='32' r='10' fill='none' stroke='%23FF6A1A' stroke-width='6'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Мотор Сервіс" data-i18n-aria="brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path class="logo__nut" d="M32 4l24 14v28L32 60 8 46V18z"/><circle cx="32" cy="32" r="10"/></svg>
+        <span data-i18n="logo">Мотор<b>Сервіс</b></span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#services" data-i18n="nav_services">Послуги й ціни</a>
+        <a href="#symptoms" data-i18n="nav_symptoms">Що зламалось?</a>
+        <a href="#why" data-i18n="nav_why">Чому ми</a>
+        <a href="#faq" data-i18n="nav_faq">Питання</a>
+        <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <span class="demo-pill" data-i18n="demo_pill">Демо-проєкт</span>
+        <button class="lang" id="lang" type="button" aria-label="Мова / Language" data-i18n-aria="a_lang">EN</button>
+        <a href="#book" class="btn btn--small" data-i18n="nav_book">Записатися</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" data-i18n-aria="a_menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero__img" src="img/hero.webp" alt="" fetchpriority="high">
+      <div class="hero__shade"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="hero__tags"><span class="tag"><span class="tag__dot"></span><span data-i18n="hero_tag">Сьогодні є вільні бокси</span></span><span class="demo-pill demo-pill--hero" data-i18n="demo_pill">Демо-проєкт</span></p>
+          <h1 data-i18n="hero_title">Ремонт без сюрпризів <span>у фінальному чеку</span></h1>
+          <p class="hero__sub" data-i18n="hero_sub">Діагностика, ТО, гальма, ходова та шиномонтаж. Ціну погоджуємо до початку робіт, а за ремонтом можна стежити наживо.</p>
+          <div class="hero__cta">
+            <a href="#book" class="btn btn--big" data-i18n="hero_book">Запис на діагностику за 1 хвилину</a>
+            <a href="#services" class="btn btn--ghost" data-i18n="hero_prices">Ціни на послуги</a>
+          </div>
+        </div>
+        <ul class="hero__facts">
+          <li><b class="mono">12</b><span data-i18n="fact_years">років на ринку</span></li>
+          <li><b class="mono">6</b><span data-i18n="fact_lifts">підйомників</span></li>
+          <li><b class="mono">12 <small data-i18n="fact_mo">міс.</small></b><span data-i18n="fact_warranty">гарантія на роботи</span></li>
+          <li><b class="mono">4.9★</b><span data-i18n="fact_rating">рейтинг клієнтів</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="srv_eyebrow">Послуги й ціни</p>
+            <h2 data-i18n="srv_title">Прозорий прайс без «а&nbsp;ще&nbsp;треба»</h2>
+          </div>
+          <p class="head__note" data-i18n="srv_note">Ціни за роботу для легкових авто. Запчастини — за чеком постачальника, без націнки на ваші.</p>
+        </div>
+        <div class="services__grid">
+          <div>
+            <ul class="price" id="priceList" aria-label="Прайс" data-i18n-aria="a_price"></ul>
+            <p class="hint" data-i18n="srv_hint">Натисніть на послугу — вона одразу з'явиться в онлайн-записі нижче.</p>
+          </div>
+          <figure class="services__photo reveal">
+            <img id="srvPhoto" src="img/diag.webp" alt="" loading="lazy">
+            <figcaption><span class="mono" id="srvCap">OBD-II · 40 хв</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYMPTOMS -->
+    <section class="symptoms wrap" id="symptoms">
+      <div class="head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="sym_eyebrow">Симптом → що перевірити</p>
+          <h2 data-i18n="sym_title">Щось не так з авто? Оберіть, що відчуваєте</h2>
+        </div>
+        <p class="head__note" data-i18n="sym_note">Підкажемо, з чого почати, і додамо потрібні послуги до запису одним натиском.</p>
+      </div>
+      <div class="sym reveal">
+        <div class="sym__chips" id="symChips" role="radiogroup" aria-label="Симптоми" data-i18n-aria="a_sym"></div>
+        <div class="sym__card" id="symCard" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking" id="book">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="bk_eyebrow">Онлайн-запис</p>
+            <h2 data-i18n="bk_title">Запис на СТО за 1 хвилину</h2>
+          </div>
+          <p class="head__note" data-i18n="bk_note">Бачите ціну й тривалість одразу. Майстер-приймальник підтвердить запис у Telegram або дзвінком.</p>
+        </div>
+
+        <div class="bk reveal">
+          <form class="bk__form" id="bookForm" novalidate>
+            <ol class="steps" id="steps">
+              <li class="is-on" data-s="1"><span class="mono">01</span><b data-i18n="st1">Авто</b></li>
+              <li data-s="2"><span class="mono">02</span><b data-i18n="st2">Послуги</b></li>
+              <li data-s="3"><span class="mono">03</span><b data-i18n="st3">Дата й час</b></li>
+              <li data-s="4"><span class="mono">04</span><b data-i18n="st4">Контакти</b></li>
+            </ol>
+
+            <fieldset class="pane is-on" data-pane="1">
+              <legend data-i18n="p1_t">Розкажіть про авто</legend>
+              <div class="grid2">
+                <label><span data-i18n="f_make">Марка</span>
+                  <select name="make" id="make" required><option value="" data-i18n="f_make_ph">Оберіть марку</option></select></label>
+                <label><span data-i18n="f_model">Модель</span>
+                  <input name="model" maxlength="40" required placeholder="Octavia, Corolla, Tucson…" data-i18n-ph="f_model_ph" autocomplete="off"></label>
+                <label><span data-i18n="f_year">Рік випуску</span>
+                  <select name="year" id="year" required></select></label>
+                <label><span data-i18n="f_km">Пробіг, км</span>
+                  <input name="mileage" id="km" inputmode="numeric" maxlength="7" placeholder="125 000" autocomplete="off"></label>
+              </div>
+              <div class="fuel" role="radiogroup" aria-label="Пальне" data-i18n-aria="f_fuel">
+                <span class="fuel__t" data-i18n="f_fuel">Двигун</span>
+                <label class="chip"><input type="radio" name="fuel" value="petrol" checked><span data-i18n="fuel_petrol">Бензин</span></label>
+                <label class="chip"><input type="radio" name="fuel" value="diesel"><span data-i18n="fuel_diesel">Дизель</span></label>
+                <label class="chip"><input type="radio" name="fuel" value="lpg"><span data-i18n="fuel_lpg">Газ/бензин</span></label>
+                <label class="chip"><input type="radio" name="fuel" value="hybrid"><span data-i18n="fuel_hybrid">Гібрид</span></label>
+                <label class="chip"><input type="radio" name="fuel" value="ev"><span data-i18n="fuel_ev">Електро</span></label>
+              </div>
+              <p class="hint" id="kmHint" aria-live="polite"></p>
+            </fieldset>
+
+            <fieldset class="pane" data-pane="2">
+              <legend data-i18n="p2_t">Що потрібно зробити?</legend>
+              <div class="svc" id="svcList"></div>
+              <p class="hint" data-i18n="p2_hint">Не впевнені? Оберіть «Комп'ютерна діагностика» — майстер підкаже решту.</p>
+            </fieldset>
+
+            <fieldset class="pane" data-pane="3">
+              <legend data-i18n="p3_t">Оберіть зручний день і час</legend>
+              <div class="dates" id="dates" role="radiogroup" aria-label="Дата" data-i18n-aria="a_date"></div>
+              <div class="slots" id="slots" role="radiogroup" aria-label="Час" data-i18n-aria="a_time"></div>
+              <p class="hint" id="slotHint"></p>
+              <p class="legend"><span class="lg lg--free"></span><span data-i18n="lg_free">вільно</span><span class="lg lg--busy"></span><span data-i18n="lg_busy">зайнято</span></p>
+            </fieldset>
+
+            <fieldset class="pane" data-pane="4">
+              <legend data-i18n="p4_t">Куди надіслати підтвердження?</legend>
+              <div class="grid2">
+                <label><span data-i18n="f_name">Ім'я</span><input name="name" required autocomplete="given-name" maxlength="60"></label>
+                <label><span data-i18n="f_phone">Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+              </div>
+              <label><span data-i18n="f_comment">Коментар для майстра</span><textarea name="comment" rows="2" maxlength="300" data-i18n-ph="f_comment_ph" placeholder="Стукіт з'являється на холодну, авто на гарантії…"></textarea></label>
+              <label class="check"><input type="checkbox" name="remind" checked><span data-i18n="f_remind">Нагадати про наступне ТО в Telegram</span></label>
+              <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            </fieldset>
+
+            <div class="bk__nav">
+              <button type="button" class="btn btn--ghost btn--dark" id="back" data-i18n="b_back">Назад</button>
+              <button type="button" class="btn" id="next" data-i18n="b_next">Далі</button>
+              <button type="submit" class="btn" id="submit" data-i18n="b_submit">Підтвердити запис</button>
+            </div>
+            <p class="form__msg" id="formMsg" role="status"></p>
+          </form>
+
+          <aside class="ticket" aria-label="Підсумок" data-i18n-aria="a_sum">
+            <p class="ticket__t mono" data-i18n="sum_t">ЗАМОВЛЕННЯ-НАРЯД</p>
+            <dl class="ticket__car">
+              <dt data-i18n="sum_car">Авто</dt><dd id="sumCar">—</dd>
+              <dt data-i18n="sum_when">Коли</dt><dd id="sumWhen">—</dd>
+            </dl>
+            <ul class="ticket__list" id="sumList"></ul>
+            <div class="ticket__total">
+              <div><span data-i18n="sum_time">Орієнтовно</span><b class="mono" id="sumDur">0 хв</b></div>
+              <div><span data-i18n="sum_total">Вартість робіт</span><b class="mono" id="sumTotal">0 грн</b></div>
+            </div>
+            <p class="ticket__note" data-i18n="sum_note">Остаточну ціну погоджуємо після огляду — без вашого «так» нічого не міняємо.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why wrap" id="why">
+      <div class="why__photos reveal">
+        <img class="why__a" src="img/lift.webp" alt="" loading="lazy">
+        <img class="why__b" src="img/mechanic.webp" alt="" loading="lazy">
+        <div class="why__badge"><b class="mono">12</b><span data-i18n="why_badge">місяців гарантії на роботи й запчастини</span></div>
+      </div>
+      <div class="why__text">
+        <p class="eyebrow reveal" data-i18n="why_eyebrow">Чому ми</p>
+        <h2 class="reveal" data-i18n="why_title">Сервіс, якому не страшно залишити ключі</h2>
+        <div class="feats">
+          <article class="feat reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <h3 data-i18n="w1_t">Гарантія 12 місяців</h3><p data-i18n="w1_p">На роботи та встановлені нами запчастини. Письмово, у замовленні-наряді.</p>
+          </article>
+          <article class="feat reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4z"/><path d="M9 7V4h6v3"/><path d="M4 12h16"/></svg>
+            <h3 data-i18n="w2_t">Оригінал або якісні аналоги</h3><p data-i18n="w2_p">Показуємо коробку й чек. Ви обираєте: оригінал, OEM чи бюджетний аналог.</p>
+          </article>
+          <article class="feat reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+            <h3 data-i18n="w3_t">Ціна до початку робіт</h3><p data-i18n="w3_p">Кошторис надсилаємо в Telegram. Додаткові роботи — лише після вашого підтвердження.</p>
+          </article>
+          <article class="feat reveal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h12v10H3z"/><path d="M15 10l6-3v10l-6-3"/></svg>
+            <h3 data-i18n="w4_t">Ремонт на ваших очах</h3><p data-i18n="w4_p">Зона очікування з вікном у цех і кавою. Або фото й відео зі стапеля прямо в месенджер.</p>
+          </article>
+        </div>
+        <div class="tg reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l8-6"/></svg>
+          <p data-i18n="tg_p"><b>Бот у Telegram нагадає про ТО.</b> Знає пробіг і дату останнього візиту, підкаже, коли міняти оливу й шини, і збереже історію обслуговування авто.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="how">
+      <div class="wrap">
+        <div class="head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="how_eyebrow">Як це працює</p>
+            <h2 data-i18n="how_title">Від заявки до ключів — 4 кроки</h2>
+          </div>
+        </div>
+        <ol class="how__list">
+          <li class="reveal"><span class="mono">01</span><h3 data-i18n="h1_t">Запис онлайн</h3><p data-i18n="h1_p">Обираєте послуги й вільний час. Підтвердження приходить за кілька хвилин.</p></li>
+          <li class="reveal"><span class="mono">02</span><h3 data-i18n="h2_t">Діагностика</h3><p data-i18n="h2_p">Майстер оглядає авто разом з вами й показує, що справді потребує уваги.</p></li>
+          <li class="reveal"><span class="mono">03</span><h3 data-i18n="h3_t">Кошторис і згода</h3><p data-i18n="h3_p">Отримуєте точну ціну в Telegram. Працюємо лише після вашого «так».</p></li>
+          <li class="reveal"><span class="mono">04</span><h3 data-i18n="h4_t">Видача й гарантія</h3><p data-i18n="h4_p">Повертаємо старі деталі, видаємо замовлення-наряд і гарантію 12 місяців.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews wrap">
+      <div class="head reveal">
+        <div>
+          <p class="eyebrow" data-i18n="rev_eyebrow">Відгуки</p>
+          <h2 data-i18n="rev_title">Що кажуть водії</h2>
+        </div>
+        <p class="head__note" data-i18n="rev_note">Приклади відгуків для демонстрації дизайну.</p>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev1">«Записався ввечері на сайті, зранку вже був на підйомнику. Показали зношені сайлентблоки наживо, ціна збіглася з кошторисом до гривні.»</p><cite><b data-i18n="n1">Олег</b> · Skoda Octavia A7</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev2">«Горів Check Engine, в іншому сервісі радили міняти каталізатор. Тут знайшли датчик кисню — 1 800 грн замість 20 тисяч.»</p><cite><b data-i18n="n2">Ірина</b> · Toyota RAV4</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev3">«Подобається, що бот сам нагадує про заміну оливи. Вже третій рік обслуговую тут обидві машини.»</p><cite><b data-i18n="n3">Андрій</b> · Hyundai Tucson</cite></blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__in">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="faq_eyebrow">Питання</p>
+          <h2 data-i18n="faq_title">Часті питання</h2>
+          <p class="head__note" data-i18n="faq_note">Не знайшли відповіді? Напишіть коментар у формі запису — майстер передзвонить.</p>
+        </div>
+        <div class="acc reveal" id="faqList">
+          <details><summary data-i18n="q1">Скільки триває діагностика і чи можна почекати?</summary><p data-i18n="a1">Комп'ютерна діагностика — 30–40 хвилин, ходова — близько 30. Можна чекати в зоні відпочинку з Wi-Fi та кавою і дивитися на роботу через вікно в цех.</p></details>
+          <details><summary data-i18n="q2">Можна приїхати зі своїми запчастинами?</summary><p data-i18n="a2">Так. Встановимо ваші деталі за тим самим прайсом робіт. Гарантія в такому разі поширюється на роботу, а на деталі — від продавця.</p></details>
+          <details><summary data-i18n="q3">Чи зміниться ціна після огляду?</summary><p data-i18n="a3">На сайті вказані ціни «від» за роботу. Після огляду ви отримуєте точний кошторис, і ми нічого не робимо без вашого підтвердження.</p></details>
+          <details><summary data-i18n="q4">Які способи оплати?</summary><p data-i18n="a4">Готівка, картка, Apple Pay / Google Pay або безготівковий рахунок для компаній з ПДВ.</p></details>
+          <details><summary data-i18n="q5">Чи обслуговуєте гібриди та електромобілі?</summary><p data-i18n="a5">Так: ходова, гальма, кондиціонер і шини — для всіх. Високовольтні системи обслуговує майстер із допуском, тому вкажіть тип двигуна під час запису.</p></details>
+          <details><summary data-i18n="q6">Як працює нагадування про ТО в Telegram?</summary><p data-i18n="a6">Після візиту бот запам'ятовує пробіг і дату. Коли настане час заміни оливи чи сезонного шиномонтажу, він надішле повідомлення з кнопкою запису.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="contacts wrap" id="contacts">
+      <div class="contacts__info reveal">
+        <p class="eyebrow" data-i18n="c_eyebrow">Контакти</p>
+        <h2 data-i18n="c_title">Приїжджайте — бокс уже чекає</h2>
+        <dl class="contacts__list">
+          <dt data-i18n="c_addr_t">Адреса</dt><dd data-i18n="c_addr">вул. Моторна, 7 (демо-адреса)</dd>
+          <dt data-i18n="c_hours_t">Графік</dt><dd data-i18n="c_hours">Пн–Пт 8:00–19:00 · Сб 9:00–16:00 · Нд вихідний</dd>
+          <dt data-i18n="c_phone_t">Телефон</dt><dd class="mono">+380 00 000 00 00 <small data-i18n="c_demo">(демо)</small></dd>
+        </dl>
+        <a href="#book" class="btn" data-i18n="c_book">Записатися онлайн</a>
+      </div>
+      <div class="contacts__media reveal">
+        <img src="img/building.webp" alt="" loading="lazy">
+        <div class="map" aria-label="Карта (демо)" data-i18n-aria="c_map">
+          <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path class="map__road" d="M-10 150 L180 120 L410 140"/><path class="map__road" d="M120 -10 L180 120 L210 230"/>
+            <path class="map__road map__road--s" d="M-10 60 L410 40"/><path class="map__road map__road--s" d="M300 -10 L320 230"/>
+            <g class="map__pin" transform="translate(180 120)"><circle r="22" class="map__pulse"/><circle r="9"/></g>
+          </svg>
+          <span class="map__label mono" data-i18n="c_map">Мапа · демо</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="yr"></span> <span data-i18n="brand">Мотор Сервіс</span></span>
+      <span class="foot__demo"><span data-i18n="demo">Демо-проєкт. Сайт розроблено</span> <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#book" class="fab btn" id="fab" data-i18n="fab">Записатися</a>
+  <script src="app.js" defer></script>
+</body>
+</html>
