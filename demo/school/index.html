@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speak Up — онлайн-школа англійської для дорослих</title>
+  <meta name="description" content="Speak Up: англійська для дорослих онлайн. Тест рівня за 2 хвилини, безкоштовний пробний урок, курси General, Business та IT English, розмовний клуб.">
+  <meta property="og:title" content="Speak Up — онлайн-школа англійської для дорослих">
+  <meta property="og:description" content="Заговоріть англійською за 4 місяці. Безкоштовний пробний урок і тест рівня онлайн.">
+  <meta property="og:image" content="img/hero.webp">
+  <meta name="theme-color" content="#1D1A4F">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%231D1A4F'/><path d='M14 18h36a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H30l-10 8v-8h-6a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4z' fill='%23C8F55A'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-bar"><span class="demo-bar__tag" data-i18n="demo_tag">Демо-проєкт</span> <span data-i18n="demo_bar">Вигадана школа для портфоліо: ціни, викладачі й відгуки — приклад.</span></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Speak Up">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><path d="M14 18h36a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H30l-10 8v-8h-6a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4z"/></svg>
+        <span>Speak<b>Up</b></span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#test" data-i18n="nav_test">Тест рівня</a>
+        <a href="#courses" data-i18n="nav_courses">Курси</a>
+        <a href="#teachers" data-i18n="nav_teachers">Викладачі</a>
+        <a href="#pricing" data-i18n="nav_pricing">Ціни</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </nav>
+      <div class="nav__right">
+        <button class="lang" id="lang" type="button" aria-label="Мова / Language">EN</button>
+        <a href="#trial" class="btn btn--small" data-i18n="nav_trial">Пробний урок</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" data-i18n-aria="aria_menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill"><span class="pill__dot"></span><span data-i18n="hero_pill">Набір у нові групи — листопад 2026</span></p>
+          <h1 data-i18n="hero_title">Заговоріть англійською <span class="hl">без страху</span> за 4 місяці</h1>
+          <p class="hero__sub" data-i18n="hero_sub">Онлайн-уроки для дорослих з викладачем, який підлаштовується під ваш графік, роботу та цілі. 80% часу на уроці говорите ви.</p>
+          <div class="hero__cta">
+            <a href="#trial" class="btn btn--lime" data-i18n="hero_trial">Безкоштовний пробний урок</a>
+            <a href="#test" class="btn btn--ghost" data-i18n="hero_test">Пройти тест рівня</a>
+          </div>
+          <ul class="hero__facts">
+            <li><b>45</b><span data-i18n="fact_min">хвилин — один урок</span></li>
+            <li><b>A1→B2</b><span data-i18n="fact_levels">усі рівні</span></li>
+            <li><b>4.9★</b><span data-i18n="fact_rating">оцінка учнів</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__photo"><img src="img/hero.webp" alt="" fetchpriority="high"></div>
+          <div class="chip chip--a"><span class="chip__ico">🎧</span><div><b data-i18n="chip1_t">Урок почнеться</b><small data-i18n="chip1_s">через 10 хв · Zoom</small></div></div>
+          <div class="chip chip--b"><span class="lvl">B1</span><span class="chip__arrow">→</span><span class="lvl lvl--lime">B2</span></div>
+          <div class="chip chip--c"><b>+120</b><small data-i18n="chip3_s">нових слів за місяць</small></div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true"><div class="marquee__track">
+        <span>Small talk</span><span>Job interview</span><span>Daily stand-up</span><span>Travel</span><span>Presentations</span><span>Emails</span><span data-i18n="mq_netflix">Netflix без субтитрів</span><span>Relocation</span>
+        <span>Small talk</span><span>Job interview</span><span>Daily stand-up</span><span>Travel</span><span>Presentations</span><span>Emails</span><span data-i18n="mq_netflix">Netflix без субтитрів</span><span>Relocation</span>
+      </div></div>
+    </section>
+
+    <!-- LEVEL TEST -->
+    <section class="test wrap" id="test">
+      <div class="test__intro reveal">
+        <p class="eyebrow" data-i18n="test_eyebrow">Тест рівня · 2 хвилини</p>
+        <h2 data-i18n="test_title">Дізнайтеся свій рівень прямо зараз</h2>
+        <p data-i18n="test_p">6 коротких питань від простого до складного. В кінці — ваш орієнтовний рівень і курс, з якого варто почати. На пробному уроці викладач уточнить результат усно.</p>
+        <ul class="test__levels">
+          <li><b>A1</b><span data-i18n="lvl_a1">Початковий</span></li>
+          <li><b>A2</b><span data-i18n="lvl_a2">Елементарний</span></li>
+          <li><b>B1</b><span data-i18n="lvl_b1">Середній</span></li>
+          <li><b>B2</b><span data-i18n="lvl_b2">Вище середнього</span></li>
+        </ul>
+      </div>
+      <div class="quiz reveal" id="quiz" aria-live="polite">
+        <div class="quiz__head">
+          <span class="quiz__count" id="qCount">1 / 6</span>
+          <div class="quiz__bar"><i id="qBar"></i></div>
+        </div>
+        <div id="qBody"></div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="courses" id="courses">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow eyebrow--lime" data-i18n="courses_eyebrow">Курси</p>
+          <h2 data-i18n="courses_title">Програма під вашу ціль</h2>
+        </div>
+        <div class="courses__grid">
+          <article class="course reveal" data-course="general">
+            <div class="course__ico" aria-hidden="true">💬</div>
+            <h3>General English</h3>
+            <p data-i18n="c_gen_p">Граматика, лексика й живе спілкування для подорожей, переїзду та повсякдення.</p>
+            <ul class="tags"><li>A1–B2</li><li data-i18n="tag_ind">1:1 або група</li></ul>
+          </article>
+          <article class="course reveal" data-course="business">
+            <div class="course__ico" aria-hidden="true">💼</div>
+            <h3>Business English</h3>
+            <p data-i18n="c_bus_p">Листи, дзвінки, переговори та презентації. Кейси з вашої реальної роботи.</p>
+            <ul class="tags"><li>B1+</li><li data-i18n="tag_1on1">1:1</li></ul>
+          </article>
+          <article class="course reveal" data-course="it">
+            <div class="course__ico" aria-hidden="true">💻</div>
+            <h3>IT English</h3>
+            <p data-i18n="c_it_p">Стендапи, code review, співбесіди в міжнародні компанії та технічна лексика.</p>
+            <ul class="tags"><li>A2+</li><li data-i18n="tag_interview">мок-співбесіди</li></ul>
+          </article>
+          <article class="course reveal" data-course="club">
+            <div class="course__ico" aria-hidden="true">🎙️</div>
+            <h3>Speaking Club</h3>
+            <p data-i18n="c_club_p">Щотижневі розмовні зустрічі до 8 людей на теми від кіно до кар'єри.</p>
+            <ul class="tags"><li>A2+</li><li data-i18n="tag_weekly">щосереди</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="how wrap" id="how">
+      <div class="how__media reveal">
+        <img class="how__main" src="img/lesson.webp" alt="" loading="lazy">
+        <img class="how__small" src="img/writing.webp" alt="" loading="lazy">
+      </div>
+      <div class="how__text">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="how_eyebrow">Як проходить навчання</p>
+          <h2 data-i18n="how_title">Від першого уроку до вільної розмови</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><b>01</b><div><h3 data-i18n="s1_t">Пробний урок</h3><p data-i18n="s1_p">30 хвилин з методистом: визначаємо рівень, ціль і темп.</p></div></li>
+          <li class="reveal"><b>02</b><div><h3 data-i18n="s2_t">Особистий план</h3><p data-i18n="s2_p">Підбираємо викладача й програму під вашу роботу та графік.</p></div></li>
+          <li class="reveal"><b>03</b><div><h3 data-i18n="s3_t">Уроки онлайн</h3><p data-i18n="s3_p">45 хвилин у Zoom з інтерактивною дошкою. Записи уроків зберігаються.</p></div></li>
+          <li class="reveal"><b>04</b><div><h3 data-i18n="s4_t">Домашка за 15 хвилин</h3><p data-i18n="s4_p">Короткі вправи в застосунку та голосові в Telegram-чаті з викладачем.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TEACHERS -->
+    <section class="teachers" id="teachers">
+      <div class="wrap">
+        <div class="head head--row reveal">
+          <div>
+            <p class="eyebrow" data-i18n="t_eyebrow">Викладачі</p>
+            <h2 data-i18n="t_title">Ті, з ким хочеться говорити</h2>
+          </div>
+          <p class="head__note" data-i18n="t_note">Відбираємо 1 з 15 кандидатів. Демо-профілі, фото згенеровані.</p>
+        </div>
+        <div class="teachers__grid">
+          <article class="teacher reveal">
+            <div class="teacher__ph"><img src="img/teacher-1.webp" alt="" loading="lazy"><span class="teacher__badge">CELTA</span></div>
+            <h3 data-i18n="t1_n">Ірина</h3>
+            <p class="teacher__role" data-i18n="t1_r">Business English · 9 років досвіду</p>
+            <p data-i18n="t1_p">Готує до переговорів і презентацій, 4 роки працювала в міжнародній компанії.</p>
+          </article>
+          <article class="teacher reveal">
+            <div class="teacher__ph"><img src="img/teacher-2.webp" alt="" loading="lazy"><span class="teacher__badge">IELTS 8.0</span></div>
+            <h3 data-i18n="t2_n">Дмитро</h3>
+            <p class="teacher__role" data-i18n="t2_r">IT English · 6 років досвіду</p>
+            <p data-i18n="t2_p">Колишній QA-інженер. Знає, що питають на співбесідах і як звучить реальний стендап.</p>
+          </article>
+          <article class="teacher reveal">
+            <div class="teacher__ph"><img src="img/teacher-3.webp" alt="" loading="lazy"><span class="teacher__badge">TKT</span></div>
+            <h3 data-i18n="t3_n">Софія</h3>
+            <p class="teacher__role" data-i18n="t3_r">General · Speaking Club · 4 роки</p>
+            <p data-i18n="t3_p">Веде розмовний клуб і допомагає подолати мовний бар'єр з першого уроку.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing wrap" id="pricing">
+      <div class="head head--center reveal">
+        <p class="eyebrow" data-i18n="p_eyebrow">Ціни</p>
+        <h2 data-i18n="p_title">Прозорі тарифи без прихованих платежів</h2>
+        <div class="toggle" role="radiogroup" aria-label="Період оплати" data-i18n-aria="aria_period" id="billing">
+          <button type="button" role="radio" class="toggle__opt is-active" aria-checked="true" data-period="month" data-i18n="p_month">Щомісяця</button>
+          <button type="button" role="radio" class="toggle__opt" aria-checked="false" data-period="pack" data-i18n="p_pack">Пакет 3 місяці</button>
+          <span class="toggle__save" data-i18n="p_save">до −15%</span>
+        </div>
+      </div>
+      <div class="plans" id="plans"></div>
+      <p class="pricing__note" data-i18n="p_note">Перший урок — безкоштовно. Якщо урок не сподобався, повернемо гроші за нього без питань.</p>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results">
+      <div class="wrap results__in">
+        <div class="results__text reveal">
+          <p class="eyebrow eyebrow--lime" data-i18n="r_eyebrow">Результати</p>
+          <h2 data-i18n="r_title">Прогрес, який видно в цифрах</h2>
+          <p data-i18n="r_p">Кожні 8 тижнів — контрольний тест і звіт: що вже вмієте, над чим працюємо далі.</p>
+          <div class="stats">
+            <div class="stat"><b data-count="2400" data-suffix="+">0</b><span data-i18n="st1">учнів навчалися з нами</span></div>
+            <div class="stat"><b data-count="87" data-suffix="%">0</b><span data-i18n="st2">підвищують рівень за 4 місяці</span></div>
+            <div class="stat"><b data-count="38">0</b><span data-i18n="st3">викладачів у команді</span></div>
+            <div class="stat"><b data-count="94" data-suffix="%">0</b><span data-i18n="st4">продовжують після першого місяця</span></div>
+          </div>
+          <p class="results__demo" data-i18n="r_demo">* демо-дані для прикладу</p>
+        </div>
+        <div class="results__media reveal">
+          <img src="img/success.webp" alt="" loading="lazy">
+          <img class="results__cert" src="img/certificate.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews wrap">
+      <div class="head reveal">
+        <p class="eyebrow" data-i18n="rev_eyebrow">Відгуки</p>
+        <h2 data-i18n="rev_title">Що кажуть учні</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="review__stars">★★★★★</div><p data-i18n="rev1">«Роками “вчила” англійську, а говорити боялася. Тут уже на третьому уроці провела 10-хвилинний small talk і навіть не помітила.»</p><cite><span class="ava" data-i18n="ava1">О</span><span><b data-i18n="rev1_n">Оксана</b><small data-i18n="rev1_s">A2 → B1 · General · демо-відгук</small></span></cite></blockquote>
+        <blockquote class="review reveal"><div class="review__stars">★★★★★</div><p data-i18n="rev2">«Готувався до співбесіди в європейську компанію. Три мок-інтерв'ю з Дмитром — і оффер отримав з першої спроби.»</p><cite><span class="ava" data-i18n="ava2">А</span><span><b data-i18n="rev2_n">Артем</b><small data-i18n="rev2_s">B1 → B2 · IT English · демо-відгук</small></span></cite></blockquote>
+        <blockquote class="review reveal"><div class="review__stars">★★★★★</div><p data-i18n="rev3">«Зручно, що уроки о 7:30 ранку, до роботи. Домашка в застосунку займає 15 хвилин у метро.»</p><cite><span class="ava" data-i18n="ava3">Н</span><span><b data-i18n="rev3_n">Наталія</b><small data-i18n="rev3_s">B1 · Business · демо-відгук</small></span></cite></blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__in">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="faq_eyebrow">Питання</p>
+          <h2 data-i18n="faq_title">Часті питання</h2>
+          <img class="faq__img" src="img/desk.webp" alt="" loading="lazy">
+        </div>
+        <div class="faq__list reveal">
+          <details class="qa" open><summary data-i18n="q1">Я зовсім не знаю англійської. Мені підійде?</summary><div class="qa__a"><p data-i18n="a1">Так. Курс General починається з рівня A1: перші уроки викладач веде повільно і пояснює складне українською.</p></div></details>
+          <details class="qa"><summary data-i18n="q2">Що потрібно для уроків?</summary><div class="qa__a"><p data-i18n="a2">Ноутбук або планшет, навушники з мікрофоном і стабільний інтернет. Підручники не потрібні — усі матеріали на платформі.</p></div></details>
+          <details class="qa"><summary data-i18n="q3">Можна перенести або пропустити урок?</summary><div class="qa__a"><p data-i18n="a3">Урок можна безкоштовно перенести, якщо попередити за 8 годин. Невикористані уроки пакета переходять на наступний місяць.</p></div></details>
+          <details class="qa"><summary data-i18n="q4">Чи можна змінити викладача?</summary><div class="qa__a"><p data-i18n="a4">Звісно. Напишіть менеджеру — підберемо іншого викладача протягом доби без доплат.</p></div></details>
+          <details class="qa"><summary data-i18n="q5">Як оплатити? Чи є розстрочка?</summary><div class="qa__a"><p data-i18n="a5">Карткою онлайн, Apple Pay або Google Pay. Пакет на 3 місяці можна оплатити частинами від банку (у справжньому проєкті).</p></div></details>
+          <details class="qa"><summary data-i18n="q6">Чи видаєте сертифікат?</summary><div class="qa__a"><p data-i18n="a6">Так, після завершення рівня ви отримуєте іменний сертифікат школи з результатами підсумкового тесту.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIAL FORM -->
+    <section class="trial" id="trial">
+      <div class="wrap trial__in">
+        <div class="trial__text reveal">
+          <p class="eyebrow eyebrow--lime" data-i18n="tr_eyebrow">Пробний урок</p>
+          <h2 data-i18n="tr_title">Запишіться на безкоштовний пробний урок</h2>
+          <p data-i18n="tr_p">Заявка миттєво приходить менеджеру в Telegram — ми напишемо вам протягом 15 хвилин і підберемо зручний час.</p>
+          <ul class="perks">
+            <li data-i18n="perk1">30 хвилин з методистом</li>
+            <li data-i18n="perk2">Точне визначення рівня</li>
+            <li data-i18n="perk3">Персональний план навчання</li>
+          </ul>
+          <img class="trial__img" src="img/group.webp" alt="" loading="lazy">
+        </div>
+        <form class="form reveal" id="trialForm" novalidate>
+          <div class="form__badge" id="testBadge" hidden></div>
+          <label><span data-i18n="f_name">Ім'я</span><input name="name" required autocomplete="given-name" maxlength="60"></label>
+          <label><span data-i18n="f_contact">Телефон або Telegram</span><input name="contact" required autocomplete="tel" data-i18n-ph="f_contact_ph" placeholder="+380 __ ___ __ __ або @username" maxlength="40"></label>
+          <div class="form__row">
+            <label><span data-i18n="f_level">Рівень</span>
+              <select name="level" id="levelSel">
+                <option value="unknown" data-i18n="o_unknown">Не знаю</option>
+                <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2+</option>
+              </select></label>
+            <label><span data-i18n="f_course">Курс</span>
+              <select name="course" id="courseSel">
+                <option value="general">General English</option>
+                <option value="business">Business English</option>
+                <option value="it">IT English</option>
+                <option value="club">Speaking Club</option>
+              </select></label>
+          </div>
+          <fieldset class="times">
+            <legend data-i18n="f_time">Зручний час</legend>
+            <label><input type="radio" name="time" value="morning"><span data-i18n="tm_morning">Ранок 7–11</span></label>
+            <label><input type="radio" name="time" value="day"><span data-i18n="tm_day">День 11–17</span></label>
+            <label><input type="radio" name="time" value="evening" checked><span data-i18n="tm_evening">Вечір 17–22</span></label>
+            <label><input type="radio" name="time" value="weekend"><span data-i18n="tm_weekend">Вихідні</span></label>
+          </fieldset>
+          <label><span data-i18n="f_comment">Коментар</span><textarea name="comment" rows="2" maxlength="300" data-i18n-ph="f_comment_ph" placeholder="Ціль: співбесіда, переїзд, подорож…"></textarea></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--lime btn--wide" type="submit" data-i18n="f_submit">Записатися на пробний</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div>
+        <a href="#top" class="logo logo--foot" aria-label="Speak Up">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><path d="M14 18h36a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H30l-10 8v-8h-6a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4z"/></svg>
+          <span>Speak<b>Up</b></span>
+        </a>
+        <p data-i18n="foot_p">Онлайн-школа англійської для дорослих.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_nav">Навігація</h4>
+        <a href="#courses" data-i18n="nav_courses">Курси</a>
+        <a href="#pricing" data-i18n="nav_pricing">Ціни</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_contacts">Контакти</h4>
+        <span>+380 00 000 00 00</span>
+        <span>hello@example.com</span>
+        <span data-i18n="foot_demo_c">(демо-контакти)</span>
+      </div>
+    </div>
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Speak Up</span>
+      <span class="foot__demo"><span data-i18n="demo">Демо-проєкт. Сайт розроблено</span> <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <!-- DEMO CHECKOUT -->
+  <div class="modal" id="checkout" hidden>
+    <div class="modal__back" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+      <button class="modal__x" type="button" data-close aria-label="Закрити" data-i18n-aria="aria_close">×</button>
+      <div class="co" id="coMain">
+        <p class="co__warn"><span>⚠</span><span data-i18n="co_warn">Демо-оплата — гроші не списуються</span></p>
+        <h3 id="coTitle" data-i18n="co_title">Оформлення замовлення</h3>
+        <dl class="co__sum" id="coSum"></dl>
+        <div class="co__methods" role="radiogroup" aria-label="Спосіб оплати" data-i18n-aria="aria_method">
+          <button type="button" class="co__m is-active" data-m="card" data-i18n="co_card">Картка</button>
+          <button type="button" class="co__m" data-m="apple">Apple Pay</button>
+          <button type="button" class="co__m" data-m="google">Google Pay</button>
+        </div>
+        <div class="mockcard" aria-label="Демонстраційна картка" data-i18n-aria="aria_card">
+          <div class="mockcard__top"><span class="mockcard__chip"></span><span class="mockcard__demo">DEMO</span></div>
+          <div class="mockcard__num">4242 •••• •••• 4242</div>
+          <div class="mockcard__bot"><span>SPEAK UP DEMO</span><span>12/29</span></div>
+        </div>
+        <p class="co__hint" data-i18n="co_hint">Тут немає полів для справжньої картки. У реальному проєкті кнопка відкриє захищену сторінку LiqPay, WayForPay або Stripe.</p>
+        <button class="btn btn--lime btn--wide co__pay" type="button" id="coPay"><span data-i18n="co_pay">Оплатити (демо)</span> <span id="coPayAmt"></span></button>
+      </div>
+      <div class="co co--done" id="coDone" hidden>
+        <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+        <h3 data-i18n="co_ok_t">Оплата пройшла (демо)</h3>
+        <p><span data-i18n="co_ok_order">Замовлення</span> <b id="coOrder"></b></p>
+        <p class="co__hint" data-i18n="co_ok_p">Гроші не списано. На справжньому сайті учень отримав би чек на e-mail, а менеджер — сповіщення в Telegram.</p>
+        <button class="btn btn--wide" type="button" data-close data-i18n="co_ok_btn">Чудово</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
