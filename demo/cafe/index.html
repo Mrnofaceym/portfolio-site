@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зерно — кав'ярня та обсмажувальня</title>
+  <meta name="description" content="Кав'ярня «Зерно»: specialty-кава власного обсмаження, сніданки весь день, свіжа випічка. Забронюйте столик онлайн.">
+  <meta property="og:title" content="Зерно — кав'ярня та обсмажувальня">
+  <meta property="og:description" content="Specialty-кава власного обсмаження, сніданки весь день, свіжа випічка.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><ellipse cx='32' cy='32' rx='20' ry='28' fill='%232B1D14' transform='rotate(25 32 32)'/><path d='M24 12c10 12 6 28 16 40' stroke='%23C8894B' stroke-width='4' fill='none'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Зерно">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="18" ry="26" transform="rotate(25 32 32)"/><path d="M25 10c10 12 5 30 15 44"/></svg>
+        <span>Зерно</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#menu" data-i18n="nav_menu">Меню</a>
+        <a href="#about" data-i18n="nav_about">Про нас</a>
+        <a href="#gallery" data-i18n="nav_gallery">Атмосфера</a>
+        <a href="#contacts" data-i18n="nav_contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <button class="lang" id="lang" type="button" aria-label="Мова / Language">EN</button>
+        <a href="#book" class="btn btn--small" data-i18n="nav_book">Забронювати</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero__img" src="img/hero.webp" alt="" fetchpriority="high">
+      <div class="hero__shade"></div>
+      <div class="wrap hero__in">
+        <p class="eyebrow" data-i18n="hero_eyebrow">Кав'ярня та обсмажувальня · з 2019</p>
+        <h1 data-i18n="hero_title">Кава, заради якої<br><em>варто прокинутися</em></h1>
+        <p class="hero__sub" data-i18n="hero_sub">Обсмажуємо зерно щотижня, печемо щоранку і подаємо сніданки до закриття.</p>
+        <div class="hero__cta">
+          <a href="#book" class="btn" data-i18n="hero_book">Забронювати столик</a>
+          <a href="#menu" class="btn btn--ghost" data-i18n="hero_menu">Подивитися меню</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>7:30</b><span data-i18n="fact_open">відкриваємось щодня</span></li>
+          <li><b>12</b><span data-i18n="fact_origins">сортів зерна на рік</span></li>
+          <li><b>4.9 ★</b><span data-i18n="fact_rating">рейтинг гостей</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about wrap" id="about">
+      <div class="about__text reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="about_eyebrow">Про нас</p>
+        <h2 data-i18n="about_title">Від зеленого зерна до вашої чашки</h2>
+        <p data-i18n="about_p1">Ми самі обираємо фермерські лоти, обсмажуємо їх невеликими партіями і налаштовуємо помел щоранку. Тому смак кожної чашки стабільний, а еспресо не гірчить.</p>
+        <p data-i18n="about_p2">Окрім кави — сніданки весь день і випічка з нашої печі. Приходьте працювати, зустрічатися з друзями або просто посидіти з книжкою біля вікна.</p>
+      </div>
+      <div class="about__cards">
+        <article class="card reveal"><img src="img/roast.webp" alt="" loading="lazy"><h3 data-i18n="card1_t">Власне обсмаження</h3><p data-i18n="card1_p">Свіже зерно щотижня, можна купити додому.</p></article>
+        <article class="card reveal"><img src="img/latte-art.webp" alt="" loading="lazy"><h3 data-i18n="card2_t">Бариста-чемпіони</h3><p data-i18n="card2_p">Двоє наших бариста — фіналісти національного чемпіонату.</p></article>
+        <article class="card reveal"><img src="img/bakery.webp" alt="" loading="lazy"><h3 data-i18n="card3_t">Випічка о 7:00</h3><p data-i18n="card3_p">Круасани та булочки з корицею — щоранку з печі.</p></article>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <div class="menu__head reveal">
+          <div>
+            <p class="eyebrow eyebrow--dark" data-i18n="menu_eyebrow">Меню</p>
+            <h2 data-i18n="menu_title">Що в нас сьогодні</h2>
+          </div>
+          <p class="menu__note"><span class="dot"></span><span id="menuSource" data-i18n="menu_source">Власник редагує це меню в Google Таблиці</span></p>
+        </div>
+        <div class="tabs" role="tablist" id="tabs">
+          <button role="tab" class="tab is-active" data-cat="coffee" data-i18n="tab_coffee">Кава</button>
+          <button role="tab" class="tab" data-cat="breakfast" data-i18n="tab_breakfast">Сніданки</button>
+          <button role="tab" class="tab" data-cat="dessert" data-i18n="tab_dessert">Випічка й десерти</button>
+          <button role="tab" class="tab" data-cat="cold" data-i18n="tab_cold">Холодні напої</button>
+        </div>
+        <div class="menu__grid">
+          <ul class="menu__list" id="menuList" aria-live="polite"></ul>
+          <figure class="menu__photo"><img id="menuPhoto" src="img/flat-white.webp" alt="" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery wrap" id="gallery">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="gal_eyebrow">Атмосфера</p>
+        <h2 data-i18n="gal_title">Місце, куди хочеться повертатися</h2>
+      </div>
+      <div class="gallery__grid">
+        <img class="g1 reveal" src="img/interior.webp" alt="" loading="lazy">
+        <img class="g2 reveal" src="img/terrace.webp" alt="" loading="lazy">
+        <img class="g3 reveal" src="img/pourover.webp" alt="" loading="lazy">
+        <img class="g4 reveal" src="img/iced.webp" alt="" loading="lazy">
+        <img class="g5 reveal" src="img/toast.webp" alt="" loading="lazy">
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="rev_eyebrow">Відгуки</p>
+          <h2 data-i18n="rev_title">Що кажуть гості</h2>
+        </div>
+        <div class="reviews__grid">
+          <blockquote class="review reveal"><p data-i18n="rev1">«Найкращий флет вайт у місті. Приходжу щоранку перед роботою — і бариста вже знають моє замовлення.»</p><cite>Олена · Google</cite></blockquote>
+          <blockquote class="review reveal"><p data-i18n="rev2">«Сирники як у бабусі, а чізкейк — окреме мистецтво. Затишно працювати з ноутбуком.»</p><cite>Андрій · Google</cite></blockquote>
+          <blockquote class="review reveal"><p data-i18n="rev3">«Забронювали столик через сайт за хвилину, на терасі ввечері просто казка.»</p><cite>Марта · Instagram</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="book wrap" id="book">
+      <div class="book__text reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="book_eyebrow">Бронювання</p>
+        <h2 data-i18n="book_title">Забронюйте столик</h2>
+        <p data-i18n="book_p">Заявка миттєво приходить адміністратору в Telegram — ми підтвердимо бронь дзвінком протягом 15 хвилин.</p>
+        <ul class="book__perks">
+          <li data-i18n="perk1">Тераса з травня по жовтень</li>
+          <li data-i18n="perk2">Столи для компаній до 10 осіб</li>
+          <li data-i18n="perk3">Розетки біля кожного столика</li>
+        </ul>
+      </div>
+      <form class="form reveal" id="bookForm" novalidate>
+        <label><span data-i18n="f_name">Ім'я</span><input name="name" required autocomplete="given-name" maxlength="60"></label>
+        <label><span data-i18n="f_phone">Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+        <div class="form__row">
+          <label><span data-i18n="f_date">Дата</span><input name="date" type="date" required></label>
+          <label><span data-i18n="f_time">Час</span><select name="time" required id="timeSel"></select></label>
+          <label><span data-i18n="f_guests">Гостей</span><select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7–10</option></select></label>
+        </div>
+        <label><span data-i18n="f_comment">Побажання</span><textarea name="comment" rows="2" maxlength="300" data-i18n-ph="f_comment_ph" placeholder="Тераса, дитячий стільчик, день народження…"></textarea></label>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--wide" type="submit" data-i18n="f_submit">Надіслати заявку</button>
+        <p class="form__msg" id="formMsg" role="status"></p>
+      </form>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="c_eyebrow">Контакти</p>
+          <h2 data-i18n="c_title">Заходьте на каву</h2>
+          <dl class="contacts__list">
+            <dt data-i18n="c_addr_t">Адреса</dt><dd data-i18n="c_addr">вул. Кавова, 12 (демо-адреса)</dd>
+            <dt data-i18n="c_hours_t">Години роботи</dt><dd data-i18n="c_hours">Пн–Пт 7:30–21:00 · Сб–Нд 8:30–22:00</dd>
+            <dt data-i18n="c_phone_t">Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+        </div>
+        <div class="contacts__card reveal">
+          <img src="img/cup.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Зерно</span>
+      <span class="foot__demo"><span data-i18n="demo">Демо-проєкт. Сайт розроблено</span> <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

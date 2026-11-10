@@ -1,0 +1,16 @@
+[
+  {"category": "coffee", "name": "Еспресо", "name_en": "Espresso", "desc": "Ефіопія Сідамо, власне обсмаження", "desc_en": "Ethiopia Sidamo, roasted in-house", "price": 55},
+  {"category": "coffee", "name": "Флет вайт", "name_en": "Flat white", "desc": "Подвійний ристрето, оксамитове молоко", "desc_en": "Double ristretto, velvety milk", "price": 85},
+  {"category": "coffee", "name": "Капучино", "name_en": "Cappuccino", "desc": "Класика на бразильському бленді", "desc_en": "A classic on our Brazil blend", "price": 75},
+  {"category": "coffee", "name": "Лате на вівсяному", "name_en": "Oat latte", "desc": "М'який смак, без лактози", "desc_en": "Soft and lactose-free", "price": 90},
+  {"category": "coffee", "name": "Пуровер V60", "name_en": "V60 pour-over", "desc": "Зерно дня — запитайте бариста", "desc_en": "Bean of the day — ask the barista", "price": 110},
+  {"category": "breakfast", "name": "Тост з авокадо", "name_en": "Avocado toast", "desc": "Житній хліб, яйце пашот, мікрозелень", "desc_en": "Rye bread, poached egg, microgreens", "price": 185},
+  {"category": "breakfast", "name": "Сирники", "name_en": "Syrnyky", "desc": "Зі сметаною та ягідним соусом", "desc_en": "With sour cream and berry sauce", "price": 165},
+  {"category": "breakfast", "name": "Гранола з йогуртом", "name_en": "Granola bowl", "desc": "Домашня гранола, грецький йогурт, мед", "desc_en": "House granola, Greek yogurt, honey", "price": 145},
+  {"category": "dessert", "name": "Чізкейк Сан-Себастьян", "name_en": "Basque cheesecake", "desc": "Карамелізована скоринка, ягоди", "desc_en": "Caramelised crust, berries", "price": 135},
+  {"category": "dessert", "name": "Булочка з корицею", "name_en": "Cinnamon roll", "desc": "Випікаємо щоранку о 7:00", "desc_en": "Baked fresh every morning at 7", "price": 75},
+  {"category": "dessert", "name": "Круасан", "name_en": "Croissant", "desc": "Масляний, французьке тісто", "desc_en": "All-butter French pastry", "price": 70},
+  {"category": "cold", "name": "Айс лате", "name_en": "Iced latte", "desc": "Еспресо, молоко, лід", "desc_en": "Espresso, milk, ice", "price": 95},
+  {"category": "cold", "name": "Еспресо-тонік", "name_en": "Espresso tonic", "desc": "Тонік, апельсин, подвійний шот", "desc_en": "Tonic, orange, double shot", "price": 105},
+  {"category": "cold", "name": "Колд брю", "name_en": "Cold brew", "desc": "Настоюємо 18 годин", "desc_en": "Steeped for 18 hours", "price": 90}
+]
