@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Майстер Дім — ремонт квартир під ключ</title>
+  <meta name="description" content="«Майстер Дім»: косметичний, капітальний і дизайнерський ремонт квартир. Онлайн-калькулятор вартості, фіксований кошторис і гарантія 3 роки.">
+  <meta property="og:title" content="Майстер Дім — ремонт квартир під ключ">
+  <meta property="og:description" content="Порахуйте вартість ремонту онлайн за хвилину. Фіксований кошторис, щотижневий фотозвіт, гарантія 3 роки.">
+  <meta property="og:image" content="img/hero.webp">
+  <meta name="theme-color" content="#1E1C1A">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231E1C1A'/><path d='M14 34 32 18l18 16v14H14z' fill='none' stroke='%23F0A23B' stroke-width='5' stroke-linejoin='round'/><rect x='27' y='36' width='10' height='12' fill='%23F0A23B'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-bar"><span data-i18n="demo_bar">Демо-проєкт: компанія, ціни та контакти вигадані для портфоліо</span></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Майстер Дім" data-i18n-al="logo_al">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 34 32 16l20 18v16H12z"/><rect x="27" y="37" width="10" height="13"/></svg>
+        <span data-i18n="logo">Майстер<b>Дім</b></span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#services" data-i18n="nav_services">Послуги</a>
+        <a href="#calc" data-i18n="nav_calc">Калькулятор</a>
+        <a href="#works" data-i18n="nav_works">Роботи</a>
+        <a href="#prices" data-i18n="nav_prices">Ціни</a>
+        <a href="#faq" data-i18n="nav_faq">Питання</a>
+      </nav>
+      <div class="nav__right">
+        <button class="lang" id="lang" type="button" aria-label="Мова / Language">EN</button>
+        <a href="#lead" class="btn btn--small" data-i18n="nav_cta">Безкоштовний замір</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" data-i18n-al="menu_al" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Ремонт квартир і будинків · Київ та область</p>
+          <h1 data-i18n="hero_title">Ремонт без сюрпризів: <span class="hl">ціна фіксується</span> в договорі</h1>
+          <p class="hero__sub" data-i18n="hero_sub">Від косметичного оновлення до дизайнерського ремонту під ключ. Один прораб на об'єкті, щотижневий фотозвіт і гарантія 3 роки на всі роботи.</p>
+          <div class="hero__cta">
+            <a href="#calc" class="btn" data-i18n="hero_calc">Розрахувати вартість</a>
+            <a href="#works" class="btn btn--ghost" data-i18n="hero_works">Наші роботи</a>
+          </div>
+          <ul class="hero__facts">
+            <li><b>3 <small data-i18n="fact_years_u">роки</small></b><span data-i18n="fact_warranty">гарантії на роботи</span></li>
+            <li><b>0 ₴</b><span data-i18n="fact_measure">виїзд і замір</span></li>
+            <li><b>±0%</b><span data-i18n="fact_fixed">кошторис не росте</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="" fetchpriority="high" width="1800" height="1013">
+          <div class="hero__chip hero__chip--a">
+            <span class="hero__chip-ic">✓</span>
+            <span><b data-i18n="chip_a_t">Кухня 14 м²</b><small data-i18n="chip_a_s">здано на 3 дні раніше</small></span>
+          </div>
+          <a href="#calc" class="hero__chip hero__chip--b">
+            <small data-i18n="chip_b_s">Капітальний ремонт від</small>
+            <b>6 500 ₴/м²</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services wrap" id="services">
+      <div class="head reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="srv_eyebrow">Послуги</p>
+        <h2 data-i18n="srv_title">Що ми робимо</h2>
+        <p class="head__p" data-i18n="srv_p">Беремо об'єкт повністю — від демонтажу до прибирання — або виконуємо окремі роботи.</p>
+      </div>
+      <div class="srv__grid">
+        <article class="srv reveal"><img src="img/painter.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">01</span><h3 data-i18n="srv1_t">Косметичний ремонт</h3><p data-i18n="srv1_p">Шпаклювання, фарбування, шпалери, нова підлога. Оновлення без пилу за 2–4 тижні.</p><span class="srv__price"><span data-i18n="from">від</span> 3 200 ₴/м²</span></div></article>
+        <article class="srv reveal"><img src="img/team.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">02</span><h3 data-i18n="srv2_t">Капітальний ремонт</h3><p data-i18n="srv2_p">Вирівнювання стін, стяжка, нова проводка й сантехніка, перепланування.</p><span class="srv__price"><span data-i18n="from">від</span> 6 500 ₴/м²</span></div></article>
+        <article class="srv reveal"><img src="img/bedroom.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">03</span><h3 data-i18n="srv3_t">Дизайнерський ремонт</h3><p data-i18n="srv3_p">Реалізація дизайн-проєкту з авторським наглядом і складними оздобленнями.</p><span class="srv__price"><span data-i18n="from">від</span> 11 000 ₴/м²</span></div></article>
+        <article class="srv reveal"><img src="img/bathroom.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">04</span><h3 data-i18n="srv4_t">Ванна під ключ</h3><p data-i18n="srv4_p">Гідроізоляція, плитка й керамограніт, інсталяції, душові без піддону.</p><span class="srv__price"><span data-i18n="from">від</span> 75 000 ₴</span></div></article>
+        <article class="srv reveal"><img src="img/kitchen.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">05</span><h3 data-i18n="srv5_t">Кухня</h3><p data-i18n="srv5_p">Розведення води й електрики під техніку, фартух, монтаж меблів.</p><span class="srv__price"><span data-i18n="from">від</span> 60 000 ₴</span></div></article>
+        <article class="srv reveal"><img src="img/electric.webp" alt="" loading="lazy"><div class="srv__body"><span class="srv__n">06</span><h3 data-i18n="srv6_t">Електрика</h3><p data-i18n="srv6_p">Заміна проводки, новий щиток, УЗО, підготовка під генератор чи інвертор.</p><span class="srv__price"><span data-i18n="from">від</span> 250 ₴/<span data-i18n="pt">точка</span></span></div></article>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="calc" id="calc">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" data-i18n="calc_eyebrow">Калькулятор</p>
+          <h2 data-i18n="calc_title">Скільки коштуватиме ваш ремонт</h2>
+          <p class="head__p" data-i18n="calc_p">Попередній розрахунок за цінами 2026 року. Точний кошторис складемо після безкоштовного заміру.</p>
+        </div>
+        <div class="calc__grid">
+          <form class="calc__form reveal" id="calcForm" onsubmit="return false">
+            <fieldset class="field">
+              <legend><span data-i18n="c_area">Площа</span> <output id="areaOut" class="area-out">60 м²</output></legend>
+              <div class="area">
+                <input type="range" id="areaRange" min="4" max="200" step="1" value="60" aria-label="Площа, м²" data-i18n-al="area_al">
+                <label class="area__num"><input type="number" id="areaNum" min="4" max="500" step="1" value="60" inputmode="numeric" aria-label="Площа, м²" data-i18n-al="area_al"><span>м²</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend data-i18n="c_type">Тип ремонту</legend>
+              <div class="seg" id="typeSeg">
+                <label><input type="radio" name="type" value="cosmetic"><span><b data-i18n="t_cosmetic">Косметичний</b><small>3 200 ₴/м²</small></span></label>
+                <label><input type="radio" name="type" value="capital" checked><span><b data-i18n="t_capital">Капітальний</b><small>6 500 ₴/м²</small></span></label>
+                <label><input type="radio" name="type" value="design"><span><b data-i18n="t_design">Дизайнерський</b><small>11 000 ₴/м²</small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend data-i18n="c_room">Приміщення</legend>
+              <div class="pills" id="roomSeg">
+                <label><input type="radio" name="room" value="flat" checked><span data-i18n="r_flat">Квартира / кімнати</span></label>
+                <label><input type="radio" name="room" value="kitchen"><span data-i18n="r_kitchen">Кухня</span></label>
+                <label><input type="radio" name="room" value="bath"><span data-i18n="r_bath">Ванна / санвузол</span></label>
+                <label><input type="radio" name="room" value="house"><span data-i18n="r_house">Приватний будинок</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend data-i18n="c_opts">Додатково</legend>
+              <div class="opts">
+                <label class="opt"><input type="checkbox" name="opt" value="demo" checked><span class="opt__box"></span><span class="opt__t"><b data-i18n="o_demo">Демонтаж і вивіз сміття</b><small>450 ₴/м²</small></span></label>
+                <label class="opt"><input type="checkbox" name="opt" value="elec" checked><span class="opt__box"></span><span class="opt__t"><b data-i18n="o_elec">Нова електрика</b><small>950 ₴/м²</small></span></label>
+                <label class="opt"><input type="checkbox" name="opt" value="plumb"><span class="opt__box"></span><span class="opt__t"><b data-i18n="o_plumb">Сантехніка</b><small>700 ₴/м²</small></span></label>
+                <label class="opt"><input type="checkbox" name="opt" value="mat"><span class="opt__box"></span><span class="opt__t"><b data-i18n="o_mat">Чорнові матеріали з нами</b><small data-i18n="o_mat_s">закупівля зі знижкою 10%</small></span></label>
+                <label class="opt"><input type="checkbox" name="opt" value="proj"><span class="opt__box"></span><span class="opt__t"><b data-i18n="o_proj">Дизайн-проєкт</b><small data-i18n="o_proj_s">900 ₴/м², мін. 25 000 ₴</small></span></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <aside class="calc__res reveal" aria-live="polite">
+            <p class="calc__label" data-i18n="res_label">Орієнтовна вартість</p>
+            <p class="calc__total"><span id="total">0</span> <span class="cur">₴</span></p>
+            <p class="calc__per" id="perM">≈ 0 ₴/м²</p>
+            <ul class="calc__lines" id="lines"></ul>
+            <div class="calc__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span><small data-i18n="res_time">Термін виконання</small><b id="weeks">—</b></span>
+            </div>
+            <button type="button" class="btn btn--wide" id="toLead" data-i18n="res_cta">Отримати точний кошторис</button>
+            <p class="calc__note" data-i18n="res_note">Розрахунок попередній: ціни на роботи, без чистових матеріалів (плитка, ламінат, сантехніка, меблі).</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="ba wrap" id="before-after">
+      <div class="ba__text reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="ba_eyebrow">До і після</p>
+        <h2 data-i18n="ba_title">Та сама кімната через 9 тижнів</h2>
+        <p data-i18n="ba_p">Капітальний ремонт вітальні 28 м²: штукатурка по маяках, стяжка, нова проводка, тепла підлога і фарбування. Потягніть повзунок, щоб порівняти.</p>
+        <ul class="ba__list">
+          <li><b>28 м²</b><span data-i18n="ba_l1">площа</span></li>
+          <li><b>9</b><span data-i18n="ba_l2">тижнів</span></li>
+          <li><b>0 ₴</b><span data-i18n="ba_l3">доплат понад кошторис</span></li>
+        </ul>
+      </div>
+      <div class="ba__wrap reveal">
+        <div class="ba__cmp" id="cmp" style="--pos:50%">
+          <img src="img/after.webp" alt="Після ремонту" data-i18n-al="after_al" loading="lazy" draggable="false">
+          <div class="ba__before"><img src="img/before.webp" alt="До ремонту" data-i18n-al="before_al" loading="lazy" draggable="false"></div>
+          <span class="ba__tag ba__tag--l" data-i18n="ba_before">До</span>
+          <span class="ba__tag ba__tag--r" data-i18n="ba_after">Після</span>
+          <div class="ba__handle" aria-hidden="true"><span></span></div>
+          <input type="range" class="ba__range" id="cmpRange" min="0" max="100" value="50" step="0.5" aria-label="До / після" data-i18n-al="ba_al">
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGES -->
+    <section class="stages" id="stages">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" data-i18n="st_eyebrow">Як ми працюємо</p>
+          <h2 data-i18n="st_title">6 кроків від заявки до ключів</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal"><span class="tl__n">1</span><div><h3 data-i18n="st1_t">Заявка і консультація</h3><p data-i18n="st1_p">Обговорюємо задачу, бюджет і терміни. Відповідаємо протягом 30 хвилин.</p><span class="tl__d" data-i18n="st1_d">День 1</span></div></li>
+          <li class="reveal"><span class="tl__n">2</span><div><h3 data-i18n="st2_t">Безкоштовний замір</h3><p data-i18n="st2_p">Прораб приїжджає з лазерною рулеткою, фотографує об'єкт і перевіряє стіни та комунікації.</p><span class="tl__d" data-i18n="st2_d">1–2 дні</span></div></li>
+          <li class="reveal"><span class="tl__n">3</span><div><h3 data-i18n="st3_t">Кошторис і договір</h3><p data-i18n="st3_p">Детальний кошторис по кожній позиції. Ціна і графік фіксуються в договорі.</p><span class="tl__d" data-i18n="st3_d">3 дні</span></div></li>
+          <li class="reveal"><span class="tl__n">4</span><div><h3 data-i18n="st4_t">Чорнові роботи</h3><p data-i18n="st4_p">Демонтаж, електрика, сантехніка, штукатурка, стяжка. Приховані роботи — на фото.</p><span class="tl__d" data-i18n="st4_d">40% терміну</span></div></li>
+          <li class="reveal"><span class="tl__n">5</span><div><h3 data-i18n="st5_t">Чистове оздоблення</h3><p data-i18n="st5_p">Плитка, підлога, фарбування, двері, монтаж сантехніки та світла.</p><span class="tl__d" data-i18n="st5_d">50% терміну</span></div></li>
+          <li class="reveal"><span class="tl__n">6</span><div><h3 data-i18n="st6_t">Здача і гарантія</h3><p data-i18n="st6_p">Клінінг, приймання за чек-листом, акт виконаних робіт і гарантійний талон на 3 роки.</p><span class="tl__d" data-i18n="st6_d">Фініш</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="works wrap" id="works">
+      <div class="works__head reveal">
+        <div>
+          <p class="eyebrow eyebrow--dark" data-i18n="w_eyebrow">Портфоліо</p>
+          <h2 data-i18n="w_title">Приклади робіт</h2>
+        </div>
+        <div class="tabs" id="wTabs" role="tablist">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-f="all" data-i18n="w_all">Усі</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-f="flat" data-i18n="w_flat">Квартири</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-f="kitchen" data-i18n="w_kitchen">Кухні</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-f="bath" data-i18n="w_bath">Ванні</button>
+        </div>
+      </div>
+      <div class="works__grid" id="wGrid">
+        <figure class="work w--big" data-cat="flat"><img src="img/after.webp" alt="" loading="lazy"><figcaption><b data-i18n="w1_t">Вітальня в скандинавському стилі</b><span data-i18n="w1_s">Капітальний · 28 м² · 9 тижнів</span></figcaption></figure>
+        <figure class="work" data-cat="kitchen"><img src="img/kitchen.webp" alt="" loading="lazy"><figcaption><b data-i18n="w2_t">Кухня-острів</b><span data-i18n="w2_s">Дизайнерський · 14 м² · 6 тижнів</span></figcaption></figure>
+        <figure class="work" data-cat="bath"><img src="img/bathroom.webp" alt="" loading="lazy"><figcaption><b data-i18n="w3_t">Ванна з душем без піддону</b><span data-i18n="w3_s">Під ключ · 5 м² · 4 тижні</span></figcaption></figure>
+        <figure class="work" data-cat="flat"><img src="img/bedroom.webp" alt="" loading="lazy"><figcaption><b data-i18n="w4_t">Спальня з гардеробом</b><span data-i18n="w4_s">Капітальний · 16 м² · 5 тижнів</span></figcaption></figure>
+        <figure class="work" data-cat="bath"><img src="img/tiling.webp" alt="" loading="lazy"><figcaption><b data-i18n="w5_t">Укладання керамограніту</b><span data-i18n="w5_s">Санвузол · 4 м² · 2 тижні</span></figcaption></figure>
+        <figure class="work" data-cat="flat"><img src="img/floor.webp" alt="" loading="lazy"><figcaption><b data-i18n="w6_t">Дубовий ламінат 33 класу</b><span data-i18n="w6_s">Косметичний · 52 м² · 3 тижні</span></figcaption></figure>
+      </div>
+      <p class="works__note" data-i18n="w_note">Фото в демо-проєкті — ілюстрації, згенеровані для портфоліо.</p>
+    </section>
+
+    <!-- PRICES -->
+    <section class="prices" id="prices">
+      <div class="wrap prices__in">
+        <div class="head reveal">
+          <p class="eyebrow eyebrow--dark" data-i18n="p_eyebrow">Ціни</p>
+          <h2 data-i18n="p_title">Прайс на окремі роботи</h2>
+          <p class="head__p" data-i18n="p_p">Ціни за роботу без матеріалів, актуальні на 2026 рік. Мінімальне замовлення — 15 000 ₴.</p>
+          <a href="#calc" class="btn btn--dark" data-i18n="p_cta">Порахувати весь ремонт</a>
+        </div>
+        <div class="ptable reveal">
+          <h3 data-i18n="pg_walls">Стіни і стеля</h3>
+          <dl>
+            <dt data-i18n="p1">Штукатурка стін по маяках</dt><dd>380 ₴/м²</dd>
+            <dt data-i18n="p2">Шпаклювання під фарбування (2 шари)</dt><dd>240 ₴/м²</dd>
+            <dt data-i18n="p3">Фарбування стін і стелі</dt><dd>150 ₴/м²</dd>
+            <dt data-i18n="p4">Стеля з гіпсокартону</dt><dd>480 ₴/м²</dd>
+          </dl>
+          <h3 data-i18n="pg_floor">Підлога і плитка</h3>
+          <dl>
+            <dt data-i18n="p5">Стяжка підлоги до 5 см</dt><dd>340 ₴/м²</dd>
+            <dt data-i18n="p6">Укладання ламінату</dt><dd>230 ₴/м²</dd>
+            <dt data-i18n="p7">Плитка стандартного формату</dt><dd>780 ₴/м²</dd>
+            <dt data-i18n="p8">Керамограніт 120×60 і більше</dt><dd>1 250 ₴/м²</dd>
+          </dl>
+          <h3 data-i18n="pg_eng">Інженерія</h3>
+          <dl>
+            <dt data-i18n="p9">Електроточка (розетка, вимикач)</dt><dd>260 ₴/<span data-i18n="pcs">шт</span></dd>
+            <dt data-i18n="p10">Збирання електрощитка</dt><dd><span data-i18n="from">від</span> 4 500 ₴</dd>
+            <dt data-i18n="p11">Сантехнічна точка</dt><dd>1 150 ₴/<span data-i18n="pcs">шт</span></dd>
+            <dt data-i18n="p12">Монтаж інсталяції з унітазом</dt><dd>3 200 ₴</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE + REVIEWS -->
+    <section class="trust" id="trust">
+      <div class="wrap">
+        <div class="guar reveal">
+          <div class="guar__badge"><b>3</b><span data-i18n="g_years">роки<br>гарантії</span></div>
+          <div class="guar__text">
+            <h2 data-i18n="g_title">Гарантія, яку можна прочитати</h2>
+            <p data-i18n="g_p">Усі обіцянки — в договорі, а не на словах. Якщо щось пішло не так, виправляємо за свій рахунок.</p>
+          </div>
+          <ul class="guar__list">
+            <li data-i18n="g1">Фіксована ціна: кошторис не змінюється без вашого підпису</li>
+            <li data-i18n="g2">Оплата етапами — після приймання кожного етапу</li>
+            <li data-i18n="g3">Щотижневий фото- і відеозвіт у Telegram</li>
+            <li data-i18n="g4">Штраф 0,1% за кожен день затримки з нашої вини</li>
+          </ul>
+        </div>
+        <div class="reviews">
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev1">«Робили капітальний ремонт двушки. Кошторис справді не виріс ні на гривню, а фотозвіти щоп'ятниці дуже заспокоювали — ми живемо в іншому місті.»</p><cite><span class="ava" data-i18n="rev1_i">І</span><span><b data-i18n="rev1_n">Ірина</b><small data-i18n="rev1_s">Капітальний ремонт, 54 м²</small></span></cite></blockquote>
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev2">«Ванну зробили за чотири тижні, як і обіцяли. Плиточник — справжній ювелір: шви рівні, підрізки акуратні.»</p><cite><span class="ava" data-i18n="rev2_i">О</span><span><b data-i18n="rev2_n">Олег</b><small data-i18n="rev2_s">Ванна під ключ, 5 м²</small></span></cite></blockquote>
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p data-i18n="rev3">«Калькулятор на сайті показав майже ту саму суму, що й фінальний кошторис. Приємно, коли без сюрпризів.»</p><cite><span class="ava" data-i18n="rev3_i">Н</span><span><b data-i18n="rev3_n">Наталія</b><small data-i18n="rev3_s">Косметичний ремонт, 42 м²</small></span></cite></blockquote>
+        </div>
+        <p class="trust__note" data-i18n="rev_note">Відгуки демонстраційні.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow eyebrow--dark" data-i18n="faq_eyebrow">Питання</p>
+        <h2 data-i18n="faq_title">Часті запитання</h2>
+      </div>
+      <div class="faq__list reveal" id="faqList">
+        <details><summary data-i18n="q1">Чи може ціна змінитися під час ремонту?</summary><div class="faq__a"><p data-i18n="a1">Ні. Кошторис фіксується в договорі. Змінити його можна лише якщо ви самі додаєте роботи — і тільки після підписання додаткової угоди.</p></div></details>
+        <details><summary data-i18n="q2">Як відбувається оплата?</summary><div class="faq__a"><p data-i18n="a2">Аванс 15% на старті, далі оплата за кожен завершений етап після його приймання. Працюємо за договором як ФОП, оплата на рахунок або карткою.</p></div></details>
+        <details><summary data-i18n="q3">Хто купує матеріали?</summary><div class="faq__a"><p data-i18n="a3">Як вам зручніше. Чорнові матеріали можемо закупити самі — у нас партнерські знижки до 10%. Чистові (плитку, ламінат, сантехніку) зазвичай обирає клієнт, ми допомагаємо з розрахунком кількості.</p></div></details>
+        <details><summary data-i18n="q4">Чи можна жити в квартирі під час ремонту?</summary><div class="faq__a"><p data-i18n="a4">При косметичному ремонті — так, ми робимо кімнати по черзі. При капітальному краще переїхати хоча б на час чорнових робіт: це швидше і безпечніше.</p></div></details>
+        <details><summary data-i18n="q5">Що входить у гарантію?</summary><div class="faq__a"><p data-i18n="a5">Усі виконані нами роботи протягом 3 років: тріщини, відшарування плитки, протікання, несправності проводки. Виїзд на гарантійний випадок — протягом 48 годин.</p></div></details>
+        <details><summary data-i18n="q6">Чи потрібно погоджувати перепланування?</summary><div class="faq__a"><p data-i18n="a6">Якщо зачіпаються несучі стіни або мокрі зони — так. Ми підкажемо, які документи потрібні, і порекомендуємо перевіреного проєктувальника.</p></div></details>
+      </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section class="lead" id="lead">
+      <div class="wrap lead__in">
+        <div class="lead__text reveal">
+          <p class="eyebrow" data-i18n="l_eyebrow">Заявка</p>
+          <h2 data-i18n="l_title">Отримайте точний кошторис</h2>
+          <p data-i18n="l_p">Заявка миттєво приходить прорабу в Telegram. Ми зателефонуємо протягом 30 хвилин і домовимося про безкоштовний замір.</p>
+          <ul class="lead__perks">
+            <li data-i18n="lp1">Замір і кошторис — безкоштовно</li>
+            <li data-i18n="lp2">Без спаму: тільки один дзвінок</li>
+            <li data-i18n="lp3">Працюємо щодня з 8:00 до 20:00</li>
+          </ul>
+        </div>
+        <form class="form reveal" id="leadForm" novalidate>
+          <label><span data-i18n="f_name">Ім'я</span><input name="name" required autocomplete="given-name" maxlength="60"></label>
+          <label><span data-i18n="f_phone">Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+          <label><span data-i18n="f_comment">Коментар</span><textarea name="comment" rows="3" maxlength="500" data-i18n-ph="f_comment_ph" placeholder="Адреса або район, стан квартири, бажані терміни…"></textarea></label>
+          <div class="calcbox" id="calcBox" hidden>
+            <div class="calcbox__head"><b data-i18n="f_calc">Ваш розрахунок</b><button type="button" class="calcbox__x" id="calcX" data-i18n="f_calc_rm">Прибрати</button></div>
+            <p id="calcSummary"></p>
+          </div>
+          <button type="button" class="calcbox__add" id="calcAdd" data-i18n="f_calc_add">+ Додати розрахунок з калькулятора</button>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--wide" type="submit" data-i18n="f_submit">Надіслати заявку</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+          <p class="form__legal" data-i18n="f_legal">Натискаючи кнопку, ви погоджуєтеся на обробку контактних даних для зворотного зв'язку.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" id="contacts">
+    <div class="wrap foot__grid">
+      <div>
+        <a href="#top" class="logo logo--foot" aria-label="Майстер Дім" data-i18n-al="logo_al">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 34 32 16l20 18v16H12z"/><rect x="27" y="37" width="10" height="13"/></svg>
+          <span data-i18n="logo">Майстер<b>Дім</b></span>
+        </a>
+        <p data-i18n="ft_p">Ремонт квартир і будинків під ключ із фіксованою ціною та гарантією 3 роки.</p>
+      </div>
+      <dl class="foot__list">
+        <dt data-i18n="ft_phone">Телефон</dt><dd>+380 00 000 00 00 <small data-i18n="demo_mark">(демо)</small></dd>
+        <dt data-i18n="ft_addr_t">Офіс</dt><dd data-i18n="ft_addr">вул. Будівельна, 1 (демо-адреса)</dd>
+        <dt data-i18n="ft_hours_t">Графік</dt><dd data-i18n="ft_hours">Щодня 8:00–20:00</dd>
+      </dl>
+      <nav class="foot__nav">
+        <a href="#services" data-i18n="nav_services">Послуги</a>
+        <a href="#calc" data-i18n="nav_calc">Калькулятор</a>
+        <a href="#works" data-i18n="nav_works">Роботи</a>
+        <a href="#prices" data-i18n="nav_prices">Ціни</a>
+        <a href="#lead" data-i18n="nav_cta">Безкоштовний замір</a>
+      </nav>
+    </div>
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> <span data-i18n="ft_brand">Майстер Дім</span></span>
+      <span class="foot__demo"><span data-i18n="demo">Демо-проєкт. Сайт розроблено</span> <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#calc" class="fab" id="fab" aria-label="Калькулятор" data-i18n-al="nav_calc"><span class="fab__sum" id="fabSum">—</span><span data-i18n="fab">Розрахунок</span></a>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
