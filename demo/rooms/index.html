@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Садиба «Липовий двір» — кімнати для відпочинку в Хмільнику</title>
+  <meta name="description" content="Затишні кімнати поруч із санаторіями Хмільника. Онлайн-бронювання дат за 1 хвилину, знижка на курс лікування від 10 ночей.">
+  <meta property="og:title" content="Садиба «Липовий двір» — кімнати в Хмільнику">
+  <meta property="og:description" content="Кімнати поруч із санаторіями. Оберіть дати — господиня отримає заявку в Telegram.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%232F6B4F'/><path d='M32 12 12 30h6v20h28V30h6z' fill='white'/><rect x='27' y='36' width='10' height='14' fill='%232F6B4F'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Липовий двір">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><path d="M32 12 12 30h6v20h28V30h6z"/></svg>
+        <span>Липовий двір</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#rooms">Кімнати</a>
+        <a href="#comfort">Зручності</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#faq">Питання</a>
+        <a href="#contacts">Як доїхати</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#book" class="btn btn--small">Забронювати</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero__bg" src="img/hero.webp" alt="" fetchpriority="high">
+      <div class="wrap hero__in">
+        <p class="pill"><span class="pill__dot"></span>Є вільні дати на найближчі тижні</p>
+        <h1>Тихий відпочинок у Хмільнику — <span>7 хвилин пішки до санаторіїв</span></h1>
+        <p class="hero__sub">Затишні кімнати з окремим санвузлом, спільна кухня, сад з альтанкою і парковка. Приїжджайте на радонові ванни — про побут подбаємо ми.</p>
+        <div class="hero__cta">
+          <a href="#book" class="btn">Обрати дати</a>
+          <a href="#rooms" class="btn btn--ghost">Кімнати і ціни</a>
+        </div>
+        <ul class="hero__stats">
+          <li><b>від 650 грн</b><span>за добу</span></li>
+          <li><b>−10%</b><span>від 10 ночей</span></li>
+          <li><b>4.9</b><span>оцінка гостей</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rooms wrap" id="rooms">
+      <div class="head reveal">
+        <p class="eyebrow">Кімнати та ціни</p>
+        <h2>Оберіть кімнату під свій курс лікування</h2>
+        <p>Ціна — за кімнату на добу. Постіль, рушники, Wi-Fi і парковка вже входять у вартість.</p>
+      </div>
+      <div class="rooms__grid" id="roomsGrid"></div>
+    </section>
+
+    <section class="comfort" id="comfort">
+      <div class="wrap comfort__in">
+        <div class="comfort__media reveal">
+          <img src="img/kitchen.webp" alt="Спільна кухня" loading="lazy">
+          <img class="comfort__small" src="img/garden.webp" alt="Альтанка в саду" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Зручності</p>
+          <h2>Як удома, тільки відпочивати не заважає ніхто</h2>
+          <ul class="perks">
+            <li><span>🚶</span><b>7 хв до санаторіїв</b><em>Пішки до бюветів, ванн і парку біля річки.</em></li>
+            <li><span>🍳</span><b>Спільна кухня</b><em>Холодильник, плита, мікрохвильовка, посуд — готуйте самі.</em></li>
+            <li><span>🚗</span><b>Парковка у дворі</b><em>Безкоштовно, під наглядом камери.</em></li>
+            <li><span>🚌</span><b>Зустрінемо з автостанції</b><em>Безкоштовно при бронюванні від 7 ночей.</em></li>
+            <li><span>📋</span><b>Допоможемо з процедурами</b><em>Підкажемо, куди записатися на радонові ванни і масаж.</em></li>
+            <li><span>🌳</span><b>Сад і альтанка</b><em>Тиша, мангал і вечірній чай на свіжому повітрі.</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery wrap">
+      <div class="gallery__grid">
+        <img src="img/breakfast.webp" alt="Сніданок на терасі" loading="lazy" class="reveal">
+        <img src="img/bath.webp" alt="Санвузол" loading="lazy" class="reveal">
+        <img src="img/river.webp" alt="Парк біля річки" loading="lazy" class="reveal">
+      </div>
+    </section>
+
+    <section class="reviews wrap" id="reviews">
+      <div class="head reveal">
+        <p class="eyebrow">Відгуки</p>
+        <h2>Гості повертаються щороку</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Приїжджали з мамою на 14 днів на ванни. Чисто, тихо, до санаторію рукою подати. Господиня зустріла з автостанції і все показала.»</p><cite>Наталія, Київ</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Забронював дати ввечері на сайті, за 10 хвилин уже передзвонили і підтвердили. Знижка за 10 ночей — приємний бонус.»</p><cite>Олег, Дніпро</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Студія з кухнею — ідеально для довгого курсу. Готували самі, вечорами сиділи в альтанці. Наступного року — знову сюди.»</p><cite>Людмила, Львів</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="wrap book__in">
+        <div class="book__intro reveal">
+          <p class="eyebrow eyebrow--light">Онлайн-бронювання</p>
+          <h2>Оберіть дати за 1 хвилину</h2>
+          <p>Позначте день заїзду і виїзду — зайняті дати вже приховані. Господиня миттєво отримає заявку в Telegram і передзвонить, щоб підтвердити.</p>
+          <ol class="steps">
+            <li>Кімната</li>
+            <li>Дати заїзду та виїзду</li>
+            <li>Ваші контакти</li>
+          </ol>
+          <p class="book__note">Передоплата — лише після підтвердження, на картку господині. Безкоштовне скасування за 3 дні до заїзду.</p>
+        </div>
+        <form class="booking reveal" id="bookForm" novalidate>
+          <div class="field-row">
+            <label><span>Кімната</span><select name="room" id="fRoom" required></select></label>
+            <label><span>Гостей</span><select name="guests" id="fGuests"></select></label>
+          </div>
+          <div class="cal" id="cal">
+            <div class="cal__head">
+              <button type="button" class="cal__nav" id="calPrev" aria-label="Попередній місяць">‹</button>
+              <span id="calTitle"></span>
+              <button type="button" class="cal__nav" id="calNext" aria-label="Наступний місяць">›</button>
+            </div>
+            <div class="cal__dow"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+            <div class="cal__grid" id="calGrid"></div>
+            <div class="cal__legend"><i class="lg lg--busy"></i>зайнято <i class="lg lg--sel"></i>ваші дати</div>
+          </div>
+          <div class="field-row">
+            <label><span>Ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+            <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+          </div>
+          <label class="full"><span>Побажання (необов'язково)</span><input name="note" maxlength="200" placeholder="Напр.: зустріти з автостанції о 14:00"></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="summary" id="summary" aria-live="polite"></div>
+          <button class="btn btn--wide" type="submit">Надіслати заявку</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow">Питання</p>
+        <h2>Часті запитання</h2>
+      </div>
+      <div class="faq__list" id="faqList"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow">Як доїхати</p>
+          <h2>Чекаємо на вас у Хмільнику</h2>
+          <dl class="contacts__list">
+            <dt>Адреса</dt><dd>вул. Липова, 1 (демо-адреса)</dd>
+            <dt>Заїзд / виїзд</dt><dd>з 13:00 / до 11:00, ранній заїзд — за домовленістю</dd>
+            <dt>Автобусом</dt><dd>з Вінниці — близько 1 години, далі зустрінемо на автостанції</dd>
+            <dt>Автомобілем</dt><dd>безкоштовна парковка у дворі</dd>
+            <dt>Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+          <a href="#book" class="btn">Забронювати дати</a>
+        </div>
+        <img class="contacts__img reveal" src="img/room-family.webp" alt="" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Садиба «Липовий двір»</span>
+      <span>Демо-проєкт, вигаданий заклад. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#book" class="sticky-book btn">Обрати дати</a>
+  <script src="app.js" defer></script>
+</body>
+</html>
