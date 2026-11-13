@@ -2,9 +2,12 @@
  * Booking: room -> check-in/check-out on a calendar (busy nights hidden) -> contacts,
  * POST BOOK_URL (Cloudflare Pages Function -> owner's Telegram; demo mode without keys). */
 const BOOK_URL = "/api/rooms-book";
+// Owner edits rooms, prices and busy dates in a Google Sheet (File → Share → Publish to web → CSV).
+// Paste that CSV link here. Empty or unreachable -> the built-in ROOMS below are used.
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMPtlGtHGELdONwl8x9i9s03cE8X0aH-MuTCA-rLEM3khJqOmAFYyEkhj5de97ziRkJHMykhjDVfrl/pub?gid=59784026&single=true&output=csv";
 const LONG_STAY = 10, LONG_DISCOUNT = 0.10;
 
-const ROOMS = [
+let ROOMS = [
   { id: "double", img: "img/room-double.webp", name: "Двомісна з садом", price: 750, max: 2, area: 16,
     perks: ["Двоспальне ліжко", "Санвузол з душем", "Вид на сад"] },
   { id: "twin", img: "img/room-twin.webp", name: "Двомісна, два ліжка", price: 650, max: 2, area: 14,
@@ -32,24 +35,32 @@ const nightsWord = (n) => (n % 10 === 1 && n % 100 !== 11 ? "ніч" : n % 10 >=
 const fmtDate = (s) => { const [y, m, d] = s.split("-"); return `${d}.${m}.${y}`; };
 
 /* ---- rooms ---- */
-$("#roomsGrid").innerHTML = ROOMS.map((r) => `
-  <article class="room reveal">
-    <img src="${r.img}" alt="${r.name}" loading="lazy">
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function renderRooms() {
+  $("#roomsGrid").innerHTML = ROOMS.map((r) => `
+  <article class="room reveal in">
+    <img src="${esc(r.img)}" alt="${esc(r.name)}" loading="lazy">
     <div class="room__body">
-      <div class="room__top"><h3>${r.name}</h3><span class="room__price"><b>${r.price} грн</b> / доба</span></div>
-      <p class="room__meta">👤 до ${r.max} гостей · ${r.area} м²</p>
-      <ul>${r.perks.map((p) => `<li>${p}</li>`).join("")}</ul>
-      <button class="btn btn--ghost btn--wide" type="button" data-room="${r.id}">Обрати дати</button>
+      <div class="room__top"><h3>${esc(r.name)}</h3><span class="room__price"><b>${r.price} грн</b> / доба</span></div>
+      <p class="room__meta">👤 до ${r.max} гостей${r.area ? ` · ${r.area} м²` : ""}</p>
+      <ul>${r.perks.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
+      <button class="btn btn--ghost btn--wide" type="button" data-room="${esc(r.id)}">Обрати дати</button>
     </div>
   </article>`).join("");
+  const min = Math.min(...ROOMS.map((r) => r.price));
+  const st = $("#minPrice"); if (st) st.textContent = `від ${min} грн`;
+}
+renderRooms();
 
 /* ---- faq ---- */
 $("#faqList").innerHTML = FAQ.map(([q, a]) => `<details class="qa reveal"><summary>${q}</summary><p>${a}</p></details>`).join("");
 
 /* ---- demo busy nights: deterministic per room, so the calendar looks lived-in ---- */
 const today = new Date(); today.setHours(0, 0, 0, 0);
+let ROOMS_BUSY = {};
 function busyNights(roomId) {
   let seed = [...roomId].reduce((a, c) => a + c.charCodeAt(0), 0);
+  if (ROOMS_BUSY[roomId]) return ROOMS_BUSY[roomId];         // real dates from the sheet
   const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);
   const busy = new Set();
   let d = addDays(today, Math.floor(rnd() * 4));
@@ -63,7 +74,8 @@ function busyNights(roomId) {
 
 /* ---- booking form ---- */
 const form = $("#bookForm"), fRoom = $("#fRoom"), fGuests = $("#fGuests");
-fRoom.innerHTML = ROOMS.map((r) => `<option value="${r.id}">${r.name} — ${r.price} грн</option>`).join("");
+const fillRoomSelect = () => { fRoom.innerHTML = ROOMS.map((r) => `<option value="${esc(r.id)}">${esc(r.name)} — ${r.price} грн</option>`).join(""); };
+fillRoomSelect();
 let state = { room: ROOMS[0], busy: busyNights(ROOMS[0].id), start: null, end: null, month: new Date(today.getFullYear(), today.getMonth(), 1) };
 
 function fillGuests() {
@@ -182,3 +194,70 @@ addEventListener("scroll", toggleSticky, { passive: true }); toggleSticky();
 $("#year").textContent = new Date().getFullYear();
 
 fillGuests(); renderCal(); renderSummary();
+
+/* ---- Google Sheet: rooms, prices, busy dates ----
+ * Columns (row 1 = headers): id | назва | ціна | гостей | площа | переваги | фото | зайнято | показувати
+ * переваги: separated by ";"   зайнято: "20.11-25.11; 01.12-05.12" (check-in–check-out, dd.mm or dd.mm.yyyy)
+ * показувати: "ні" hides a room. фото: file in img/ or a full https link. */
+function parseCSV(text) {
+  const rows = [[]]; let f = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { rows[rows.length - 1].push(f); f = ""; }
+    else if (c === "\n") { rows[rows.length - 1].push(f); f = ""; rows.push([]); }
+    else if (c !== "\r") f += c;
+  }
+  rows[rows.length - 1].push(f);
+  return rows.filter((r) => r.some((x) => x.trim()));
+}
+function parseDay(s) {
+  const [d, m, y] = s.trim().split(".").map(Number);
+  if (!d || !m) return null;
+  let dt = new Date(y || today.getFullYear(), m - 1, d);
+  if (!y && dt < addDays(today, -60)) dt = new Date(today.getFullYear() + 1, m - 1, d); // "05.01" in November = next year
+  return dt;
+}
+function parseBusy(s) {
+  const set = new Set();
+  for (const part of String(s || "").split(/[;\n]/)) {
+    const [a, b] = part.split(/[-–—]/).map((x) => x && parseDay(x));
+    if (!a) continue;
+    const end = b && b > a ? b : addDays(a, 1);          // single date = one night
+    for (let d = a; d < end; d = addDays(d, 1)) set.add(iso(d));
+  }
+  return set;
+}
+async function loadSheet() {
+  if (!SHEET_CSV_URL) return;
+  try {
+    const r = await fetch(SHEET_CSV_URL, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const [head, ...rows] = parseCSV(await r.text());
+    const col = (name) => head.findIndex((h) => h.trim().toLowerCase() === name);
+    const C = { id: col("id"), name: col("назва"), price: col("ціна"), max: col("гостей"), area: col("площа"),
+      perks: col("переваги"), img: col("фото"), busy: col("зайнято"), show: col("показувати") };
+    const get = (row, k) => (C[k] >= 0 ? (row[C[k]] || "").trim() : "");
+    const builtIn = Object.fromEntries(ROOMS.map((r) => [r.id, r]));
+    const rooms = [], busy = {};
+    rows.forEach((row, i) => {
+      if (/^(ні|no|0)$/i.test(get(row, "show"))) return;
+      const id = get(row, "id") || `room${i + 1}`, price = parseInt(get(row, "price").replace(/\D/g, ""), 10);
+      const name = get(row, "name");
+      if (!name || !price) return;                          // skip half-filled rows
+      const base = builtIn[id] || {};
+      rooms.push({ id, name, price,
+        max: parseInt(get(row, "max"), 10) || base.max || 2,
+        area: parseInt(get(row, "area"), 10) || base.area || 0,
+        perks: get(row, "perks") ? get(row, "perks").split(";").map((x) => x.trim()).filter(Boolean) : base.perks || [],
+        img: get(row, "img") ? (/^https:\/\//.test(get(row, "img")) ? get(row, "img") : `img/${get(row, "img")}`) : base.img || "img/hero.webp" });
+      if (C.busy >= 0 && get(row, "busy")) busy[id] = parseBusy(get(row, "busy"));
+      else if (C.busy >= 0) busy[id] = new Set();           // column exists but empty = all free
+    });
+    if (!rooms.length) return;
+    ROOMS = rooms; ROOMS_BUSY = busy;
+    renderRooms(); fillRoomSelect(); setRoom(ROOMS[0].id);
+  } catch (e) { console.warn("sheet not loaded, using built-in rooms", e); }
+}
+loadSheet();
