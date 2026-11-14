@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Студія краси «Півонія» — манікюр, фарбування, брови. Онлайн-запис</title>
+  <meta name="description" content="Манікюр, педикюр, стрижки й фарбування, брови та вії. Оберіть послугу, майстра й вільний час — запис за 1 хвилину.">
+  <meta property="og:title" content="Студія краси «Півонія» — онлайн-запис">
+  <meta property="og:description" content="Оберіть послугу, майстра й вільний час — адміністратор отримає запис у Telegram.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236B2E4A'/><circle cx='32' cy='32' r='9' fill='%23F4C9D4'/><circle cx='32' cy='19' r='8' fill='white'/><circle cx='45' cy='32' r='8' fill='white'/><circle cx='32' cy='45' r='8' fill='white'/><circle cx='19' cy='32' r='8' fill='white'/><circle cx='32' cy='32' r='7' fill='%23F4C9D4'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Півонія">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><circle cx="32" cy="19" r="8"/><circle cx="45" cy="32" r="8"/><circle cx="32" cy="45" r="8"/><circle cx="19" cy="32" r="8"/><circle class="c" cx="32" cy="32" r="7"/></svg>
+        <span>Півонія</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#services">Послуги й ціни</a>
+        <a href="#masters">Майстри</a>
+        <a href="#works">Роботи</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#book" class="btn btn--small">Записатися</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill"><span class="pill__dot"></span>Сьогодні є вільні вікна</p>
+          <h1>Манікюр, фарбування й брови — <em>запис онлайн за 1 хвилину</em></h1>
+          <p class="hero__sub">Оберіть послугу, майстра й вільний час просто тут — без дзвінків і переписок. Адміністратор отримає запис у Telegram і нагадає вам за день.</p>
+          <div class="hero__cta">
+            <a href="#book" class="btn">Записатися онлайн</a>
+            <a href="https://t.me/faceclo_bot" class="btn btn--ghost" target="_blank" rel="noopener">✈️ Записатися в Telegram</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>4.9</b><span>оцінка в Google</span></li>
+            <li><b>7 років</b><span>працюємо</span></li>
+            <li><b>−10%</b><span>на перший візит</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="Інтер'єр студії" fetchpriority="high">
+          <div class="hero__card"><b>Найближче вільне</b><span id="nextFree">сьогодні</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services wrap" id="services">
+      <div class="head reveal">
+        <p class="eyebrow">Послуги та ціни</p>
+        <h2>Чесні ціни — без «від» і сюрпризів на касі</h2>
+        <p>Ціни вказані за процедуру разом з матеріалами. Тривалість — орієнтовна.</p>
+      </div>
+      <div class="tabs reveal" role="tablist" id="tabs"></div>
+      <div class="price" id="priceList"></div>
+    </section>
+
+    <section class="masters" id="masters">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Майстри</p>
+          <h2>Кожна — у своїй справі найкраща</h2>
+        </div>
+        <div class="masters__grid" id="mastersGrid"></div>
+      </div>
+    </section>
+
+    <section class="works wrap" id="works">
+      <div class="head reveal">
+        <p class="eyebrow">Наші роботи</p>
+        <h2>Більше робіт — в Instagram</h2>
+      </div>
+      <div class="works__grid">
+        <img src="img/work-nails.webp" alt="Манікюр з золотими деталями" loading="lazy" class="reveal">
+        <img src="img/work-hair.webp" alt="Фарбування балаяж" loading="lazy" class="reveal">
+        <img src="img/nails.webp" alt="Гель-манікюр" loading="lazy" class="reveal">
+        <img src="img/brows.webp" alt="Корекція брів" loading="lazy" class="reveal">
+      </div>
+    </section>
+
+    <section class="promo wrap reveal">
+      <div><b>Приведіть подругу</b><span>— обом знижка 15% на наступну процедуру</span></div>
+      <a href="#book" class="btn btn--light">Записатися</a>
+    </section>
+
+    <section class="book" id="book">
+      <div class="wrap book__in">
+        <div class="book__intro reveal">
+          <p class="eyebrow eyebrow--light">Онлайн-запис</p>
+          <h2>Запишіться за 1 хвилину</h2>
+          <p>Зайнятий час уже прихований — обирайте будь-яке вільне вікно. Адміністратор миттєво отримає запис у Telegram і підтвердить його.</p>
+          <ol class="steps">
+            <li>Послуга і майстер</li>
+            <li>День і час</li>
+            <li>Ваше ім'я і телефон</li>
+          </ol>
+          <p class="book__note">Зручніше в месенджері? <a href="https://t.me/faceclo_bot" target="_blank" rel="noopener">Запишіться через наш Telegram-бот →</a></p>
+        </div>
+        <form class="booking reveal" id="bookForm" novalidate>
+          <div class="field-row">
+            <label><span>Послуга</span><select name="service" id="fService" required></select></label>
+            <label><span>Майстер</span><select name="master" id="fMaster" required></select></label>
+          </div>
+          <div class="pick">
+            <span class="pick__label">День</span>
+            <div class="dates" id="dates" role="radiogroup"></div>
+          </div>
+          <div class="pick">
+            <span class="pick__label">Вільний час</span>
+            <div class="slots" id="slots" role="radiogroup"></div>
+          </div>
+          <div class="field-row">
+            <label><span>Ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+            <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+          </div>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="summary" id="summary" aria-live="polite"></div>
+          <button class="btn btn--wide" type="submit">Підтвердити запис</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="reviews wrap" id="reviews">
+      <div class="head reveal">
+        <p class="eyebrow">Відгуки</p>
+        <h2>Що кажуть клієнтки</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Записалась о 23:00 з телефону, вранці мені вже підтвердили. Манікюр тримається третій тиждень — жодного скола.»</p><cite>Ірина</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Олена зробила балаяж саме такий, як я показала на фото. Порадила догляд, без нав'язування.»</p><cite>Вікторія</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Зручно, що на сайті одразу видно ціну і вільний час. Брови — ідеальні, вже записалася на наступний місяць.»</p><cite>Тетяна</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow">Питання</p>
+        <h2>Часті запитання</h2>
+      </div>
+      <div class="faq__list" id="faqList"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow">Контакти</p>
+          <h2>Чекаємо на вас</h2>
+          <dl class="contacts__list">
+            <dt>Адреса</dt><dd>вул. Квіткова, 5 (демо-адреса), вхід з двору</dd>
+            <dt>Графік</dt><dd>Пн–Пт 9:00–19:00, Сб 10:00–16:00, Нд — вихідний</dd>
+            <dt>Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+          <div class="contacts__cta">
+            <a href="#book" class="btn">Записатися</a>
+            <a href="https://t.me/faceclo_bot" class="btn btn--ghost" target="_blank" rel="noopener">✈️ Telegram</a>
+          </div>
+        </div>
+        <img class="contacts__img reveal" src="img/pedicure.webp" alt="" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Студія краси «Півонія»</span>
+      <span>Демо-проєкт, вигаданий заклад. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#book" class="sticky-book btn">Записатися</a>
+  <script src="app.js" defer></script>
+</body>
+</html>
