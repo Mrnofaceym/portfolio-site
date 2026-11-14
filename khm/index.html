@@ -46,6 +46,11 @@
     .card b { display: block; font-size: 17px; margin-bottom: 4px; }
     .card p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .card span { font-size: 14px; color: var(--acc); font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .chips a { font-size: 14px; padding: 7px 13px; border-radius: 999px; background: var(--bg2); border: 1px solid var(--line); }
+    .chips a:hover { border-color: var(--acc); }
+    .card { scroll-margin-top: 16px; }
+    .card:target { border-color: var(--acc2); box-shadow: 0 0 0 3px rgba(124,240,197,.25); }
     .card--star { border-color: rgba(124,240,197,.45); }
     .badge { display: inline-block; font-size: 11px; font-weight: 600; color: #0b0d12; background: var(--acc2); border-radius: 6px; padding: 1px 7px; margin-left: 6px; vertical-align: 2px; }
 
@@ -96,28 +101,45 @@
   </header>
 
   <section id="examples">
-    <h2>Приклади</h2>
-    <p class="muted" style="margin-bottom:16px">Відкрийте будь-який — усе працює: можна обрати дати, записатися, подивитися меню. Заклади вигадані, а технології — справжні.</p>
+    <h2>Оберіть свій бізнес</h2>
+    <p class="muted" style="margin-bottom:14px">Натисніть на свій тип бізнесу й відкрийте приклад — усе працює: можна обрати дати, записатися, подивитися меню. Заклади вигадані, а технології — справжні.</p>
+    <nav class="chips" aria-label="Тип бізнесу">
+      <a href="#ex-rooms">🏡 Садиба / подобово</a>
+      <a href="#ex-salon">💅 Салон краси</a>
+      <a href="#ex-cafe">☕ Кафе</a>
+      <a href="#ex-sto">🚗 СТО</a>
+      <a href="#ex-med">🦷 Медицина</a>
+      <a href="#ex-repair">🔨 Ремонт</a>
+      <a href="#ex-courses">📚 Курси</a>
+    </nav>
     <div class="cards">
-      <a class="card card--star" href="../demo/rooms/" target="_blank" rel="noopener">
+      <a class="card card--star" id="ex-rooms" href="../demo/rooms/" target="_blank" rel="noopener">
         <img src="../demo/rooms/img/hero.webp" alt="Садиба біля санаторіїв" loading="lazy">
         <div><b>Садиба / кімнати <span class="badge">для курорту</span></b><p>Фото номерів, ціни, календар вільних дат і бронювання. Ціни й дати — з Google Таблиці.</p><span>Відкрити →</span></div>
       </a>
-      <a class="card card--star" href="https://t.me/faceclo_bot" target="_blank" rel="noopener">
+      <a class="card card--star" id="ex-salon" href="https://t.me/faceclo_bot" target="_blank" rel="noopener">
         <img src="../assets/salon-poster.jpg" alt="Telegram-бот запису в салон" loading="lazy" style="object-position: center 72%">
-        <div><b>Бот запису в салон <span class="badge">спробуйте</span></b><p>Клієнт сам обирає послугу, майстра й вільний час — вам приходить готовий запис.</p><span>Відкрити в Telegram →</span></div>
+        <div><b>Салон краси: бот запису <span class="badge">спробуйте</span></b><p>Клієнт сам обирає послугу, майстра й вільний час — вам приходить готовий запис.</p><span>Відкрити в Telegram →</span></div>
       </a>
-      <a class="card" href="../demo/cafe/" target="_blank" rel="noopener">
+      <a class="card" id="ex-cafe" href="../demo/cafe/" target="_blank" rel="noopener">
         <img src="../demo/cafe/img/hero.webp" alt="Кав'ярня" loading="lazy">
         <div><b>Кафе / кав'ярня</b><p>Меню з фото й цінами, бронювання столика, QR-код на столі.</p><span>Відкрити →</span></div>
       </a>
-      <a class="card" href="../demo/autoservice/" target="_blank" rel="noopener">
+      <a class="card" id="ex-sto" href="../demo/autoservice/" target="_blank" rel="noopener">
         <img src="../demo/autoservice/img/hero.webp" alt="Автосервіс" loading="lazy">
         <div><b>СТО / шиномонтаж</b><p>Послуги й ціни, запис на зручний час — без дзвінків і черг.</p><span>Відкрити →</span></div>
       </a>
-      <a class="card" href="../demo/dentist/" target="_blank" rel="noopener">
+      <a class="card" id="ex-med" href="../demo/dentist/" target="_blank" rel="noopener">
         <img src="../demo/dentist/img/hero.webp" alt="Стоматологія" loading="lazy">
-        <div><b>Стоматологія / приватний кабінет</b><p>Лікарі, послуги, онлайн-запис на прийом.</p><span>Відкрити →</span></div>
+        <div><b>Стоматологія / приватний кабінет</b><p>Лікарі, послуги, онлайн-запис на прийом. Підходить і для масажу та реабілітації.</p><span>Відкрити →</span></div>
+      </a>
+      <a class="card" id="ex-repair" href="../demo/renovation/" target="_blank" rel="noopener">
+        <img src="../demo/renovation/img/hero.webp" alt="Ремонт квартир" loading="lazy">
+        <div><b>Ремонт / будівельники</b><p>Роботи «до і після», ціни за м², заявка на безкоштовний замір.</p><span>Відкрити →</span></div>
+      </a>
+      <a class="card" id="ex-courses" href="../demo/school/" target="_blank" rel="noopener">
+        <img src="../demo/school/img/hero.webp" alt="Курси" loading="lazy">
+        <div><b>Курси / репетитори / гуртки</b><p>Викладачі, програма, ціни й запис на пробне заняття.</p><span>Відкрити →</span></div>
       </a>
     </div>
   </section>
