@@ -1,6 +1,6 @@
 // ===== Contacts: fill these in =====
 const CONFIG = {
-  telegram: "",          // e.g. "maksym_dev" (without @)
+  telegram: "GrandFaceYm", // work Telegram (without @)
   email: "MrmaksymBusiness@gmail.com", // business email
 };
 
@@ -87,7 +87,7 @@ setLang(start);
 
 // contacts
 const tg = document.getElementById("ct-tg"), mail = document.getElementById("ct-mail");
-if (CONFIG.telegram) tg.href = "https://t.me/" + CONFIG.telegram; else tg.style.display = "none";
+if (CONFIG.telegram) { tg.href = "https://t.me/" + CONFIG.telegram; tg.textContent = "✈️ @" + CONFIG.telegram; } else tg.style.display = "none";
 if (CONFIG.email) { mail.href = "mailto:" + CONFIG.email; document.getElementById("ct-mail-t").textContent = CONFIG.email; }
 else mail.style.display = "none";
 
