@@ -1,9 +1,3 @@
-// ===== Contacts: fill these in =====
-const CONFIG = {
-  telegram: "GrandFaceYm", // work Telegram (without @)
-  email: "MrmaksymBusiness@gmail.com", // business email
-};
-
 // ===== English translations (Ukrainian is the default text in index.html) =====
 const EN = {
   "nav.services": "Services", "nav.work": "Work", "nav.process": "Process", "nav.faq": "FAQ", "nav.cta": "Contact",
@@ -39,7 +33,7 @@ const EN = {
   "demos.7.h": "Courses / tutors", "demos.7.p": "Teachers, curriculum, prices and sign-up for a trial lesson.",
   "stack.h": "Tech I use",
   "proc.h": "How we work",
-  "proc.1.h": "Request", "proc.1.p": "You briefly describe the task — on Telegram or by email.",
+  "proc.1.h": "Request", "proc.1.p": "You briefly describe the task in messages on Freelancehunt.",
   "proc.2.h": "Discussion", "proc.2.p": "I clarify the details and propose a solution, price and deadline.",
   "proc.3.h": "Prepayment", "proc.3.p": "50% to start, the rest once everything works.",
   "proc.4.h": "Development", "proc.4.p": "I show intermediate results so you can see the progress.",
@@ -57,7 +51,7 @@ const EN = {
   "faq.4.q": "Where will the bot run?", "faq.4.a": "I can host it on my server (with support) or on yours. The bot runs 24/7 and restarts itself if something fails.",
   "faq.5.q": "Do I get the source code?", "faq.5.a": "Yes. After payment you get the full code, setup instructions and all access.",
   "faq.6.q": "What if I need changes later?", "faq.6.a": "Small fixes within 14 days after delivery are free. After that — by agreement or as part of support.",
-  "ct.h": "Got a task? Let's talk", "ct.p": "Describe what you need — I'll reply within a day and suggest a solution. The consultation is free.",
+  "ct.h": "Got a task? Let's talk", "ct.p": "Describe your task in private messages on Freelancehunt — I'll reply within a day and suggest a solution. The consultation is free, payment goes through the platform's safe deal.", "ct.fh": "Message me on Freelancehunt",
 };
 const META = {
   uk: { title: "Maksym — Telegram-боти та сайти", desc: "Розробка Telegram-ботів, лендингів та автоматизації. Запуск на сервері 24/7, підтримка після здачі." },
@@ -84,12 +78,6 @@ document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click
 let start = "uk";
 try { start = localStorage.getItem("lang") || (navigator.language.startsWith("uk") || navigator.language.startsWith("ru") ? "uk" : "en"); } catch (e) {}
 setLang(start);
-
-// contacts
-const tg = document.getElementById("ct-tg"), mail = document.getElementById("ct-mail");
-if (CONFIG.telegram) { tg.href = "https://t.me/" + CONFIG.telegram; tg.textContent = "✈️ @" + CONFIG.telegram; } else tg.style.display = "none";
-if (CONFIG.email) { mail.href = "mailto:" + CONFIG.email; document.getElementById("ct-mail-t").textContent = CONFIG.email; }
-else mail.style.display = "none";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
