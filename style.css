@@ -126,6 +126,18 @@ h3 { font-size: 18px; margin-bottom: 8px; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
 .reveal.in { opacity: 1; transform: none; }
 
+/* ready-made demos */
+.demos__h { font-size: 26px; margin: 56px 0 8px; }
+.demos { grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+.card--demo { padding: 0; overflow: hidden; color: inherit; text-decoration: none; }
+.card--demo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+.card--demo > div { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.card--demo h3 { font-size: 18px; margin-bottom: 6px; }
+.card--demo p { font-size: 14px; flex: 1; }
+.demo__go { margin-top: 12px; color: var(--acc2); font-weight: 600; font-size: 14px; }
+@media (max-width: 960px) { .demos { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .demos { grid-template-columns: 1fr; } }
+
 /* responsive */
 @media (max-width: 960px) {
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
