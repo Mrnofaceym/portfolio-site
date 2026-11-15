@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Агентство нерухомості «Ключ» — квартири, будинки, ділянки. Купівля й оренда</title>
+  <meta name="description" content="Перевірені квартири, будинки й ділянки в місті та передмісті. Фільтри, фото, ціна за м², іпотечний калькулятор і запис на перегляд онлайн.">
+  <meta property="og:title" content="Агентство нерухомості «Ключ»">
+  <meta property="og:description" content="Каталог перевірених об'єктів з фото й цінами. Запис на перегляд за 1 хвилину.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2316324F'/><circle cx='24' cy='32' r='10' fill='none' stroke='%23F2B24C' stroke-width='6'/><path d='M34 32h20M46 32v8M52 32v6' stroke='%23F2B24C' stroke-width='6' stroke-linecap='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Ключ — агентство нерухомості">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16"/><circle cx="24" cy="32" r="10"/><path d="M34 32h20M46 32v8M52 32v6"/></svg>
+        <span>Ключ<small>агентство нерухомості</small></span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#catalog">Каталог</a>
+        <a href="#sell">Продати / здати</a>
+        <a href="#calc">Іпотека</a>
+        <a href="#agents">Агенти</a>
+        <a href="#faq">Питання</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <button class="fav-btn" id="favTop" type="button" aria-label="Обране"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg><span class="fav-count" id="favCount">0</span></button>
+        <a href="tel:+380000000000" class="nav__phone">+380 00 000 00 00</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero__bg" src="img/hero.webp" alt="" fetchpriority="high">
+      <div class="wrap hero__in">
+        <p class="pill"><span class="pill__dot"></span>18 перевірених об'єктів · оновлено сьогодні</p>
+        <h1>Знайдемо житло, в якому <em>захочеться лишитися</em></h1>
+        <p class="hero__sub">Квартири, будинки й ділянки в місті та передмісті. Кожен об'єкт перевіряємо юридично й особисто оглядаємо перед публікацією.</p>
+        <form class="qs" id="quickSearch">
+          <div class="seg" role="radiogroup" aria-label="Тип угоди">
+            <label><input type="radio" name="deal" value="sale" checked><span>Купити</span></label>
+            <label><input type="radio" name="deal" value="rent"><span>Орендувати</span></label>
+          </div>
+          <div class="qs__fields">
+            <label class="fld"><span>Тип</span>
+              <select name="type"><option value="">Будь-який</option><option value="flat">Квартира</option><option value="house">Будинок</option><option value="plot">Ділянка</option></select></label>
+            <label class="fld"><span>Кімнат</span>
+              <select name="rooms"><option value="">Будь-яка</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4+</option></select></label>
+            <label class="fld"><span id="qsPriceLbl">Ціна до, $</span>
+              <input name="pmax" type="number" inputmode="numeric" min="0" step="500" placeholder="без обмежень"></label>
+            <button class="btn btn--accent" type="submit" id="qsBtn">Показати</button>
+          </div>
+        </form>
+        <ul class="hero__stats">
+          <li><b>12 років</b><span>на ринку міста</span></li>
+          <li><b>640+</b><span>успішних угод</span></li>
+          <li><b>0 грн</b><span>для покупця за підбір</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalog wrap" id="catalog">
+      <div class="head">
+        <p class="eyebrow">Каталог</p>
+        <h2>Актуальні об'єкти</h2>
+      </div>
+      <div class="cat">
+        <aside class="filters" id="filters" aria-label="Фільтри">
+          <div class="filters__head"><b>Фільтри</b><button type="button" class="link" id="resetF">Скинути</button><button type="button" class="filters__close" id="closeF" aria-label="Закрити фільтри">✕</button></div>
+          <form id="fForm">
+            <div class="seg seg--full" role="radiogroup" aria-label="Тип угоди">
+              <label><input type="radio" name="deal" value="sale" checked><span>Купівля</span></label>
+              <label><input type="radio" name="deal" value="rent"><span>Оренда</span></label>
+            </div>
+            <fieldset><legend>Тип об'єкта</legend>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="type" value="flat"><span>Квартира</span></label>
+                <label class="chip"><input type="checkbox" name="type" value="house"><span>Будинок</span></label>
+                <label class="chip"><input type="checkbox" name="type" value="plot"><span>Ділянка</span></label>
+              </div></fieldset>
+            <fieldset><legend>Кімнат</legend>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="rooms" value="1"><span>1</span></label>
+                <label class="chip"><input type="checkbox" name="rooms" value="2"><span>2</span></label>
+                <label class="chip"><input type="checkbox" name="rooms" value="3"><span>3</span></label>
+                <label class="chip"><input type="checkbox" name="rooms" value="4"><span>4+</span></label>
+              </div></fieldset>
+            <fieldset><legend id="priceLegend">Ціна, $</legend>
+              <div class="range"><input name="pmin" type="number" inputmode="numeric" min="0" placeholder="від" aria-label="Ціна від"><span>—</span><input name="pmax" type="number" inputmode="numeric" min="0" placeholder="до" aria-label="Ціна до"></div></fieldset>
+            <fieldset><legend>Площа, м²</legend>
+              <div class="range"><input name="amin" type="number" inputmode="numeric" min="0" placeholder="від" aria-label="Площа від"><span>—</span><input name="amax" type="number" inputmode="numeric" min="0" placeholder="до" aria-label="Площа до"></div></fieldset>
+            <fieldset><legend>Район</legend>
+              <select name="district" id="districtSel"><option value="">Усі райони</option></select></fieldset>
+            <label class="check"><input type="checkbox" name="fav" value="1"><span>Лише обране ♥</span></label>
+          </form>
+          <button type="button" class="btn btn--wide filters__apply" id="applyF">Показати</button>
+        </aside>
+        <div class="cat__main">
+          <div class="toolbar">
+            <button type="button" class="btn btn--ghost btn--small toolbar__f" id="openF">⚙ Фільтри <span id="fCount"></span></button>
+            <p class="toolbar__count" id="count" aria-live="polite">—</p>
+            <label class="sort"><span>Сортувати:</span>
+              <select id="sort"><option value="new">Нові</option><option value="price-asc">Ціна ↑</option><option value="price-desc">Ціна ↓</option><option value="area">Площа</option></select></label>
+          </div>
+          <div class="grid" id="grid"></div>
+          <div class="empty" id="empty" hidden>
+            <b>Нічого не знайшли за цими параметрами</b>
+            <p>Спробуйте розширити фільтри — або залиште заявку, і агент надішле вам нові об'єкти, щойно вони з'являться.</p>
+            <button type="button" class="btn btn--ghost" id="emptyReset">Скинути фільтри</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="wrap why__grid">
+        <div><span class="why__ic">⚖️</span><b>Юридична перевірка</b><p>Документи, власники, обтяження — до того, як ви внесете завдаток.</p></div>
+        <div><span class="why__ic">📷</span><b>Реальні фото</b><p>Знімаємо самі. Що на фото — те й побачите на перегляді.</p></div>
+        <div><span class="why__ic">🤝</span><b>Супровід до ключів</b><p>Торг, нотаріус, банк, передача лічильників — беремо на себе.</p></div>
+        <div><span class="why__ic">🏦</span><b>Іпотека та єОселя</b><p>Допоможемо підготувати документи для банку.</p></div>
+      </div>
+    </section>
+
+    <section class="sell" id="sell">
+      <div class="wrap sell__in">
+        <div>
+          <p class="eyebrow eyebrow--light">Власникам</p>
+          <h2>Продайте або здайте свій об'єкт без клопоту</h2>
+          <ul class="ticks">
+            <li>Безкоштовна оцінка ринкової ціни за 1 день</li>
+            <li>Професійні фото та розміщення на 6 майданчиках</li>
+            <li>Показуємо лише перевіреним покупцям і орендарям</li>
+            <li>Комісія — тільки після успішної угоди</li>
+          </ul>
+        </div>
+        <form class="card form" id="sellForm" novalidate>
+          <h3>Заявка від власника</h3>
+          <div class="seg seg--full" role="radiogroup" aria-label="Що бажаєте">
+            <label><input type="radio" name="goal" value="Продати" checked><span>Продати</span></label>
+            <label><input type="radio" name="goal" value="Здати в оренду"><span>Здати</span></label>
+          </div>
+          <label class="fld"><span>Тип об'єкта</span>
+            <select name="ptype"><option>Квартира</option><option>Будинок</option><option>Ділянка</option><option>Комерційне приміщення</option></select></label>
+          <label class="fld"><span>Адреса або район</span><input name="address" maxlength="120" placeholder="вул. Паркова, 12" required></label>
+          <div class="row2">
+            <label class="fld"><span>Бажана ціна</span><input name="price" maxlength="30" placeholder="45 000 $"></label>
+            <label class="fld"><span>Площа, м²</span><input name="area" type="number" inputmode="numeric" min="0" placeholder="54"></label>
+          </div>
+          <div class="row2">
+            <label class="fld"><span>Ваше ім'я</span><input name="name" maxlength="60" autocomplete="name" required></label>
+            <label class="fld"><span>Телефон</span><input name="phone" type="tel" maxlength="20" autocomplete="tel" placeholder="+380" required></label>
+          </div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--accent btn--wide" type="submit">Отримати оцінку</button>
+          <p class="form__msg" role="status"></p>
+          <p class="form__note">Натискаючи кнопку, ви погоджуєтесь на обробку контактних даних для зворотного зв'язку.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="calc wrap" id="calc">
+      <div class="head">
+        <p class="eyebrow">Калькулятор</p>
+        <h2>Іпотека чи розстрочка: скільки платити щомісяця</h2>
+        <p>Орієнтовний розрахунок за ануїтетною схемою. Для розстрочки від власника поставте ставку 0%.</p>
+      </div>
+      <div class="calc__in card">
+        <form class="calc__form" id="calcForm">
+          <label class="slider"><span>Вартість об'єкта <output id="oPrice"></output></span>
+            <input type="range" name="price" min="5000" max="150000" step="500" value="42000"></label>
+          <label class="slider"><span>Перший внесок <output id="oDown"></output></span>
+            <input type="range" name="down" min="0" max="90" step="5" value="30"></label>
+          <label class="slider"><span>Строк <output id="oTerm"></output></span>
+            <input type="range" name="term" min="1" max="20" step="1" value="10"></label>
+          <label class="slider"><span>Ставка <output id="oRate"></output></span>
+            <input type="range" name="rate" min="0" max="25" step="0.5" value="7"></label>
+          <div class="presets"><button type="button" class="chip-btn" data-rate="3">єОселя 3%</button><button type="button" class="chip-btn" data-rate="7">єОселя 7%</button><button type="button" class="chip-btn" data-rate="16">Банк ~16%</button><button type="button" class="chip-btn" data-rate="0">Розстрочка 0%</button></div>
+        </form>
+        <div class="calc__res">
+          <span>Щомісячний платіж</span>
+          <b id="rMonthly">—</b>
+          <small id="rUah"></small>
+          <dl>
+            <div><dt>Сума кредиту</dt><dd id="rLoan">—</dd></div>
+            <div><dt>Переплата</dt><dd id="rOver">—</dd></div>
+            <div><dt>Загалом сплатите</dt><dd id="rTotal">—</dd></div>
+          </dl>
+          <a href="#contacts" class="btn btn--light btn--wide">Консультація щодо іпотеки</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="agents" id="agents">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Команда</p><h2>Агенти, які знають кожну вулицю</h2></div>
+        <div class="agents__grid" id="agentsGrid"></div>
+      </div>
+    </section>
+
+    <section class="reviews wrap" id="reviews">
+      <div class="head"><p class="eyebrow">Відгуки</p><h2>4.9 ★ — 87 відгуків клієнтів</h2></div>
+      <div class="reviews__grid" id="reviewsGrid"></div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap faq__in">
+        <div class="head"><p class="eyebrow">Питання</p><h2>Часті запитання</h2><p>Не знайшли відповідь? Зателефонуйте — пояснимо за 5 хвилин.</p></div>
+        <div id="faqList"></div>
+      </div>
+    </section>
+
+    <section class="contacts wrap" id="contacts">
+      <div class="card contacts__in">
+        <div>
+          <p class="eyebrow">Контакти</p>
+          <h2>Приходьте на каву — поговоримо про ваше житло</h2>
+          <p><b>Офіс:</b> вул. Соборна, 1, 2-й поверх (демо-адреса)</p>
+          <p><b>Телефон:</b> <a href="tel:+380000000000">+380 00 000 00 00</a></p>
+          <p><b>Графік:</b> Пн–Пт 9:00–18:00, Сб 10:00–15:00</p>
+        </div>
+        <div class="contacts__cta">
+          <a href="tel:+380000000000" class="btn">📞 Зателефонувати</a>
+          <a href="#catalog" class="btn btn--ghost">Дивитися об'єкти</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Агентство нерухомості «Ключ»</span>
+      <span>Демо-проєкт, вигадане агентство. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <!-- Listing detail (hash route #obj-N) -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__bg" data-close></div>
+    <article class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button type="button" class="modal__x" data-close aria-label="Закрити">✕</button>
+      <div id="mBody"></div>
+    </article>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

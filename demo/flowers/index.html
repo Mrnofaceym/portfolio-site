@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Квіткова крамниця «Ромашка» — букети з доставкою сьогодні</title>
+  <meta name="description" content="Букети, квіти в коробках, весільна флористика. Доставка по місту сьогодні до 20:00. Оберіть букет і оформіть замовлення за 1 хвилину.">
+  <meta property="og:title" content="Квіткова крамниця «Ромашка» — доставка сьогодні">
+  <meta property="og:description" content="Свіжі букети з доставкою по місту сьогодні до 20:00. Можна анонімно, з листівкою.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%232F5D46'/><g fill='white'><ellipse cx='32' cy='17' rx='6' ry='10'/><ellipse cx='32' cy='47' rx='6' ry='10'/><ellipse cx='17' cy='32' rx='10' ry='6'/><ellipse cx='47' cy='32' rx='10' ry='6'/></g><circle cx='32' cy='32' r='8' fill='%23F5C542'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Ромашка">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect class="bg" width="64" height="64" rx="16"/><g class="pt"><ellipse cx="32" cy="17" rx="6" ry="10"/><ellipse cx="32" cy="47" rx="6" ry="10"/><ellipse cx="17" cy="32" rx="10" ry="6"/><ellipse cx="47" cy="32" rx="10" ry="6"/></g><circle class="c" cx="32" cy="32" r="8"/></svg>
+        <span>Ромашка</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#catalog">Букети</a>
+        <a href="#builder">Свій букет</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#faq">Питання</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#catalog" class="btn btn--small">Обрати букет</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill"><span class="pill__dot"></span>Доставка сьогодні до 20:00</p>
+          <h1>Свіжі букети <em>з доставкою сьогодні</em> по всьому місту</h1>
+          <p class="hero__sub">Збираємо букет після замовлення — зі свіжих квітів, а не з вітрини. Надішлемо фото перед доставкою, додамо листівку, можемо анонімно.</p>
+          <div class="hero__cta">
+            <a href="#catalog" class="btn">💐 Обрати букет</a>
+            <a href="https://t.me/faceclo_bot" class="btn btn--ghost" target="_blank" rel="noopener">✈️ Замовити в Telegram</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>від 90 хв</b><span>доставка по місту</span></li>
+            <li><b>фото</b><span>букета перед доставкою</span></li>
+            <li><b>від 690 грн</b><span>букети</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="Квіткова крамниця зі свіжими квітами" fetchpriority="high">
+          <div class="hero__card"><b>Встигнемо сьогодні</b><span id="todayNote">до 20:00</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog wrap" id="catalog">
+      <div class="head reveal">
+        <p class="eyebrow">Букети</p>
+        <h2>Оберіть букет — решту зробимо ми</h2>
+        <p>Оберіть привід і бюджет. Склад букета може трохи відрізнятися залежно від сезону — флорист погодить заміну з вами.</p>
+      </div>
+      <div class="filters reveal">
+        <div class="chips" id="occasions" role="group" aria-label="Привід"></div>
+        <div class="chips chips--price" id="prices" role="group" aria-label="Ціна"></div>
+      </div>
+      <div class="cards" id="cards"></div>
+      <p class="empty" id="empty" hidden>Нічого не знайшлося — спробуйте інший фільтр або <a href="#builder">зберіть свій букет</a>.</p>
+    </section>
+
+    <section class="builder" id="builder">
+      <div class="wrap builder__in">
+        <div class="builder__intro reveal">
+          <p class="eyebrow">Конструктор</p>
+          <h2>Зібрати свій букет</h2>
+          <p>Оберіть квіти, кількість і упаковку — ціна рахується одразу. Флорист збере саме так, як ви задумали.</p>
+          <img src="img/florist.webp" alt="Флорист збирає букет" loading="lazy">
+        </div>
+        <div class="bb reveal" id="bb">
+          <div class="bb__group"><span class="bb__label">Квіти</span><div class="opts" id="bbFlower"></div></div>
+          <div class="bb__group"><span class="bb__label">Кількість</span><div class="opts opts--row" id="bbCount"></div></div>
+          <div class="bb__group"><span class="bb__label">Упаковка</span><div class="opts" id="bbWrap"></div></div>
+          <label class="check"><input type="checkbox" id="bbGreen"> Додати зелень (евкаліпт, піттоспорум) <small>+80 грн</small></label>
+          <div class="bb__total"><span id="bbDesc"></span><b id="bbPrice"></b></div>
+          <button type="button" class="btn btn--wide" id="bbOrder">Оформити цей букет</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery wrap" id="delivery">
+      <div class="head reveal">
+        <p class="eyebrow">Доставка</p>
+        <h2>Зони й ціни доставки</h2>
+        <p>Щодня з 9:00 до 20:00. Замовлення до 18:00 доставимо сьогодні. Перед виїздом надішлемо фото букета.</p>
+      </div>
+      <div class="zones" id="zones"></div>
+      <p class="zones__note reveal">🎁 У межах центру — <b>безкоштовно</b> при замовленні від 1500 грн. Самовивіз — безкоштовно.</p>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Відгуки</p>
+          <h2>Кажуть ті, хто дарував</h2>
+        </div>
+        <div class="reviews__grid">
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Замовив о 16:00 з роботи — о 18:30 дружина вже тримала букет. Надіслали фото перед доставкою, все як на сайті.»</p><cite>Олег</cite></blockquote>
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Анонімний букет для подруги в лікарню — кур'єр нічого не розповів, як і просила 😊 Квіти стояли 10 днів.»</p><cite>Марина</cite></blockquote>
+          <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Зібрала свій букет у конструкторі — тюльпани й евкаліпт. Мама плакала від щастя. Дякую!»</p><cite>Юлія</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow">Питання</p>
+        <h2>Часті запитання</h2>
+      </div>
+      <div class="faq__list" id="faqList"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow">Контакти</p>
+          <h2>Заходьте по квіти</h2>
+          <dl class="contacts__list">
+            <dt>Адреса</dt><dd>вул. Садова, 3 (демо-адреса), біля ринку</dd>
+            <dt>Графік</dt><dd>Щодня 8:00–20:00, без вихідних</dd>
+            <dt>Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+          <div class="contacts__cta">
+            <a href="#catalog" class="btn">Обрати букет</a>
+            <a href="https://t.me/faceclo_bot" class="btn btn--ghost" target="_blank" rel="noopener">✈️ Замовити в Telegram</a>
+          </div>
+        </div>
+        <img class="contacts__img reveal" src="img/vase.webp" alt="Букет у вазі на підвіконні" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Квіткова крамниця «Ромашка»</span>
+      <span>Демо-проєкт, вигаданий заклад. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="mTitle">
+    <form class="order" id="orderForm" novalidate>
+      <button type="button" class="modal__x" id="mClose" aria-label="Закрити">×</button>
+      <div class="order__item" id="mItem"></div>
+      <h3 id="mTitle">Оформлення доставки</h3>
+      <div class="field-row">
+        <label><span>Ваше ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+        <label><span>Ваш телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+      </div>
+      <div class="field-row">
+        <label><span>Ім'я отримувача</span><input name="rname" required maxlength="60"></label>
+        <label><span>Телефон отримувача</span><input name="rphone" type="tel" required placeholder="+380 __ ___ __ __" maxlength="20"></label>
+      </div>
+      <div class="field-row">
+        <label><span>Зона доставки</span><select name="zone" id="fZone"></select></label>
+        <label><span>Дата</span><input type="date" name="date" id="fDate" required></label>
+      </div>
+      <label id="addrWrap"><span>Адреса</span><input name="address" maxlength="120" placeholder="Вулиця, будинок, квартира / під'їзд"></label>
+      <div><span class="pick__label">Час доставки</span><div class="slots" id="slots" role="radiogroup"></div></div>
+      <label><span>Текст листівки (безкоштовно)</span><textarea name="card" rows="2" maxlength="200" placeholder="Напр.: З днем народження, рідна! ❤️"></textarea></label>
+      <label class="check check--plain"><input type="checkbox" name="anon"> Анонімно — не називати отримувачу, від кого букет</label>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="order__total" id="mTotal"></div>
+      <button class="btn btn--wide" type="submit">Замовити доставку</button>
+      <p class="form__msg" id="formMsg" role="status"></p>
+    </form>
+  </dialog>
+
+  <a href="#catalog" class="sticky-book btn">💐 Обрати букет</a>
+  <script src="app.js" defer></script>
+</body>
+</html>

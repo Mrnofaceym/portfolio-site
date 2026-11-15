@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор ціни для вашого сайту — клієнт рахує сам і залишає заявку</title>
+  <meta name="description" content="Вбудовуваний калькулятор вартості для Tilda, WordPress, Horoshop, Wix. Один рядок коду — і заявки з розрахунком приходять у Telegram.">
+  <meta property="og:title" content="Калькулятор для вашого сайту">
+  <meta property="og:description" content="Клієнт сам рахує ціну і залишає заявку. Підключення одним рядком коду на будь-який сайт.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23141B2D'/><rect x='16' y='14' width='32' height='12' rx='3' fill='%23FF6A3D'/><g fill='white'><rect x='16' y='32' width='8' height='8' rx='2'/><rect x='28' y='32' width='8' height='8' rx='2'/><rect x='40' y='32' width='8' height='8' rx='2'/><rect x='16' y='44' width='8' height='8' rx='2'/><rect x='28' y='44' width='8' height='8' rx='2'/><rect x='40' y='44' width='8' height='8' rx='2'/></g></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#141B2D"/><rect x="16" y="14" width="32" height="12" rx="3" fill="#FF6A3D"/><g fill="#fff"><rect x="16" y="32" width="8" height="8" rx="2"/><rect x="28" y="32" width="8" height="8" rx="2"/><rect x="40" y="32" width="8" height="8" rx="2"/><rect x="16" y="44" width="8" height="8" rx="2"/><rect x="28" y="44" width="8" height="8" rx="2"/><rect x="40" y="44" width="8" height="8" rx="2"/></g></svg><span>Калькулятор<i>.віджет</i></span></a>
+      <nav class="nav__links">
+        <a href="#demo">Демо</a>
+        <a href="#why">Переваги</a>
+        <a href="#code">Код</a>
+        <a href="#how">Як підключити</a>
+      </nav>
+      <a href="#order" class="btn btn--small">Замовити</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill">Для Tilda · WordPress · Horoshop · Wix · будь-якого сайту</p>
+          <h1>Калькулятор для вашого сайту — <em>клієнт сам рахує ціну і залишає заявку</em></h1>
+          <p class="hero__sub">Відвідувач рухає повзунок, обирає опції й одразу бачить «від 7 850 до 9 100 грн». Ще два поля — і заявка з повним розрахунком уже у вашому Telegram. Без переробки сайту: вставляєте один рядок коду.</p>
+          <div class="hero__cta">
+            <a href="#demo" class="btn">Спробувати демо</a>
+            <a href="#code" class="btn btn--ghost">Подивитися код</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>1 рядок</b><span>коду для підключення</span></li>
+            <li><b id="kb">~20 КБ</b><span>без бібліотек</span></li>
+            <li><b>24/7</b><span>рахує замість менеджера</span></li>
+          </ul>
+        </div>
+        <div class="hero__media" aria-label="Приклад заявки в Telegram">
+          <div class="tg">
+            <div class="tg__top"><span class="tg__ava">🤖</span><div><b>Заявки з сайту</b><small>бот</small></div></div>
+            <div class="tg__msg">
+              <p>🧮 <b>Заявка з калькулятора</b></p>
+              <p>💰 від 7 850 до 9 100 грн</p>
+              <p>• Площа кімнати: 18 м²<br>• Тип полотна: Матова<br>• Кількість кутів: 4 шт<br>• Світильники: 4 шт<br>• Обходи труб: 1 шт</p>
+              <p>👤 Олена, +380 00 000 00 00</p>
+              <p>🕐 Зателефонувати: увечері, 18:00–21:00</p>
+              <p>🌐 steli-podillia.com.ua</p>
+              <time>19:42 ✓✓</time>
+            </div>
+          </div>
+          <div class="float float--a">⚡ Ціна за 30 секунд</div>
+          <div class="float float--b">📩 Заявка одразу в Telegram</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="demo">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Живе демо</p>
+          <h2>Ось так віджет виглядає на чужому сайті</h2>
+          <p class="muted">Нижче — вигаданий сайт компанії. Калькулятор вставлено в нього тим самим кодом, що й у блоці «Код». Перемкніть нішу або колір — це той самий віджет, змінюється лише файл з цінами.</p>
+        </div>
+        <div class="controls">
+          <div class="tabs" role="tablist" aria-label="Ніша">
+            <button role="tab" class="tab is-on" aria-selected="true" data-cfg="ceilings">🏠 Натяжні стелі</button>
+            <button role="tab" class="tab" aria-selected="false" data-cfg="cleaning">🧽 Клінінг</button>
+          </div>
+          <div class="swatches" role="radiogroup" aria-label="Колір під бренд">
+            <span>Колір:</span>
+            <button class="sw is-on" role="radio" aria-checked="true" data-color="" aria-label="Як у конфігу"></button>
+            <button class="sw" role="radio" aria-checked="false" data-color="#E4572E" style="--s:#E4572E" aria-label="Помаранчевий"></button>
+            <button class="sw" role="radio" aria-checked="false" data-color="#4F46E5" style="--s:#4F46E5" aria-label="Фіолетовий"></button>
+            <button class="sw" role="radio" aria-checked="false" data-color="#1F2937" style="--s:#1F2937" aria-label="Графітовий"></button>
+          </div>
+        </div>
+
+        <div class="browser">
+          <div class="browser__bar"><i></i><i></i><i></i><span class="browser__url" id="fakeUrl">🔒 steli-podillia.com.ua</span></div>
+          <div class="fake" id="fake">
+            <div class="fake__nav"><b id="fakeLogo">Стелі Поділля</b><span id="fakeNav">Каталог · Роботи · Ціни · Контакти</span><span class="fake__tel">+380 00 000 00 00</span></div>
+            <div class="fake__hero">
+              <h3 id="fakeH">Натяжні стелі у Вінниці та Хмельнику — монтаж за 1 день</h3>
+              <p id="fakeP">Німецькі полотна, гарантія 12 років, прибираємо за собою. Порахуйте вартість просто зараз.</p>
+            </div>
+            <div class="fake__calc">
+              <div id="sc-calc"></div>
+            </div>
+            <div class="fake__foot" id="fakeFoot">© Стелі Поділля · вигаданий сайт для демонстрації</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Чому це працює</p>
+          <h2>Більше заявок без зміни сайту</h2>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="card__ic">⌨️</span><h3>Один рядок коду</h3><p>Вставляєте в блок «HTML» — і все. Tilda, WordPress, Horoshop, Wix, OpenCart чи самописний сайт.</p></article>
+          <article class="card"><span class="card__ic">🛡️</span><h3>Не ламає дизайн</h3><p>Віджет живе в ізольованому Shadow DOM: стилі сайту не зачіпають калькулятор, а калькулятор — сайт.</p></article>
+          <article class="card"><span class="card__ic">📩</span><h3>Заявки в Telegram</h3><p>Ім'я, телефон, зручний час і всі параметри з ціною. Менеджер дзвонить уже підготовленим.</p></article>
+          <article class="card"><span class="card__ic">🧾</span><h3>Ціни в одному файлі</h3><p>Підняли ціну на полотно — міняємо одне число в конфігу. Без програміста на годину.</p></article>
+          <article class="card"><span class="card__ic">🔒</span><h3>Чесний розрахунок</h3><p>Сервер перераховує ціну сам, тож підробити суму в заявці не вийде. Від спаму — прихована пастка.</p></article>
+          <article class="card"><span class="card__ic">📱</span><h3>Зручно з телефону</h3><p>Великі кнопки й повзунки, підлаштовується під ширину блоку — від 320 px до десктопу.</p></article>
+        </div>
+        <div class="niches">
+          <span>Підходить для:</span>
+          <b>натяжні стелі</b><b>ремонт квартир</b><b>вікна й двері</b><b>клінінг</b><b>доставка</b><b>меблі на замовлення</b><b>ландшафт</b><b>поліграфія</b><b>автосервіс</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="code" id="code">
+      <div class="wrap code__in">
+        <div>
+          <p class="eyebrow eyebrow--light">Код для вставки</p>
+          <h2>Скопіюйте — і калькулятор на сайті</h2>
+          <p>Код оновлюється разом із демо вище: спробуйте змінити нішу чи колір. Атрибут <code>data-color</code> фарбує віджет у колір вашого бренду, <code>data-config</code> вибирає набір цін.</p>
+        </div>
+        <div class="snippet">
+          <div class="snippet__bar"><span>HTML</span><button class="copy" id="copy" type="button">Копіювати</button></div>
+          <pre><code id="snippet"></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Як підключити</p>
+          <h2>Три кроки — і калькулятор приймає заявки</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><h3>Надсилаєте прайс</h3><p>Фото прайсу або таблиця: від чого залежить ціна, які є опції. Я збираю з цього конфіг калькулятора й узгоджую з вами формулу.</p></li>
+          <li><span>2</span><h3>Вставляєте код</h3><p>Tilda — блок T123 «HTML-код». WordPress — блок «Довільний HTML». Horoshop і Wix — «Вставити код». Або це зроблю я.</p></li>
+          <li><span>3</span><h3>Отримуєте заявки</h3><p>Підключаємо вашого Telegram-бота: кожна заявка з ім'ям, телефоном, параметрами й ціною приходить вам або в робочий чат.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="order" id="order">
+      <div class="wrap order__in">
+        <h2>Хочете такий калькулятор на свій сайт?</h2>
+        <p>Напишіть, чим займаєтесь і що потрібно рахувати — покажу, як це виглядатиме саме з вашими цінами.</p>
+        <a href="https://site-cloud.uk" class="btn btn--light" target="_blank" rel="noopener">Обговорити проєкт</a>
+        <p class="order__tel">або телефон: <a href="tel:+380000000000">+380 00 000 00 00</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Калькулятор-віджет</span>
+      <span>Демо-проєкт. Розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <script src="widget.js" data-config="ceilings" async></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Домашня кондитерська «Медовик» — торти на замовлення, бенто, капкейки</title>
+  <meta name="description" content="Торти на замовлення, бенто-торти, капкейки й десерти на свято. Зберіть торт онлайн — ціна рахується одразу, замовлення летить кондитеру в Telegram.">
+  <meta property="og:title" content="Домашня кондитерська «Медовик» — торти на замовлення">
+  <meta property="og:description" content="Зберіть свій торт онлайн: вага, начинка, декор — і одразу бачите ціну.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23B8682A'/><rect x='14' y='30' width='36' height='18' rx='4' fill='%23FFF6E8'/><rect x='18' y='20' width='28' height='12' rx='4' fill='%23F2C98A'/><circle cx='32' cy='15' r='4' fill='%23D9443A'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Медовик">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect class="bg" width="64" height="64" rx="16"/><rect class="l1" x="14" y="30" width="36" height="18" rx="4"/><rect class="l2" x="18" y="20" width="28" height="12" rx="4"/><circle class="ch" cx="32" cy="15" r="4"/></svg>
+        <span>Медовик</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#catalog">Каталог і ціни</a>
+        <a href="#builder">Зібрати торт</a>
+        <a href="#gallery">Роботи</a>
+        <a href="#how">Як замовити</a>
+        <a href="#faq">Питання</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#builder" class="btn btn--small">Замовити торт</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <p class="pill"><span class="pill__dot"></span>Приймаємо замовлення <span id="nearest">на найближчі дні</span></p>
+          <h1>Домашні торти, які <em>смакують як у дитинстві</em></h1>
+          <p class="hero__sub">Печемо з вершкового масла, справжніх вершків і сезонних ягід — без маргарину й ароматизаторів. Зберіть торт онлайн: обирайте вагу, начинку й декор — ціна рахується одразу.</p>
+          <div class="hero__cta">
+            <a href="#builder" class="btn">🎂 Зібрати свій торт</a>
+            <a href="#catalog" class="btn btn--ghost">Дивитися каталог</a>
+          </div>
+          <ul class="hero__stats">
+            <li><b>650 грн</b><span>за 1 кг торта</span></li>
+            <li><b>2 дні</b><span>мінімум до свята</span></li>
+            <li><b>1200+</b><span>тортів спечено</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="Двоярусний торт з ягодами й карамеллю" fetchpriority="high">
+          <div class="hero__card"><b>Хіт сезону</b><span>Ягоди й солона карамель</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog wrap" id="catalog">
+      <div class="head reveal">
+        <p class="eyebrow">Каталог і ціни</p>
+        <h2>Торти, бенто, капкейки й десерти</h2>
+        <p>Ціни за кілограм або за штуку. Будь-який торт можна змінити під себе — у конструкторі нижче.</p>
+      </div>
+      <div class="tabs reveal" role="tablist" id="tabs"></div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="builder" id="builder">
+      <div class="wrap">
+        <div class="head head--light reveal">
+          <p class="eyebrow eyebrow--light">Конструктор</p>
+          <h2>Зібрати торт</h2>
+          <p>Оберіть вагу, начинку й декор — ціна оновлюється одразу. Кондитер отримає замовлення в Telegram і зв'яжеться з вами для підтвердження.</p>
+        </div>
+        <form class="order reveal" id="orderForm" novalidate>
+          <div class="order__main">
+            <fieldset class="block">
+              <legend>1. Що печемо</legend>
+              <div class="choice" id="kinds"></div>
+            </fieldset>
+            <fieldset class="block" id="weightBlock">
+              <legend>2. Вага <span class="hint" id="guests"></span></legend>
+              <div class="weights" id="weights"></div>
+            </fieldset>
+            <fieldset class="block">
+              <legend>3. Начинка</legend>
+              <div class="fillings" id="fillings"></div>
+            </fieldset>
+            <fieldset class="block">
+              <legend>4. Декор <span class="hint">можна кілька</span></legend>
+              <div class="decor" id="decor"></div>
+              <label class="full"><span>Напис на торті (безкоштовно)</span><input name="inscription" maxlength="40" placeholder="Напр.: З днем народження, Соню!"></label>
+            </fieldset>
+            <fieldset class="block">
+              <legend>5. Коли й як отримати</legend>
+              <div class="field-row">
+                <label><span>Дата свята</span><input type="date" name="date" id="fDate" required></label>
+                <label><span>Час</span><select name="time" id="fTime"></select></label>
+              </div>
+              <div class="choice choice--2" id="delivery"></div>
+              <label class="full" id="addrWrap" hidden><span>Адреса доставки</span><input name="address" maxlength="120" placeholder="Вулиця, будинок, квартира"></label>
+            </fieldset>
+            <fieldset class="block">
+              <legend>6. Ваші контакти</legend>
+              <div class="field-row">
+                <label><span>Ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+                <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+              </div>
+              <label class="full"><span>Побажання (необов'язково)</span><textarea name="comment" rows="2" maxlength="300" placeholder="Колір крему, алергії, ідея з фото…"></textarea></label>
+              <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            </fieldset>
+          </div>
+          <aside class="order__sum">
+            <div class="sum" id="sum" aria-live="polite"></div>
+            <button class="btn btn--wide" type="submit">Надіслати замовлення</button>
+            <p class="form__msg" id="formMsg" role="status"></p>
+            <p class="sum__note">Передоплата 30% — після підтвердження кондитером. Остаточна ціна залежить від фактичної ваги (±100 г).</p>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <section class="gallery wrap" id="gallery">
+      <div class="head reveal">
+        <p class="eyebrow">Наші роботи</p>
+        <h2>Торти, що вже стали частиною свят</h2>
+      </div>
+      <div class="gallery__grid">
+        <img src="img/wedding.webp" alt="Весільний триярусний торт з квітами" loading="lazy" class="reveal">
+        <img src="img/table.webp" alt="Солодкий стіл на свято" loading="lazy" class="reveal">
+        <img src="img/kids.webp" alt="Дитячий торт з посипкою" loading="lazy" class="reveal">
+        <img src="img/naked.webp" alt="Ягідний відкритий торт" loading="lazy" class="reveal">
+        <img src="img/chocolate.webp" alt="Шоколадний торт з вишнею" loading="lazy" class="reveal">
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="wrap how__in">
+        <div class="reveal">
+          <p class="eyebrow">Як замовити</p>
+          <h2>Три кроки до вашого торта</h2>
+          <ol class="how__steps">
+            <li><b>Збираєте торт на сайті</b><span>Вага, начинка, декор і дата — ціну бачите одразу. Або надішліть фото-ідею.</span></li>
+            <li><b>Підтверджуємо й беремо передоплату</b><span>Кондитер напише чи зателефонує протягом години, уточнить деталі. Передоплата 30% на картку.</span></li>
+            <li><b>Забираєте або привозимо</b><span>Самовивіз у зручний час або доставка по місту в термосумці — торт приїде ідеальним.</span></li>
+          </ol>
+        </div>
+        <img class="how__img reveal" src="img/process.webp" alt="Кондитер прикрашає торт кремом" loading="lazy">
+      </div>
+    </section>
+
+    <section class="reviews wrap" id="reviews">
+      <div class="head reveal">
+        <p class="eyebrow">Відгуки</p>
+        <h2>Що кажуть гості й іменинники</h2>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Замовляла медовик на ювілей мами — гості просили рецепт. Ніжний, не приторний, коржі просочені ідеально.»</p><cite>Оксана</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Зібрала торт на сайті за 3 хвилини, одразу побачила ціну. Привезли вчасно, синочок був у захваті від макаронс.»</p><cite>Наталія</cite></blockquote>
+        <blockquote class="review reveal"><div class="stars" aria-label="5/5">★★★★★</div><p>«Бенто-торт на річницю — маленький, але з душею. Напис зробили саме такий, як я хотіла.»</p><cite>Андрій</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="faq wrap" id="faq">
+      <div class="head reveal">
+        <p class="eyebrow">Питання</p>
+        <h2>Часті запитання</h2>
+      </div>
+      <div class="faq__list" id="faqList"></div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow">Контакти</p>
+          <h2>Заходьте на чай</h2>
+          <dl class="contacts__list">
+            <dt>Адреса</dt><dd>вул. Медова, 12 (демо-адреса), самовивіз</dd>
+            <dt>Графік</dt><dd>Вт–Нд 9:00–19:00, Пн — вихідний (печемо)</dd>
+            <dt>Телефон</dt><dd>+380 00 000 00 00</dd>
+          </dl>
+          <div class="contacts__cta">
+            <a href="#builder" class="btn">Замовити торт</a>
+            <a href="https://t.me/faceclo_bot" class="btn btn--ghost" target="_blank" rel="noopener">✈️ Telegram</a>
+          </div>
+        </div>
+        <img class="contacts__img reveal" src="img/box.webp" alt="Набір десертів у коробці" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Домашня кондитерська «Медовик»</span>
+      <span>Демо-проєкт, вигаданий заклад. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#builder" class="sticky-book btn">🎂 Зібрати торт</a>
+  <script src="app.js" defer></script>
+</body>
+</html>

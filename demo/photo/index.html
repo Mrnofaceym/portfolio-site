@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Марта Світло — весільний і сімейний фотограф</title>
+  <meta name="description" content="Весілля, сімейні фотосесії, love story та портрети. Живі емоції, природне світло, фото за 7–30 днів. Перевірте вільні дати й забронюйте зйомку онлайн.">
+  <meta property="og:title" content="Марта Світло — фотограф">
+  <meta property="og:description" content="Весілля, сім'я, love story, портрети. Вільні дати й бронювання онлайн.">
+  <meta property="og:image" content="img/w-wheat-1600.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23221F1C'/><circle cx='32' cy='33' r='13' fill='none' stroke='%23F3EDE4' stroke-width='4'/><circle cx='32' cy='33' r='5' fill='%23C8A27A'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/w-wheat-800.webp" imagesrcset="img/w-wheat-800.webp 800w, img/w-wheat-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo">Марта Світло</a>
+      <nav class="nav__links" id="links">
+        <a href="#portfolio">Портфоліо</a>
+        <a href="#about">Про мене</a>
+        <a href="#prices">Пакети</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#faq">Питання</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#book" class="btn btn--small">Забронювати дату</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Головна">
+      <div class="hero__slides" id="slides">
+        <img class="is-on" src="img/w-wheat-800.webp" srcset="img/w-wheat-800.webp 800w, img/w-wheat-1600.webp 1600w" sizes="100vw" alt="Наречені йдуть пшеничним полем на заході сонця" fetchpriority="high" width="1600" height="900">
+        <img data-srcset="img/l-pier-800.webp 800w, img/l-pier-1600.webp 1600w" sizes="100vw" alt="Пара на дерев'яному пірсі біля озера" width="1600" height="900">
+        <img data-srcset="img/f-picnic-800.webp 800w, img/f-picnic-1600.webp 1600w" sizes="100vw" alt="Сімейний пікнік у парку" width="1600" height="900">
+        <img data-srcset="img/p-lavender-800.webp 800w, img/p-lavender-1600.webp 1600w" sizes="100vw" alt="Портрет дівчини в лавандовому полі" width="1600" height="900">
+        <img data-srcset="img/w-dance-800.webp 800w, img/w-dance-1600.webp 1600w" sizes="100vw" alt="Перший танець наречених" width="1600" height="900">
+      </div>
+      <div class="hero__shade"></div>
+      <div class="wrap hero__text">
+        <p class="hero__kicker">Фотограф · Вінниця та вся Україна</p>
+        <h1>Марта Світло</h1>
+        <p class="hero__tag">Знімаю тихі, справжні моменти — щоб через двадцять років<br class="br-d"> ви відчули той самий день, а не просто згадали його.</p>
+        <div class="hero__cta">
+          <a href="#portfolio" class="btn btn--light">Дивитися роботи</a>
+          <a href="#book" class="btn btn--line">Перевірити дату</a>
+        </div>
+      </div>
+      <div class="hero__dots" id="dots" role="tablist" aria-label="Слайди"></div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Портфоліо</p>
+          <h2>Історії, які я знімала</h2>
+        </div>
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Категорії"></div>
+        <div class="masonry" id="gallery"></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about__in">
+        <figure class="about__img reveal">
+          <img src="img/marta-800.webp" srcset="img/marta-800.webp 450w, img/marta-1600.webp 900w" sizes="(max-width: 900px) 90vw, 440px" alt="Фотограф Марта з плівковою камерою" loading="lazy" width="900" height="1600">
+        </figure>
+        <div class="about__text reveal">
+          <p class="eyebrow">Про мене</p>
+          <h2>Привіт, я Марта</h2>
+          <p class="lead">Дев'ять років я знімаю людей — і досі найбільше люблю ті кадри, яких ніхто не планував: як наречений витирає сльозу, як дитина ховається за мамину сукню, як пара сміється з власної незграбності.</p>
+          <p>Я не ставлю вас у «правильні пози». Підкажу, куди стати, щоб падало гарне світло, а далі — просто будьте собою. Працюю з природним світлом, обробляю кожен кадр вручну, без пластикової шкіри й кислотних фільтрів.</p>
+          <ul class="facts">
+            <li><b>9</b><span>років знімаю</span></li>
+            <li><b>140+</b><span>весіль</span></li>
+            <li><b>600+</b><span>фотосесій</span></li>
+          </ul>
+          <p class="sign">Марта</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="prices" id="prices">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Пакети</p>
+          <h2>Прозорі ціни</h2>
+          <p>Фіксована вартість — без доплат за «складні» локації в межах міста. Передоплата 30% закріплює дату.</p>
+        </div>
+        <div class="packs" id="packs"></div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Як проходить зйомка</p>
+          <h2>Від заявки до готових фото</h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal"><span class="steps__n">01</span><h3>Бронювання</h3><p>Обираєте вільну дату й пакет. Я передзвоню протягом дня, обговоримо деталі. Передоплата 30% — дата ваша.</p></li>
+          <li class="reveal"><span class="steps__n">02</span><h3>Підготовка</h3><p>Разом обираємо локацію й час з найкращим світлом. Надсилаю підказки щодо одягу та референси.</p></li>
+          <li class="reveal"><span class="steps__n">03</span><h3>Зйомка</h3><p>Спокійно, без поспіху й «скажіть сир». Підказую, як рухатися, — а емоції ваші власні.</p></li>
+          <li class="reveal"><span class="steps__n">04</span><h3>Готові фото</h3><p>Відбираю найкращі кадри, обробляю вручну й надсилаю онлайн-галерею, з якої зручно завантажити все.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Відгуки</p>
+          <h2>Що кажуть мої клієнти</h2>
+        </div>
+        <div class="reviews__grid">
+          <blockquote class="review reveal"><p>«Ми з чоловіком дуже скуті перед камерою, а на фото — ніби нас знімали потай. Марта вміє зробити так, що забуваєш про зйомку.»</p><cite>Олена й Андрій<small>весілля, серпень</small></cite></blockquote>
+          <blockquote class="review reveal"><p>«Двоє дітей, 3 і 6 років, і жодної істерики за годину. Фото прийшли за тиждень — тепер вони на всіх стінах у бабусі.»</p><cite>Ірина<small>сімейна фотосесія</small></cite></blockquote>
+          <blockquote class="review reveal"><p>«Зробила портрети для сайту й LinkedIn. Нарешті фото, де я на себе схожа, а не на манекен з фотошопу.»</p><cite>Дмитро<small>діловий портрет</small></cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap faq__in">
+        <div class="head reveal">
+          <p class="eyebrow">Питання</p>
+          <h2>Часті запитання</h2>
+          <p>Не знайшли відповідь? Напишіть у коментарі до бронювання — відповім особисто.</p>
+        </div>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </section>
+
+    <section class="book" id="book">
+      <div class="wrap book__in">
+        <div class="book__intro reveal">
+          <p class="eyebrow">Бронювання</p>
+          <h2>Оберіть дату зйомки</h2>
+          <p>Сірим позначені дати, які вже зайняті. Оберіть вільний день — я отримаю заявку в Telegram і зателефоную вам, щоб усе узгодити.</p>
+          <p class="book__note">Суботи в травні–вересні розбирають за 6–9 місяців. Якщо плануєте весілля — бронюйте заздалегідь.</p>
+          <p class="book__phone">Або зателефонуйте: <b>+380 00 000 00 00</b></p>
+        </div>
+        <form class="booking reveal" id="bookForm" novalidate>
+          <div class="cal" id="cal">
+            <div class="cal__head">
+              <button type="button" class="cal__nav" id="calPrev" aria-label="Попередній місяць">‹</button>
+              <b id="calTitle"></b>
+              <button type="button" class="cal__nav" id="calNext" aria-label="Наступний місяць">›</button>
+            </div>
+            <div class="cal__wd"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+            <div class="cal__grid" id="calGrid"></div>
+            <div class="cal__legend"><span><i class="lg lg--free"></i>вільно</span><span><i class="lg lg--busy"></i>зайнято</span><span><i class="lg lg--on"></i>ваша дата</span></div>
+          </div>
+          <div class="field-row">
+            <label><span>Пакет</span><select name="pack" id="fPack"></select></label>
+            <label><span>Тип зйомки</span><select name="kind" id="fKind">
+              <option>Весілля</option><option selected>Сімейна</option><option>Love story</option><option>Портрет</option>
+            </select></label>
+          </div>
+          <div class="field-row">
+            <label><span>Ім'я</span><input name="name" required autocomplete="name" maxlength="60"></label>
+            <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __" maxlength="20"></label>
+          </div>
+          <label><span>Коментар <em>(необов'язково)</em></span><textarea name="comment" rows="3" maxlength="500" placeholder="Скільки людей, яка локація подобається, побажання…"></textarea></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="summary" id="summary" aria-live="polite"></div>
+          <button class="btn btn--wide" type="submit">Надіслати заявку</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <p class="foot__logo">Марта Світло</p>
+        <p>Фотограф · весілля, сім'я, love story, портрети<br>+380 00 000 00 00</p>
+      </div>
+      <p class="foot__demo">© <span id="year"></span> · Демо-проєкт, вигаданий фотограф. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></p>
+    </div>
+  </footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Перегляд фото" hidden>
+    <button type="button" class="lb__btn lb__close" id="lbClose" aria-label="Закрити">×</button>
+    <button type="button" class="lb__btn lb__prev" id="lbPrev" aria-label="Попереднє фото">‹</button>
+    <figure class="lb__fig">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button type="button" class="lb__btn lb__next" id="lbNext" aria-label="Наступне фото">›</button>
+  </div>
+
+  <a href="#book" class="sticky-book btn">Забронювати дату</a>
+  <script src="app.js" defer></script>
+</body>
+</html>

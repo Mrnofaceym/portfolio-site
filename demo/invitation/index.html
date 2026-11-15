@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Олена & Андрій — запрошення на весілля 20.03.2027</title>
+  <meta name="description" content="Онлайн-запрошення на весілля Олени та Андрія: програма дня, локації, дрес-код і підтвердження присутності.">
+  <meta property="og:title" content="Олена & Андрій запрошують на весілля">
+  <meta property="og:description" content="20 березня 2027 · Підтвердіть, будь ласка, присутність онлайн.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%237D8B6E'/><circle cx='26' cy='34' r='11' fill='none' stroke='white' stroke-width='4'/><circle cx='38' cy='34' r='11' fill='none' stroke='%23F1D9D3' stroke-width='4'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Marck+Script&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="На початок">О <i>&amp;</i> А</a>
+      <nav class="nav__links" id="links">
+        <a href="#story">Історія</a>
+        <a href="#program">Програма</a>
+        <a href="#places">Локації</a>
+        <a href="#dress">Дрес-код</a>
+        <a href="#wishes">Побажання</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#rsvp" class="btn btn--small">Підтвердити</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero__bg" src="img/hero.webp" alt="" fetchpriority="high">
+      <div class="hero__veil"></div>
+      <div class="wrap hero__in">
+        <p class="hero__greet" id="greet" hidden></p>
+        <p class="hero__pre">Запрошуємо на наше весілля</p>
+        <h1 class="hero__names">Олена <span>&amp;</span> Андрій</h1>
+        <p class="hero__date"><span>Субота</span><b>20 · 03 · 2027</b><span>15:00</span></p>
+        <div class="count" id="count" aria-live="off">
+          <div><b data-u="d">—</b><span>днів</span></div>
+          <div><b data-u="h">—</b><span>годин</span></div>
+          <div><b data-u="m">—</b><span>хвилин</span></div>
+          <div><b data-u="s">—</b><span>секунд</span></div>
+        </div>
+        <div class="hero__cta">
+          <a href="#rsvp" class="btn btn--light">Підтвердити присутність</a>
+          <button type="button" class="btn btn--glass" data-ics>📅 Додати в календар</button>
+        </div>
+      </div>
+      <a href="#invite" class="hero__down" aria-label="Гортати далі">⌄</a>
+    </section>
+
+    <section class="invite wrap" id="invite">
+      <div class="ornament" aria-hidden="true">❦</div>
+      <p class="invite__text reveal" id="inviteText">Дорогі рідні та друзі! Ми вирішили бути разом назавжди — і дуже хочемо, щоб цього дня поруч були найближчі нам люди. Будемо щасливі розділити з вами радість, сміх і перший сімейний танець.</p>
+      <p class="sign reveal">з любов'ю, Олена та Андрій</p>
+    </section>
+
+    <section class="story" id="story">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Наша історія</p>
+          <h2>Як усе починалося</h2>
+        </div>
+        <ol class="timeline">
+          <li class="moment reveal">
+            <img src="img/story-meet.webp" alt="Олена й Андрій у кав'ярні" loading="lazy">
+            <div><time>Вересень 2021</time><h3>Перша кава</h3><p>Андрій переплутав замовлення й забрав Оленин лате. Довелося знайомитися — і пригощати новим.</p></div>
+          </li>
+          <li class="moment reveal">
+            <img src="img/story-trip.webp" alt="Подорож у Карпати" loading="lazy">
+            <div><time>Липень 2023</time><h3>Перша спільна подорож</h3><p>Говерла, туман, промоклі кросівки й розуміння: з цією людиною не страшно навіть заблукати.</p></div>
+          </li>
+          <li class="moment reveal">
+            <img src="img/story-ring.webp" alt="Пропозиція" loading="lazy">
+            <div><time>Грудень 2025</time><h3>«Так!»</h3><p>Новорічні вогники, тремтячі руки й найкоротша відповідь, яку Андрій чекав усе життя.</p></div>
+          </li>
+          <li class="moment reveal">
+            <img src="img/details.webp" alt="Весільні обручки" loading="lazy">
+            <div><time>20 березня 2027</time><h3>Наш день</h3><p>І ми дуже хочемо провести його разом з вами.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="program wrap" id="program">
+      <div class="head head--center reveal">
+        <p class="eyebrow">Програма дня</p>
+        <h2>20 березня, субота</h2>
+      </div>
+      <ul class="plan">
+        <li class="reveal"><time>14:30</time><div><h3>Збір гостей</h3><p>Welcome-напої та легка музика в саду садиби.</p></div></li>
+        <li class="reveal"><time>15:00</time><div><h3>Виїзна церемонія</h3><p>Під квітковою аркою в саду. Не запізнюйтеся — ми дуже хочемо бачити ваші обличчя!</p></div></li>
+        <li class="reveal"><time>16:00</time><div><h3>Фотосесія й фуршет</h3><p>Спільні фото з молодятами, закуски та ігристе.</p></div></li>
+        <li class="reveal"><time>17:30</time><div><h3>Банкет</h3><p>Вечеря в залі садиби, тости, перший танець і жива музика.</p></div></li>
+        <li class="reveal"><time>21:30</time><div><h3>Весільний торт</h3><p>Солодка частина вечора і танці до ночі.</p></div></li>
+        <li class="reveal"><time>23:30</time><div><h3>Завершення</h3><p>Для гостей з інших міст працюватиме трансфер до Вінниці.</p></div></li>
+      </ul>
+    </section>
+
+    <section class="places" id="places">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Локації</p>
+          <h2>Де ми святкуємо</h2>
+        </div>
+        <div class="places__grid">
+          <article class="place reveal">
+            <img src="img/ceremony.webp" alt="Квіткова арка для церемонії в саду" loading="lazy">
+            <div class="place__body">
+              <p class="place__time">15:00 · Церемонія</p>
+              <h3>Сад садиби «Тиха гавань»</h3>
+              <p class="muted">с. Вишеньки, вул. Садова, 1 (демо-адреса)</p>
+              <button type="button" class="link-btn" data-map="0">Показати на мапі ↓</button>
+            </div>
+          </article>
+          <article class="place reveal">
+            <img src="img/banquet.webp" alt="Банкетна зала садиби" loading="lazy">
+            <div class="place__body">
+              <p class="place__time">17:30 · Банкет</p>
+              <h3>Зала «Оранжерея»</h3>
+              <p class="muted">Та сама садиба, 2 хвилини пішки від саду (демо-адреса)</p>
+              <button type="button" class="link-btn" data-map="1">Показати на мапі ↓</button>
+            </div>
+          </article>
+        </div>
+        <div class="route reveal">
+          <div class="map">
+            <iframe id="map" title="Мапа розташування садиби" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=28.40%2C49.20%2C28.56%2C49.27&amp;layer=mapnik&amp;marker=49.2331%2C28.4682"></iframe>
+          </div>
+          <div class="route__text">
+            <h3>Як дістатися</h3>
+            <ul class="how">
+              <li><b>🚌 Трансфер</b><span>О 13:45 від ЖД вокзалу Вінниці (демо-адреса) — автобус з табличкою «Олена & Андрій». Назад — о 23:45.</span></li>
+              <li><b>🚗 Авто</b><span>20 хв від центру міста. Безкоштовна парковка біля в'їзду до садиби.</span></li>
+              <li><b>🚕 Таксі</b><span>Вкажіть «садиба Тиха гавань» — водії знають. Орієнтовно 250–300 грн.</span></li>
+            </ul>
+            <a id="mapLink" class="btn btn--ghost btn--small" href="https://www.openstreetmap.org/?mlat=49.2331&amp;mlon=28.4682#map=15/49.2331/28.4682" target="_blank" rel="noopener">Відкрити маршрут ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dress wrap" id="dress">
+      <div class="dress__in">
+        <div class="reveal">
+          <p class="eyebrow">Дрес-код</p>
+          <h2>Ніжні природні відтінки</h2>
+          <p>Будемо раді, якщо ви підтримаєте палітру нашого свята. Дівчатам — сукні у пастельних тонах, чоловікам — світлі або бежеві костюми, можна без краватки.</p>
+          <p class="muted">Будь ласка, залиште білий колір нареченій 🤍</p>
+        </div>
+        <ul class="palette reveal" aria-label="Палітра кольорів">
+          <li style="--c:#8A9A7B"><span>шавлія</span></li>
+          <li style="--c:#C9A39A"><span>пильна троянда</span></li>
+          <li style="--c:#E8D8C4"><span>пісочний</span></li>
+          <li style="--c:#B9C4CF"><span>сизий</span></li>
+          <li style="--c:#A88B6A"><span>капучино</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wishes" id="wishes">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Побажання</p>
+          <h2>Кілька маленьких прохань</h2>
+        </div>
+        <div class="wishes__grid">
+          <article class="wish reveal">
+            <img src="img/wine.webp" alt="Вино на дерев'яному столі" loading="lazy">
+            <h3>Замість квітів — вино</h3>
+            <p>Квіти швидко зів'януть, а пляшку вина ми відкриємо на першу річницю й згадаємо вас.</p>
+          </article>
+          <article class="wish reveal">
+            <div class="wish__icon">✉️</div>
+            <h3>Подарунки</h3>
+            <p>Ми мріємо про подорож до Італії, тож найкращий подарунок — внесок у наш конверт.</p>
+          </article>
+          <article class="wish reveal">
+            <div class="wish__icon">📸</div>
+            <h3>Діліться фото</h3>
+            <p>Додавайте до публікацій хештег <b>#ОленаТаАндрій2027</b> — зберемо всі спогади разом.</p>
+          </article>
+          <article class="wish reveal">
+            <div class="wish__icon">🥂</div>
+            <h3>Свято для дорослих</h3>
+            <p>Ми дуже любимо ваших дітей, але цей вечір плануємо як дорослий. Дякуємо за розуміння!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp wrap" id="rsvp">
+      <div class="rsvp__card reveal">
+        <div class="head head--center">
+          <p class="eyebrow">RSVP</p>
+          <h2>Підтвердіть присутність</h2>
+          <p>Будь ласка, дайте відповідь до <b>1 березня 2027</b> — так нам буде легше все спланувати.</p>
+        </div>
+        <form id="rsvpForm" novalidate>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="field">
+            <span>Ваше ім'я та прізвище</span>
+            <input name="name" id="fName" required minlength="2" maxlength="60" autocomplete="name" placeholder="Наприклад, Тарас Коваленко">
+          </label>
+          <fieldset class="field">
+            <legend>Чи зможете бути з нами?</legend>
+            <div class="choice choice--2">
+              <label><input type="radio" name="attend" value="yes" required><span>💚 Так, із радістю!</span></label>
+              <label><input type="radio" name="attend" value="no"><span>На жаль, не зможу</span></label>
+            </div>
+          </fieldset>
+          <div class="if-yes" id="ifYes">
+            <label class="field">
+              <span>Скільки вас буде (разом з вами)?</span>
+              <select name="guests" id="fGuests">
+                <option value="1">1 — лише я</option>
+                <option value="2">2 гостя</option>
+                <option value="3">3 гостя</option>
+                <option value="4">4 гостя</option>
+              </select>
+            </label>
+            <fieldset class="field">
+              <legend>Що вам більше до смаку?</legend>
+              <div class="choice choice--3">
+                <label><input type="radio" name="food" value="meat" checked><span>🥩 М'ясо</span></label>
+                <label><input type="radio" name="food" value="fish"><span>🐟 Риба</span></label>
+                <label><input type="radio" name="food" value="veg"><span>🥗 Вегетаріанське</span></label>
+              </div>
+            </fieldset>
+            <label class="field">
+              <span>Пісня, під яку ви точно підете танцювати</span>
+              <input name="song" maxlength="100" placeholder="Виконавець — назва">
+            </label>
+          </div>
+          <label class="field">
+            <span>Коментар <i class="muted">(алергії, трансфер, побажання)</i></span>
+            <textarea name="comment" rows="3" maxlength="500"></textarea>
+          </label>
+          <p class="form-err" id="formErr" role="alert"></p>
+          <button class="btn btn--wide" type="submit" id="sendBtn">Надіслати відповідь</button>
+          <p class="small muted">Відповідь одразу отримають молодята в Telegram.</p>
+        </form>
+        <div class="done" id="done" hidden>
+          <div class="done__icon">💌</div>
+          <h3 id="doneTitle">Дякуємо!</h3>
+          <p id="doneText"></p>
+          <button type="button" class="btn btn--ghost" data-ics>📅 Додати в календар</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="wrap contacts__in">
+        <div class="reveal">
+          <p class="eyebrow">Контакти</p>
+          <h2>Маєте питання?</h2>
+          <p>Щоб не відволікати молодят у передвесільних клопотах, усі організаційні питання — до нашого координатора.</p>
+        </div>
+        <div class="org reveal">
+          <div class="org__ava" aria-hidden="true">В</div>
+          <div>
+            <h3>Вікторія</h3>
+            <p class="muted">весільний координатор</p>
+            <a class="org__tel" href="tel:+380000000000">+380 00 000 00 00</a>
+            <p class="small muted">Дзвінки та Viber/Telegram, щодня 10:00–20:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <p class="final__names">Олена &amp; Андрій</p>
+        <p>Чекаємо на вас 20 березня!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span>© <span id="year"></span> Олена &amp; Андрій</span>
+      <span>Демо-проєкт, вигаданий заклад. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <button type="button" class="music" id="music" aria-pressed="false" title="Увімкнути музику (мелодія генерується в браузері)">♪ <span>Музика</span></button>
+  <a href="#rsvp" class="sticky-book btn" id="sticky">Підтвердити присутність</a>
+  <script src="app.js" defer></script>
+</body>
+</html>

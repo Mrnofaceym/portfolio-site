@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>«Спокій без таблеток» — 4-тижневий онлайн-курс роботи з тривогою · Ірина Коваль</title>
+  <meta name="description" content="4 тижні практик самодопомоги при тривозі: живі зустрічі в Zoom, записи, підтримка в чаті. Безкоштовний урок «3 вправи від тривоги».">
+  <meta property="og:title" content="Спокій без таблеток: 4 тижні роботи з тривогою">
+  <meta property="og:description" content="Онлайн-курс практик самодопомоги від психологині Ірини Коваль. Старт потоку незабаром, кількість місць обмежена.">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='18' fill='%235B7A68'/><path d='M32 48c-9-4-14-11-14-20 7 0 12 4 14 10 2-6 7-10 14-10 0 9-5 16-14 20z' fill='%23EAF1EA'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#top" class="logo" aria-label="Спокій без таблеток — на початок">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18"/><path d="M32 48c-9-4-14-11-14-20 7 0 12 4 14 10 2-6 7-10 14-10 0 9-5 16-14 20z"/></svg>
+        <span>Ірина Коваль</span>
+      </a>
+      <nav class="nav__links" id="links">
+        <a href="#for">Кому підійде</a>
+        <a href="#program">Програма</a>
+        <a href="#author">Про авторку</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#prices">Тарифи</a>
+        <a href="#faq">Питання</a>
+      </nav>
+      <div class="nav__right">
+        <a href="#apply" class="btn btn--small">Записатися</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <div class="hero__badges">
+            <span class="pill"><span class="pill__dot"></span>Старт потоку <b data-start-short>1 грудня</b></span>
+            <span class="pill pill--warm">Залишилось <b id="seatsLeft">7</b> з 20 місць</span>
+          </div>
+          <h1>Спокій без таблеток: <em>4 тижні роботи з тривогою</em></h1>
+          <p class="hero__sub">Онлайн-курс практик самодопомоги від психологині Ірини Коваль. Ви навчитеся помічати тривогу раніше, ніж вона накриє, заспокоювати тіло за 2–3 хвилини й повертати собі ясну голову — у власному темпі, без тиску й «мотивашок».</p>
+          <div class="countdown" aria-live="off">
+            <p class="countdown__label">До старту потоку:</p>
+            <div class="countdown__grid" id="countdown">
+              <div><b data-cd="d">00</b><span>днів</span></div>
+              <div><b data-cd="h">00</b><span>годин</span></div>
+              <div><b data-cd="m">00</b><span>хвилин</span></div>
+              <div><b data-cd="s">00</b><span>секунд</span></div>
+            </div>
+          </div>
+          <div class="hero__cta">
+            <a href="#prices" class="btn">Обрати тариф</a>
+            <a href="#magnet" class="btn btn--ghost">🎁 Безкоштовний урок</a>
+          </div>
+          <p class="note">Практики самодопомоги, не замінюють лікування.</p>
+        </div>
+        <div class="hero__media">
+          <img src="img/hero.webp" alt="Психологиня Ірина Коваль у затишному кабінеті" fetchpriority="high" width="1400" height="788">
+          <div class="hero__card">
+            <span class="hero__card-ic">🌿</span>
+            <div><b>4 тижні · 12 уроків</b><span>Zoom + записи + чат</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="section" id="for">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Чесно про формат</p>
+          <h2>Кому підійде курс — і кому ні</h2>
+          <p class="muted">Ми цінуємо ваш час і гроші, тому одразу кажемо, з чим курс допоможе, а з чим краще звернутися до лікаря чи до особистого терапевта.</p>
+        </div>
+        <div class="fit">
+          <div class="fit__col fit__col--yes reveal">
+            <h3><span class="fit__ic">✓</span> Підійде, якщо ви</h3>
+            <ul>
+              <li>часто «прокручуєте» думки перед сном і довго не можете заснути;</li>
+              <li>відчуваєте напругу в тілі, стиснуті плечі, тривожність перед дзвінками чи зустрічами;</li>
+              <li>втомилися від постійного «а раптом» і хочете мати під рукою прості інструменти;</li>
+              <li>готові 20–30 хвилин на день приділяти практикам;</li>
+              <li>хочете спокійного навчання в групі, де вас не оцінюють.</li>
+            </ul>
+          </div>
+          <div class="fit__col fit__col--no reveal">
+            <h3><span class="fit__ic">✕</span> Не підійде, якщо</h3>
+            <ul>
+              <li>у вас діагностований тривожний розлад, депресія чи панічні атаки, що потребують лікування, — курс може лише доповнити терапію;</li>
+              <li>ви шукаєте «чарівну таблетку» замість регулярної практики;</li>
+              <li>вам зараз дуже важко і потрібна термінова допомога — зверніться, будь ласка, до лікаря або на лінію психологічної підтримки.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTHOR -->
+    <section class="section section--tint" id="author">
+      <div class="wrap author">
+        <figure class="author__photo reveal">
+          <img src="img/author.webp" alt="Ірина Коваль, психологиня" loading="lazy" width="1000" height="563">
+          <figcaption>Ірина Коваль</figcaption>
+        </figure>
+        <div class="author__text reveal">
+          <p class="eyebrow">Авторка курсу</p>
+          <h2>Ірина Коваль</h2>
+          <p class="lead">Психологиня, практикую когнітивно-поведінковий підхід і тілесно-орієнтовані техніки. Допомагаю людям м'якше проживати стрес і тривогу.</p>
+          <ul class="creds">
+            <li><b>12 років</b> практики з дорослими клієнтами</li>
+            <li><b>2 000+</b> учасників групових програм</li>
+            <li>Магістр психології, сертифікація з КПТ</li>
+            <li>Членкиня професійної асоціації психологів</li>
+          </ul>
+          <p class="fict">ⓘ Авторка й регалії вигадані — це демо-сайт для портфоліо.</p>
+          <blockquote>«Тривога — не ворог, а сигнал. Ми вчимося чути його, не дозволяючи йому керувати нашим днем».</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="section" id="program">
+      <div class="wrap program">
+        <div class="head reveal">
+          <p class="eyebrow">Програма</p>
+          <h2>4 тижні — 12 уроків</h2>
+          <p class="muted">Кожен тиждень — 3 короткі уроки (25–40 хв), практика на щодень і жива зустріч у Zoom. Натисніть на тиждень, щоб побачити теми.</p>
+        </div>
+        <div class="acc" id="acc">
+          <details class="week reveal" open>
+            <summary><span class="week__n">Тиждень 1</span><span class="week__t">Зрозуміти свою тривогу</span><span class="week__ic" aria-hidden="true"></span></summary>
+            <ol class="lessons">
+              <li><b>Урок 1.</b> Що таке тривога і навіщо вона нам. Як відрізнити корисну тривогу від виснажливої</li>
+              <li><b>Урок 2.</b> Щоденник тривоги: тригери, думки, реакції тіла</li>
+              <li><b>Урок 3.</b> Дихання 4–6: перша «швидка допомога» на 2 хвилини</li>
+            </ol>
+            <p class="week__res">Результат тижня: ви бачите власні тригери й маєте одну робочу вправу.</p>
+          </details>
+          <details class="week reveal">
+            <summary><span class="week__n">Тиждень 2</span><span class="week__t">Тіло як опора</span><span class="week__ic" aria-hidden="true"></span></summary>
+            <ol class="lessons">
+              <li><b>Урок 4.</b> Прогресивна м'язова релаксація: як відпустити затиснуті плечі</li>
+              <li><b>Урок 5.</b> Заземлення 5-4-3-2-1 і практики для роботи та транспорту</li>
+              <li><b>Урок 6.</b> Сон, кава, телефон: дрібниці, що підсилюють тривогу</li>
+            </ol>
+            <p class="week__res">Результат тижня: персональний набір тілесних практик на день і на вечір.</p>
+          </details>
+          <details class="week reveal">
+            <summary><span class="week__n">Тиждень 3</span><span class="week__t">Думки, що розкручують тривогу</span><span class="week__ic" aria-hidden="true"></span></summary>
+            <ol class="lessons">
+              <li><b>Урок 7.</b> Когнітивні викривлення: катастрофізація, «читання думок», «завжди/ніколи»</li>
+              <li><b>Урок 8.</b> Техніка «Перевірка фактів» і альтернативна думка</li>
+              <li><b>Урок 9.</b> «Час для тривоги»: як не думати про все одразу</li>
+            </ol>
+            <p class="week__res">Результат тижня: ви вмієте зупинити «прокручування» думок за кілька хвилин.</p>
+          </details>
+          <details class="week reveal">
+            <summary><span class="week__n">Тиждень 4</span><span class="week__t">Спокій у повсякденні</span><span class="week__ic" aria-hidden="true"></span></summary>
+            <ol class="lessons">
+              <li><b>Урок 10.</b> Маленькі кроки назустріч тому, чого уникаєте</li>
+              <li><b>Урок 11.</b> Межі, «ні» та розмови, що лякають</li>
+              <li><b>Урок 12.</b> Ваш особистий план спокою на 3 місяці вперед</li>
+            </ol>
+            <p class="week__res">Результат тижня: план підтримки, з яким ви продовжуєте самостійно.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAT -->
+    <section class="section section--tint" id="format">
+      <div class="wrap format">
+        <div class="format__text">
+          <div class="head reveal">
+            <p class="eyebrow">Формат</p>
+            <h2>Навчання, яке вписується в життя</h2>
+          </div>
+          <div class="cards3">
+            <article class="fcard reveal"><span class="fcard__ic">🎥</span><h3>Живі зустрічі в Zoom</h3><p>Щосереди о 19:00. Розбір практик, відповіді на питання. Камеру можна не вмикати.</p></article>
+            <article class="fcard reveal"><span class="fcard__ic">▶️</span><h3>Записи уроків</h3><p>Усі уроки й зустрічі в записі — доступ на 6 місяців. Дивіться, коли зручно.</p></article>
+            <article class="fcard reveal"><span class="fcard__ic">💬</span><h3>Чат групи</h3><p>Закритий Telegram-чат з учасниками й кураторкою. Тут безпечно ділитися.</p></article>
+          </div>
+        </div>
+        <img class="format__img reveal" src="img/zoom.webp" alt="Ноутбук з онлайн-зустріччю і чашка чаю" loading="lazy" width="1000" height="563">
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section" id="results">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Результати</p>
+          <h2>Після курсу ви зможете…</h2>
+        </div>
+        <ol class="results">
+          <li class="reveal"><b>Помічати тривогу на старті</b><span>і розпізнавати свої тригери до того, як вона «накриє».</span></li>
+          <li class="reveal"><b>Заспокоїти тіло за 2–3 хвилини</b><span>диханням, заземленням чи м'язовою релаксацією — де завгодно.</span></li>
+          <li class="reveal"><b>Зупинити «прокручування» думок</b><span>і повертати собі ясну голову перед сном чи важливою розмовою.</span></li>
+          <li class="reveal"><b>Спокійніше говорити «ні»</b><span>і проходити ситуації, яких раніше уникали.</span></li>
+          <li class="reveal"><b>Мати власний план підтримки</b><span>на складні дні — замість паніки й пошуку порад у мережі.</span></li>
+          <li class="reveal"><b>Знати, коли звернутися по допомогу</b><span>до фахівця, і не соромитися цього.</span></li>
+        </ol>
+        <p class="note note--center">Результати залежать від регулярності практики й індивідуальних особливостей. Курс не є медичною послугою.</p>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET -->
+    <section class="magnet" id="magnet">
+      <div class="wrap magnet__in">
+        <img class="magnet__img reveal" src="img/calm.webp" alt="Жінка з чашкою чаю біля вікна" loading="lazy" width="1000" height="563">
+        <div class="magnet__text reveal">
+          <p class="eyebrow">Подарунок</p>
+          <h2>Безкоштовний урок: 3 вправи від тривоги</h2>
+          <p>20-хвилинний відеоурок і PDF-шпаргалка. Спробуйте підхід Ірини до того, як обирати курс.</p>
+          <form class="mform" id="magnetForm" novalidate>
+            <label class="sr" for="mContact">Email або телефон</label>
+            <div class="mform__row">
+              <input id="mContact" name="contact" type="text" inputmode="email" autocomplete="email" placeholder="Email або телефон" required>
+              <button class="btn" type="submit">Отримати урок</button>
+            </div>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="check"><input type="checkbox" name="consent"> <span>Погоджуюся на обробку персональних даних і отримання листів. Відписатися можна будь-коли.</span></label>
+            <p class="form__msg" id="magnetMsg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Відгуки учасників</p>
+          <h2>Що кажуть після потоку</h2>
+        </div>
+        <div class="vids">
+          <button class="vid reveal" type="button" data-video="img/rev-olha.webp" data-title="Ольга, 34 — відгук після курсу">
+            <img src="img/rev-olha.webp" alt="" loading="lazy" width="1000" height="563">
+            <span class="vid__play" aria-hidden="true"></span>
+            <span class="vid__cap"><b>Ольга, 34</b> · «Перестала боятися дзвінків» · 2:14</span>
+          </button>
+          <button class="vid reveal" type="button" data-video="img/rev-andrii.webp" data-title="Андрій, 41 — відгук після курсу">
+            <img src="img/rev-andrii.webp" alt="" loading="lazy" width="1000" height="563">
+            <span class="vid__play" aria-hidden="true"></span>
+            <span class="vid__cap"><b>Андрій, 41</b> · «Нарешті висипаюся» · 1:48</span>
+          </button>
+        </div>
+        <div class="reviews">
+          <figure class="review reveal">
+            <blockquote>«Найцінніше — дихання 4–6. Користуюся ним перед кожною нарадою. Подобається, що все пояснюється спокійно й без пафосу».</blockquote>
+            <figcaption><span class="ava">М</span><b>Марина</b>, тариф «З підтримкою»</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>«Я довго відкладала, думала — не для мене. А виявилося, що в групі багато людей з такими ж думками. Чат дуже підтримував».</blockquote>
+            <figcaption><span class="ava">Т</span><b>Тетяна</b>, тариф «Самостійний»</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <blockquote>«Особисті сесії у VIP допомогли розібрати мою ситуацію з роботою. Тепер маю план, що робити, коли знову накриває».</blockquote>
+            <figcaption><span class="ava">О</span><b>Олександр</b>, тариф VIP</figcaption>
+          </figure>
+        </div>
+        <p class="note note--center">Відгуки й імена вигадані для демо.</p>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section section--tint" id="prices">
+      <div class="wrap">
+        <div class="head head--center reveal">
+          <p class="eyebrow">Тарифи</p>
+          <h2>Оберіть свій формат участі</h2>
+          <p class="muted">Ціна діє до старту потоку. Оплата — після дзвінка менеджера.</p>
+        </div>
+        <div class="tiers">
+          <article class="tier reveal">
+            <h3>Самостійний</h3>
+            <p class="tier__price"><b>2 900</b> грн</p>
+            <p class="tier__sub">для тих, хто любить свій темп</p>
+            <ul>
+              <li>12 уроків у записі</li>
+              <li>Робочий зошит PDF</li>
+              <li>Записи Zoom-зустрічей</li>
+              <li>Доступ 6 місяців</li>
+              <li class="off">Чат з кураторкою</li>
+              <li class="off">Особисті сесії</li>
+            </ul>
+            <button class="btn btn--ghost btn--wide" type="button" data-tier="solo">Обрати</button>
+          </article>
+          <article class="tier tier--best reveal">
+            <span class="tier__badge">Рекомендуємо</span>
+            <h3>З підтримкою</h3>
+            <p class="tier__price"><b>4 900</b> грн</p>
+            <p class="tier__sub">обирають 7 з 10 учасників</p>
+            <ul>
+              <li>Усе з тарифу «Самостійний»</li>
+              <li>Участь у живих зустрічах</li>
+              <li>Закритий чат групи</li>
+              <li>Перевірка домашніх завдань</li>
+              <li>Доступ 12 місяців</li>
+              <li class="off">Особисті сесії</li>
+            </ul>
+            <button class="btn btn--wide" type="button" data-tier="support">Обрати</button>
+          </article>
+          <article class="tier reveal">
+            <h3>VIP</h3>
+            <p class="tier__price"><b>9 900</b> грн</p>
+            <p class="tier__sub">максимум уваги до вашої ситуації</p>
+            <ul>
+              <li>Усе з тарифу «З підтримкою»</li>
+              <li>3 особисті онлайн-сесії з Іриною</li>
+              <li>Персональний план практик</li>
+              <li>Підтримка в особистих повідомленнях</li>
+              <li>Доступ назавжди</li>
+            </ul>
+            <button class="btn btn--ghost btn--wide" type="button" data-tier="vip">Обрати</button>
+          </article>
+        </div>
+        <p class="instal reveal">💳 Можна оплатити частинами: <b>2 або 3 платежі без переплат</b> — менеджер розкаже деталі під час дзвінка.</p>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section section--slim">
+      <div class="wrap">
+        <div class="guarantee reveal">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 8 13v17c0 15 10 26 24 30 14-4 24-15 24-30V13L32 4z"/><path class="tick" d="m21 32 8 8 15-16"/></svg>
+          <div>
+            <h3>Гарантія повернення коштів — 14 днів</h3>
+            <p>Пройдіть перші два тижні. Якщо відчуєте, що курс вам не підходить, — напишіть менеджеру, і ми повернемо 100% оплати без зайвих питань.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section class="section" id="apply">
+      <div class="wrap apply">
+        <div class="apply__text reveal">
+          <p class="eyebrow">Заявка на участь</p>
+          <h2>Забронюйте місце в потоці</h2>
+          <p>Залиште заявку — менеджер зателефонує протягом дня, відповість на питання й допоможе обрати тариф.</p>
+          <ul class="steps">
+            <li><span>1</span>Заявка на сайті</li>
+            <li><span>2</span>Дзвінок менеджера</li>
+            <li><span>3</span>Оплата й доступ до курсу</li>
+          </ul>
+          <p class="pay-note">🔒 Оплата після дзвінка менеджера. Сайт не приймає платежі.</p>
+        </div>
+        <form class="form reveal" id="applyForm" novalidate>
+          <div class="field">
+            <label for="fName">Ваше ім'я</label>
+            <input id="fName" name="name" autocomplete="name" placeholder="Наприклад, Олена" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fPhone">Телефон</label>
+              <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+380" required>
+            </div>
+            <div class="field">
+              <label for="fTg">Telegram <span class="opt">(необов'язково)</span></label>
+              <input id="fTg" name="telegram" autocomplete="off" placeholder="@nickname">
+            </div>
+          </div>
+          <fieldset class="field tiers-pick">
+            <legend>Тариф</legend>
+            <label><input type="radio" name="tier" value="solo"><span>Самостійний<small>2 900 грн</small></span></label>
+            <label><input type="radio" name="tier" value="support" checked><span>З підтримкою<small>4 900 грн</small></span></label>
+            <label><input type="radio" name="tier" value="vip"><span>VIP<small>9 900 грн</small></span></label>
+          </fieldset>
+          <div class="field">
+            <label for="fQ">Ваше питання <span class="opt">(необов'язково)</span></label>
+            <textarea id="fQ" name="question" rows="3" placeholder="Що вас турбує або що хочете уточнити"></textarea>
+          </div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="check"><input type="checkbox" name="consent"> <span>Погоджуюся на обробку персональних даних і розумію, що курс — це практики самодопомоги, а не лікування.</span></label>
+          <button class="btn btn--wide" type="submit">Надіслати заявку</button>
+          <p class="form__msg" id="applyMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--tint" id="faq">
+      <div class="wrap faq">
+        <div class="head reveal">
+          <p class="eyebrow">Питання</p>
+          <h2>Часті запитання</h2>
+        </div>
+        <div class="qas">
+          <details class="qa"><summary>Чи замінить курс роботу з психотерапевтом або лікарем?</summary><p>Ні. Курс — це освітня програма з практиками самодопомоги. Якщо ви проходите лікування, продовжуйте його, а курс може стати корисним доповненням. Не відміняйте й не змінюйте призначення лікаря самостійно.</p></details>
+          <details class="qa"><summary>Скільки часу потрібно на тиждень?</summary><p>Близько 2–3 годин: уроки по 25–40 хвилин, щоденні практики по 10–20 хвилин і одна жива зустріч на тиждень.</p></details>
+          <details class="qa"><summary>Я не встигаю на зустрічі в Zoom — що робити?</summary><p>Усі зустрічі записуються й з'являються в кабінеті того ж вечора. Питання можна залишити заздалегідь у чаті.</p></details>
+          <details class="qa"><summary>Чи обов'язково вмикати камеру й говорити?</summary><p>Ні. Ви можете просто слухати. Багато учасників пишуть питання в чат анонімно.</p></details>
+          <details class="qa"><summary>Як відбувається оплата?</summary><p>Після заявки вам зателефонує менеджер, уточнить деталі й надішле посилання на оплату. Можна платити частинами — 2 або 3 платежі без переплат.</p></details>
+          <details class="qa"><summary>Як працює гарантія повернення?</summary><p>Протягом 14 днів від старту напишіть менеджеру — ми повернемо всю суму, навіть без пояснення причин.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="wrap final__in reveal">
+        <h2>Почніть повертати собі спокій — <em>крок за кроком</em></h2>
+        <p>Старт потоку <b data-start-long>1 грудня</b>. Залишилось <b data-seats>7</b> місць.</p>
+        <div class="final__cta">
+          <a href="#apply" class="btn btn--light">Записатися на курс</a>
+          <a href="#magnet" class="btn btn--line">Спершу безкоштовний урок</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <b>Ірина Коваль · онлайн-курси</b><br>
+        <a href="tel:+380000000000">+380 00 000 00 00</a> · <a href="#apply">Telegram</a>
+      </div>
+      <p class="foot__small">Матеріали курсу мають освітній характер і не замінюють консультацію лікаря. Якщо вам дуже важко зараз — зверніться до лікаря або на лінію психологічної підтримки.</p>
+      <span>Демо-проєкт, вигаданий автор. Сайт розроблено <a href="https://site-cloud.uk" target="_blank" rel="noopener">Maksym · bots &amp; web</a></span>
+    </div>
+  </footer>
+
+  <a href="#apply" class="sticky-cta" id="sticky"><span>Старт <b data-start-short>1 грудня</b> · <b data-seats>7</b> місць</span><b class="sticky-cta__btn">Записатися</b></a>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__x" type="button" aria-label="Закрити" data-close>×</button>
+      <div class="modal__screen">
+        <img id="modalImg" src="" alt="">
+        <span class="modal__note">▶ Демо: тут буде відео-відгук (YouTube / Vimeo)</span>
+      </div>
+      <p class="modal__title" id="modalTitle"></p>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
